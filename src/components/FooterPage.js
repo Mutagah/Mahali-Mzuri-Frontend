@@ -78,7 +78,7 @@ function FooterPage() {
               </div>
             </div>
             <div class="col pr-2 text-reset">
-              <div class="text-end">
+              <div class="text-end inline-block">
                 <a href="/twitter">
                   <svg 
                     xmlns="http://www.w3.org/2000/svg"

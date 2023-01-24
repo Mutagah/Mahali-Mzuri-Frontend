@@ -106,7 +106,7 @@ export default function HomePage() {
         <div class="p-3 container text-center">
           <div class="row">
             <div class="col">
-            <a href="/drinks" className="p-3"> 🍹</a>
+            <a href="/drinks" className="p-3"> </a>
             <a href="/drinks"> Welcome Drinks </a>
             </div>
             <div class="col">
