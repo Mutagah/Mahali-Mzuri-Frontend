@@ -1,8 +1,14 @@
 import React from "react";
-import { Box, Grid, IconButton, Typography } from "@mui/material";
-import Card from "@mui/material/Card";
-// import CardCover from "@mui/joy/CardCover";
-import CardContent from "@mui/material/CardContent";
+import {
+  Box,
+  Card,
+  CardContent,
+  Grid,
+  IconButton,
+  Typography,
+} from "@mui/material";
+import Image1 from "../Images/photo-1621293954908-907159247fc8.jpeg";
+import Image2 from "../Images/Rectangle 3671.png";
 import { Experimental_CssVarsProvider as CssVarsProvider } from "@mui/material/styles";
 export default function ServicePage() {
   return (
@@ -53,8 +59,14 @@ export default function ServicePage() {
           </Box>
         </Grid>
       </Grid>
-      <Grid container sx={{ mx: 5 }}>
-        <Grid item xs={6}>
+      <Grid container sx={{ px: 5 }}>
+        <Grid
+          item
+          xs={12}
+          md={12}
+          lg={6}
+          sx={{ px: 3}}
+        >
           <CssVarsProvider>
             <Box
               sx={{
@@ -64,17 +76,6 @@ export default function ServicePage() {
                 "& > div, & > div > div": {
                   transition: "inherit",
                 },
-                "&:hover": {
-                  "& > div": {
-                    transform: "rotateY(30deg)",
-                    "& > div:nth-child(2)": {
-                      transform: "scaleY(0.9) translate3d(20px, 30px, 40px)",
-                    },
-                    "& > div:nth-child(3)": {
-                      transform: "translate3d(45px, 50px, 40px)",
-                    },
-                  },
-                },
               }}
             >
               <Card
@@ -83,6 +84,7 @@ export default function ServicePage() {
                   height: "250px",
                   backgroundColor: "#f17a12",
                   border: "2px solid",
+                  overflowY: "scroll",
                 }}
               >
                 <Typography
@@ -122,17 +124,6 @@ export default function ServicePage() {
                 "& > div, & > div > div": {
                   transition: "inherit",
                 },
-                "&:hover": {
-                  "& > div": {
-                    transform: "rotateY(30deg)",
-                    "& > div:nth-child(2)": {
-                      transform: "scaleY(0.9) translate3d(20px, 30px, 40px)",
-                    },
-                    "& > div:nth-child(3)": {
-                      transform: "translate3d(45px, 50px, 40px)",
-                    },
-                  },
-                },
               }}
             >
               <Card
@@ -141,6 +132,7 @@ export default function ServicePage() {
                   height: "250px",
                   backgroundColor: "#000",
                   border: "2px solid",
+                  overflowY: "scroll",
                 }}
               >
                 <Typography
@@ -180,17 +172,18 @@ export default function ServicePage() {
                 "& > div, & > div > div": {
                   transition: "inherit",
                 },
-                "&:hover": {
-                  "& > div": {
-                    transform: "rotateY(30deg)",
-                    "& > div:nth-child(2)": {
-                      transform: "scaleY(0.9) translate3d(20px, 30px, 40px)",
-                    },
-                    "& > div:nth-child(3)": {
-                      transform: "translate3d(45px, 50px, 40px)",
-                    },
-                  },
-                },
+                // ,
+                // "&:hover": {
+                //   "& > div": {
+                //     transform: "rotateY(30deg)",
+                //     "& > div:nth-child(2)": {
+                //       transform: "scaleY(0.9) translate3d(20px, 30px, 40px)",
+                //     },
+                //     "& > div:nth-child(3)": {
+                //       transform: "translate3d(45px, 50px, 40px)",
+                //     },
+                //   },
+                // },
               }}
             >
               <Card
@@ -199,6 +192,7 @@ export default function ServicePage() {
                   height: "250px",
                   backgroundColor: "#f17a12",
                   border: "2px solid",
+                  overflowY: "scroll",
                 }}
               >
                 <Typography
@@ -223,15 +217,47 @@ export default function ServicePage() {
                     sx={{ justifyContent: "center", mx: 15, color: "white" }}
                   >
                     "Take memories leave footprints" ~ Nweke Pascal. <br></br>
-                    Affordable car renting services with optional drivers to take you to our beautiful game drives in the country.
+                    Affordable car renting services with optional drivers to
+                    take you to our beautiful game drives in the country.
                   </Typography>
                 </CardContent>
               </Card>
             </Box>
           </CssVarsProvider>
         </Grid>
-        <Grid item xs={6}>
-          Yet to design
+        <Grid
+          item
+          xs={12}
+          md={12}
+          lg={6}
+          sx={{
+            px: 3,
+            display: "flex",
+            justifyContent: "end"
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src={Image1}
+              style={{
+                maxWidth: "100%",
+                height: "300px",
+              }}
+              alt="Mahali Mzuri"
+            />
+          </Box>
+            <img
+              src={Image2}
+              style={{
+                maxWidth: "50%",
+              }}
+              alt="Mahali Mzuri"
+            />
         </Grid>
       </Grid>
     </main>
