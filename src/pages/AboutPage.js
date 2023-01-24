@@ -1,4 +1,5 @@
 import React from "react";
+import './about.css'
 export default function AboutPage() {
   return(
     <div className="about">
@@ -8,7 +9,19 @@ export default function AboutPage() {
         <button>Explore</button>
       </div>
       <div className="about-imgs">
-        <img src="https://imgs.search.brave.com/9EtfaKlkaq4PGTzZX4tGC-tOCr8uFcfWqs5QEEe6nPc/rs:fit:711:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC55/YjBMMWhsVzdkR2NB/U1Bsb1piNHpBSGFF/OCZwaWQ9QXBp" alt="restaurant" />
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+      <img src="https://imgs.search.brave.com/jGmjxHnmlw_uiY6MdAIKEUZbt7KVzcdm1Tpbhilt64Q/rs:fit:711:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5W/d0oycEtGRjVxT0Fl/aXlKUHd2bFJBSGFF/OCZwaWQ9QXBp" className="d-block w-100" alt="..."/>
+    </div>
+    <div className="carousel-item">
+      <img src="https://imgs.search.brave.com/Jghgugx412wy3M-9hlwihN8i6HdzSoKpUjgT9Yky06w/rs:fit:711:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5X/eVFiREZPOGJ3N0dV/Y3ZrUVhCTXVBSGFF/OCZwaWQ9QXBp" className="d-block w-100" alt="..."/>
+    </div>
+    <div className="carousel-item">
+      <img src="https://imgs.search.brave.com/IOfnl4p78ZkGoomgP_Njb2v5TEtHolxawbj48jhEvfg/rs:fit:711:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5w/Z0htQ2EycWZYLVAw/bnlIdGhsWlNBSGFF/OCZwaWQ9QXBp" className="d-block w-100" alt="..."/>
+    </div>
+  </div>
+</div>
       </div>
     </div>
   );
