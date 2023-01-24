@@ -6,6 +6,8 @@ import ContactPage from "./pages/ContactPage";
 import ServicePage from "./pages/ServicePage";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import FooterPage from "./components/FooterPage";
+
 function App() {
   const theme = createTheme({
     palette: {
@@ -38,12 +40,17 @@ function App() {
       path: "/contact",
       element: <ContactPage />,
     },
+    {
+      path: "/footer",
+      element: <FooterPage />,
+    },
   ]);
   return (
     <>
       <ThemeProvider theme={theme}>
         <Header />
         <RouterProvider router={router} />
+        <FooterPage/>
       </ThemeProvider>
     </>
   );
