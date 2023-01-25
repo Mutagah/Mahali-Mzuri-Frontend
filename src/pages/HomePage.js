@@ -103,47 +103,68 @@ export default function HomePage() {
           <span className="visually-hidden">Next</span>
         </button>
 
-        <div class="p-3 container text-center">
+        <div class="p-4 container text-center">
           <div class="row">
             <div class="col">
-              <a href="/drinks" className="p-3 text-decoration-none">
-                {" "}
-                🥤{" "}
-              </a>
-              <a className="text-decoration-none" href="/drinks">
-                {" "}
-                Welcome Drinks{" "}
-              </a>
+              <div
+                class="card m-3"
+                style={{ borderColor: "#f17a12", borderWidth: "4px" }}
+              >
+                <div class="card-body">
+                  <a href="/drinks" className="p-3 text-decoration-none">
+                    🥤
+                  </a>
+                  <a className="text-decoration-none text-dark" href="/drinks">
+                    Welcome Drinks
+                  </a>
+                </div>
+              </div>
             </div>
             <div class="col">
-              <a href="/drinks" className="p-3 text-decoration-none">
-                {" "}
-                🚘{" "}
-              </a>
-              <a className="text-decoration-none" href="/carRental">
-                {" "}
-                Car Rental{" "}
-              </a>
+              <div
+                class="card m-3"
+                style={{ borderColor: "#f17a12", borderWidth: "4px" }}
+              >
+                <div class="card-body">
+                  <a href="/drinks" className="p-3 text-decoration-none">
+                    🚘
+                  </a>
+                  <a className="text-decoration-none text-body" href="/drinks">
+                    Rental Cars
+                  </a>
+                </div>
+              </div>
             </div>
             <div class="col">
-              <a href="/drinks" className="p-3 text-decoration-none">
-                {" "}
-                🏬{" "}
-              </a>
-              <a className="text-decoration-none" href="/drinks">
-                {" "}
-                Resort & Spa{" "}
-              </a>
+              <div
+                class="card m-3"
+                style={{ borderColor: "#f17a12", borderWidth: "4px" }}
+              >
+                <div class="card-body">
+                  <a href="/drinks" className="p-3 text-decoration-none"
+                  >
+                    🏬
+                  </a>
+                  <a className="text-decoration-none text-body" href="/drinks" >
+                    Resort & Spa
+                  </a>
+                </div>
+              </div>
             </div>
             <div class="col">
-              <a href="/drinks" className="p-3 text-decoration-none">
-                {" "}
-                📶{" "}
-              </a>
-              <a href="/drinks" className="text-decoration-none">
-                {" "}
-                Free Wifi{" "}
-              </a>
+              <div
+                class="card m-3"
+                style={{ borderColor: "#f17a12", borderWidth: "4px" }}
+              >
+                <div class="card-body">
+                  <a href="/drinks" className="p-3 text-decoration-none">
+                    📶
+                  </a>
+                  <a className="text-decoration-none text-dark" href="/drinks">
+                    Free Wifi
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
