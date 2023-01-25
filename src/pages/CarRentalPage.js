@@ -123,13 +123,7 @@ export default function RentalParkingPage() {
                   &nbsp; Select pickup date
                 </Typography>
               </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  marginY: "5px",
-                }}
-              >
+              
                 <Typography
                   variant="h5"
                   sx={{ paddingLeft: "10px", color: "#ffffff" }}
@@ -141,10 +135,10 @@ export default function RentalParkingPage() {
                   </IconButton>
                   &nbsp; Select return date
                 </Typography>
-              </Box>
+              
               <Typography
                 variant="h4"
-                sx={{ paddingLeft: "10px", color: "#ffffff" }}
+                sx={{ paddingLeft: "10px", color: "#ffffff", textAlign:"center" }}
               >
                 Driver can be hired on request
               </Typography>

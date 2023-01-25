@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import ServicePage from "./pages/ServicePage";
-import RentalParkingPage from "./pages/Rental&ParkingPage";
+import CarRentalPage from "./pages/CarRentalPage";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 function App() {
@@ -41,7 +41,7 @@ function App() {
     },
     {
       path: "/car-rental",
-      element: <RentalParkingPage/>
+      element: <CarRentalPage/>
     }
   ]);
   return (
