@@ -1,3 +1,6 @@
+import './Restaurant.css'
+
+
 const Restaurant = () => {
     return (  
         <div className="restautant">
