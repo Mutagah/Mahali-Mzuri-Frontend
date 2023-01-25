@@ -1,4 +1,6 @@
 import './Restaurant.css'
+import KoreanFried from '/home/zamzam/Desktop/Development/PostSchoolProjects/Mahali-Mzuri-Hotel/Mahali-Mzuri-Frontend/src/pages/Restaurant/images/KoreanFried.png'
+import Burger from '/home/zamzam/Desktop/Development/PostSchoolProjects/Mahali-Mzuri-Hotel/Mahali-Mzuri-Frontend/src/pages/Restaurant/images/burger.png'
 
 
 const Restaurant = () => {
@@ -7,7 +9,7 @@ const Restaurant = () => {
           <section class="home" id="home">
 
         <div class="content">
-            <h3>food made with love</h3>
+            <h3>Mahali Mzuri Restaurant</h3>
             <p>Mahali Mzuri Restaurant is one of Nairobi's most iconic food joints . Its website is a feast for the senses, including bright colors, cheeky line illustrations and mouthwatering food photography. Despite how loud and eye-catching the design system is, the site itself is clean, well-structured and easy to navigate. It shows that restaurant websites do not need to choose between making a splash and being user-friendly.</p>
         </div>
 
@@ -25,7 +27,7 @@ const Restaurant = () => {
 <div class="box-container">
 
     <div class="box">
-        <img class="image" src="https://images.unsplash.com/photo-1525804017725-0ac671aea1fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80" alt="" />
+        <img class="image" src="https://i.pinimg.com/564x/b1/34/bd/b134bd5c45fa2e8ed27377faf31cc6c3.jpg" alt="" />
         <div class="content">
             <img src="" alt="" />
             <h3>English breakfast</h3>
@@ -34,7 +36,7 @@ const Restaurant = () => {
         </div>
     </div>
     <div class="box">
-        <img class="image" src="images/s-img-2.jpg" alt="" />
+        <img class="image" src="https://i.pinimg.com/564x/00/f6/80/00f6804d68705d1de7a5745298a8ed9d.jpg" alt="" />
         <div class="content">
             <img src="images/s-2.png" alt="" />
             <h3>Continental breakfast</h3>
@@ -42,7 +44,7 @@ const Restaurant = () => {
         </div>
     </div>
     <div class="box">
-        <img class="image" src="images/s-img-3.jpg" alt="" />
+        <img class="image" src="https://i.pinimg.com/564x/ac/d4/39/acd439a3924df2e1e768499634982743.jpg" alt="" />
         <div class="content">
             <img src="" alt="" />
             <h3>American breakfast</h3>
@@ -51,7 +53,7 @@ const Restaurant = () => {
         </div>
     </div>
     <div class="box">
-        <img class="image" src="images/s-img-4.jpg" alt="" />
+        <img class="image" src="https://i.pinimg.com/564x/73/d9/e5/73d9e59f42a35de1e2514bb598ac3918.jpg" alt="" />
         <div class="content">
             <img src="images/s-4.png" alt="" />
             <h3>Buffet breakfast</h3>
@@ -60,16 +62,16 @@ const Restaurant = () => {
         </div>
     </div>
     <div class="box">
-        <img class="image" src="images/s-img-5.jpg" alt="" />
+        <img class="image" src="https://i.pinimg.com/564x/1c/aa/7a/1caa7a1861c75bb74165c78b76f4bfb5.jpg" alt="" />
         <div class="content">
-            <img src="images/s-5.png" alt="" />
+            <img src="" alt="" />
             <h3>Regional breakfast</h3>
             <h3>Ksh.1200</h3>
             <p>Other Regional Breakfast like South Indian, North Indian, Japanese, Chinese, Vietnamese etc.</p>
         </div>
     </div>
     <div class="box">
-        <img class="image" src="images/s-img-6.jpg" alt="" />
+        <img class="image" src="https://i.pinimg.com/564x/48/66/15/486615a5f3adc940fec8809a584f468a.jpg" alt="" />
         <div class="content">
             <img src="images/s-6.png" alt="" />
             <h3>Healty breakfast</h3>
@@ -91,50 +93,50 @@ const Restaurant = () => {
 <div class="box-container">
 
     <div class="box">
-        <img class="image" src="images/s-img-1.jpg" alt="" />
+        <img class="image" src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1013&q=80" alt="" />
         <div class="content">
             <img src="images/s-1.png" alt="" />
-            <h3>tasty burger</h3>
+            <h3>Chicken, tomato salad</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa tenetur voluptates aperiam tempore libero labore aut.</p>
         </div>
     </div>
     <div class="box">
-        <img class="image" src="images/s-img-2.jpg" alt="" />
+        <img class="image" src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="" />
         <div class="content">
             <img src="images/s-2.png" alt="" />
-            <h3>tasty pizza</h3>
+            <h3>Pilau</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa tenetur voluptates aperiam tempore libero labore aut.</p>
         </div>
     </div>
     <div class="box">
-        <img class="image" src="images/s-img-3.jpg" alt="" />
+        <img class="image" src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80" alt="" />
         <div class="content">
             <img src="images/s-3.png" alt="" />
-            <h3>cold ice-cream</h3>
+            <h3>Nyama Choma</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa tenetur voluptates aperiam tempore libero labore aut.</p>
         </div>
     </div>
     <div class="box">
-        <img class="image" src="images/s-img-4.jpg" alt="" />
+        <img class="image" src="https://images.unsplash.com/photo-1585238342070-61e1e768b1ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="" />
         <div class="content">
             <img src="images/s-4.png" alt="" />
-            <h3>cold drinks</h3>
+            <h3>Crispy Chicken with Soya base</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa tenetur voluptates aperiam tempore libero labore aut.</p>
         </div>
     </div>
     <div class="box">
-        <img class="image" src="images/s-img-5.jpg" alt="" />
+        <img class="image" src="https://images.unsplash.com/photo-1623243020684-9f8bcefe6e94?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" />
         <div class="content">
             <img src="images/s-5.png" alt="" />
-            <h3>tasty sweets</h3>
+            <h3>Spaghetti dish</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa tenetur voluptates aperiam tempore libero labore aut.</p>
         </div>
     </div>
     <div class="box">
-        <img class="image" src="images/s-img-6.jpg" alt="" />
+        <img class="image" src="https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="" />
         <div class="content">
             <img src="images/s-6.png" alt="" />
-            <h3>healty breakfast</h3>
+            <h3>Fish curry</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa tenetur voluptates aperiam tempore libero labore aut.</p>
         </div>
     </div>
@@ -152,8 +154,8 @@ const Restaurant = () => {
 
     <div class="box">
         <span class="price"> Ksh.200 </span>
-        <img src="https://i.pinimg.com/564x/6b/f4/b8/6bf4b83fcbb176905f99a22ce4b0bd59.jpg" alt="" />
-        <h3>Bourbon Cherry Old Fashioned</h3>
+        <img src="https://images.unsplash.com/photo-1604321115296-f4b73745c7d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="" />
+        <h3>Fig Thyme Shrub Cocktail</h3>
         <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -163,9 +165,9 @@ const Restaurant = () => {
         </div>
     </div>
     <div class="box">
-        <span class="price"> $5 - $20 </span>
-        <img src="images/p-2.jpg" alt="" />
-        <h3>tasty cakes</h3>
+    <span class="price"> Ksh.200 </span>
+        <img src="https://i.pinimg.com/564x/00/ec/f2/00ecf218ab56f2903b649ff249211778.jpg" alt="" />
+        <h3>Mango shake</h3>
         <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -175,9 +177,9 @@ const Restaurant = () => {
         </div>
     </div>
     <div class="box">
-        <span class="price"> $5 - $20 </span>
-        <img src="images/p-3.jpg" alt="" />
-        <h3>tasty sweets</h3>
+    <span class="price"> Ksh.200 </span>
+        <img src="https://i.pinimg.com/564x/ec/4e/bb/ec4ebb960ba24ef4d4dd250fe3fb1c06.jpg" alt="" />
+        <h3>Fruit smoothie</h3>
         <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -187,9 +189,9 @@ const Restaurant = () => {
         </div>
     </div>
     <div class="box">
-        <span class="price"> $5 - $20 </span>
-        <img src="images/p-4.jpg" alt="" />
-        <h3>tasty cupcakes</h3>
+    <span class="price"> Ksh.200 </span>
+        <img src="https://i.pinimg.com/564x/db/3c/ae/db3caedb553b093236303095f44c6742.jpg" alt="" />
+        <h3>Blue lagoon</h3>
         <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -199,9 +201,9 @@ const Restaurant = () => {
         </div>
     </div>
     <div class="box">
-        <span class="price"> $5 - $20 </span>
-        <img src="images/p-5.jpg" alt="" />
-        <h3>cold drinks</h3>
+    <span class="price"> Ksh.200 </span>
+        <img src="https://i.pinimg.com/564x/bb/2b/1a/bb2b1a5fb91f407455277c9465e77da6.jpg" alt="" />
+        <h3>Passion</h3>
         <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -211,9 +213,9 @@ const Restaurant = () => {
         </div>
 \    </div>
     <div class="box">
-        <span class="price"> $5 - $20 </span>
-        <img src="images/p-6.jpg" alt="" />
-        <h3>cold ice-cream</h3>
+    <span class="price"> Ksh.200 </span>
+        <img src="https://i.pinimg.com/564x/ec/7c/f8/ec7cf8c61661ff215baa3902218a9cfa.jpg" alt="" />
+        <h3>Iced lemonade</h3>
         <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -235,19 +237,18 @@ const Restaurant = () => {
 <div class="box-container">
 
     <div class="box">
-        <img src="images/g-1.jpg" alt="" />
+    <img class="image" src={KoreanFried} alt="" />
         <div class="content">
-            <h3>tasty food</h3>
+            <h3>Korean Fried Chicken</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
-            <a href="#" class="btn">ordern now</a>
         </div>
     </div>
     <div class="box">
-        <img src="images/g-2.jpg" alt="" />
+        <img src={Burger} alt="" />
         <div class="content">
-            <h3>tasty food</h3>
+            <h3>tasty burger</h3>
+            <h3>Ksh.500</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
-            <a href="#" class="btn">ordern now</a>
         </div>
     </div>
     <div class="box">
@@ -255,7 +256,6 @@ const Restaurant = () => {
         <div class="content">
             <h3>tasty food</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
-            <a href="#" class="btn">ordern now</a>
         </div>
     </div>
     <div class="box">
