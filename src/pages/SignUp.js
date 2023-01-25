@@ -3,101 +3,112 @@ import React from "react";
 function SignUp() {
   return (
     <div>
-      <section class="vh-100" style={{ backgroundColor: "black" }}>
-        <div class="container h-100">
-          <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-lg-12 col-xl-11">
-              <div class="card text-black" style={{ borderRadius: "25px" }}>
-                <div class="card-body p-md-5">
-                  <div class="row justify-content-center">
-                    <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
-                      <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
-                        Create  Account
+      <section style={{ backgroundColor: "black" }}>
+        <div className="container h-40">
+          <div className="row d-flex justify-content-center align-items-center h-50">
+            <div className="col-lg-12 col-xl-11">
+              <div className="card text-black" style={{ borderRadius: "85px" }}>
+                <div className="card-body p-md-5">
+                  <div className="row justify-content-center">
+                    <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                      <p className="text-center h1 fw-bold mb-4 mx-1 mx-md-4">
+                        Create Account
                       </p>
 
-                      <form class="mx-1 mx-md-4">
-                        <div class="d-flex flex-row align-items-center mb-4">
-                          <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                          <div class="form-outline flex-fill mb-0">
-                            <label class="form-label" for="form3Example1c">
-                              Your Name
-                            </label>
+                      <form className="mx-1 mx-md-">
+                        <div className="align-items-center mb-2">
+                          <div className="input-group"></div>
+                          <div className="form-floating rounded border border-3 border-warning">
                             <input
                               type="text"
-                              id="form3Example1c"
-                              class="form-control"
-                              placeholder="Enter your name here..."
-                              required
+                              className="form-control"
+                              id="floatingInputGroup1"
+                              placeholder="Username"
                             />
-                          </div>
-                        </div>
-
-                        <div class="d-flex flex-row align-items-center mb-4">
-                          <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                          <div class="form-outline flex-fill mb-0">
-                            <label class="form-label" for="form3Example3c">
-                              Your Email
+                            <label htmlFor="floatingInputGroup1">
+                              Username
                             </label>
-                            <input
-                              type="email"
-                              id="form3Example3c"
-                              class="form-control"
-                              placeholder="Enter your email here..."
-                              required
-                            />
                           </div>
                         </div>
 
-                        <div class="d-flex flex-row align-items-center mb-4">
-                          <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                          <div class="form-outline flex-fill mb-0">
-                            <label class="form-label" for="form3Example4c">
+                        <div className="align-items-center mb-2">
+                          <div className="input-group"></div>
+                          <div className="form-floating rounded border border-3 border-warning">
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="floatingInputGroup1"
+                              placeholder="Username"
+                            />
+                            <label htmlFor="floatingInputGroup1">Email</label>
+                          </div>
+                        </div>
+
+                        <div className="align-items-center mb-2">
+                          <div className="input-group"></div>
+                          <div className="form-floating rounded border border-3 border-warning">
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="floatingInputGroup1"
+                              placeholder="Username"
+                            />
+                            <label htmlFor="floatingInputGroup1">
                               Password
                             </label>
-                            <input
-                              type="password"
-                              id="form3Example4c"
-                              class="form-control"
-                              placeholder="Enter password"
-                              required
-                            />
                           </div>
                         </div>
 
-                        <div class="d-flex flex-row align-items-center mb-4">
-                          <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                          <div class="form-outline flex-fill mb-0">
-                            <label class="form-label" for="form3Example4cd">
-                              Repeat your password
+                        <div className="align-items-center mb-2">
+                          <div className="input-group"></div>
+                          <div className="form-floating rounded border border-3 border-warning">
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="floatingInputGroup1"
+                              placeholder="Username"
+                            />
+                            <label htmlFor="floatingInputGroup1">
+                              Confirm Password
                             </label>
-                            <input
-                              type="password"
-                              id="form3Example4cd"
-                              class="form-control"
-                              placeholder="Confirm Password"
-                              required
-                            />
                           </div>
                         </div>
 
-                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4 mt-3">
+                        <div className="d-flex justify-content-center mx-4 mb-lg-4 mt-3">
                           <button
                             type="button"
-                            class="btn btn-light btn-lg border border-info"
+                            className="rounded border border-3"
+                            style={{ backgroundColor: "#f17a12", width: "30%" }}
                           >
-                            <a className="display-none" href="/">
+                            <a className="text-decoration-none" href="/login">
                               Sign Up
                             </a>
                           </button>
                         </div>
+                        <p class="d-flex justify-content-center  pb-lg-2">
+                          Have an account?
+                          <a href="/login" style={{ color: "#f17a12" }}>
+                          <button
+                            type="button"
+                            className="rounded border border-3"
+                            style={{ backgroundColor: "#f17a12" }}
+                          >
+                            <a className="text-decoration-none" href="/">
+                              Login
+                            </a>
+                          </button>
+                          </a>
+                        </p>
                       </form>
                     </div>
-                    <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+                    <div className="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
                       <img
-                        class="img-fluid rounded-1 border border-info"
-                        src="https://images.unsplash.com/photo-1581859814481-bfd944e3122f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjE4fHxob3RlbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-                        alt="Sample image"
-                      />
+                        className="border radius-20 rounded-5 m-2"
+                        src="../m.jpg"
+                        alt=""
+                        height="430"
+                        width="500"
+                      ></img>
                     </div>
                   </div>
                 </div>

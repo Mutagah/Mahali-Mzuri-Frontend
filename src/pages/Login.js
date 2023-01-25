@@ -4,17 +4,18 @@ function Login() {
   return (
     <>
       <section class="vh-100" style={{ backgroundColor: "black" }}>
-        <div class="container py-5 h-100">
-          <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="container py-5 h-90">
+          <div class="row d-flex justify-content-center align-items-center h-90">
             <div class="col col-xl-10">
-              <div class="card" style={{ borderRadius: " 1rem" }}>
+              <div class="card" style={{ borderRadius: " 3rem" }}>
                 <div class="row g-0">
                   <div class="col-md-6 col-lg-5 d-none d-md-block">
                     <img
-                      src="https://images.unsplash.com/photo-1581859814481-bfd944e3122f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjE4fHxob3RlbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-                      alt="login form"
-                      class="img-fluid p-2 mt-2 rounded-4"
-                      style={{ borderRadius: "1rem 0 0 1rem" }}
+                      src="../m.jpg"
+                      alt="logo"
+                      class="m-4 rounded-4"
+                      height="400"
+                      width="400"
                     />
                   </div>
                   <div class="col-md-6 col-lg-7 d-flex align-items-center">
@@ -25,54 +26,61 @@ function Login() {
                             class="fas fa-cubes fa-2x me-3"
                             style={{ color: " #ff6219" }}
                           ></i>
-                          <span class="h1 fw-bold mb-0">
-                            <img src="../m.jpg" alt="" />
-                          </span>
+                          <span class="h1 fw-bold mb-0"></span>
                         </div>
 
                         <h5
                           class="d-flex justify-content-center w-normal mb-3 pb-3"
                           style={{ letterSpacing: "1px;" }}
                         >
-                          Welcome back @ username
+                          Welcome Back @ username
                         </h5>
 
-                        <div class="form-outline mb-4">
-                          <label class="form-label" for="form2Example17">
-                            Email address
-                          </label>
-                          <input
-                            type="email"
-                            id="form2Example17"
-                            class="form-control form-control-lg"
-                          />
+                        <div className="align-items-center mb-2">
+                          <div className="input-group"></div>
+                          <div className="form-floating rounded border border-3 border-warning">
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="floatingInputGroup1"
+                              placeholder="Username"
+                            />
+                            <label htmlFor="floatingInputGroup1">Email</label>
+                          </div>
                         </div>
 
-                        <div class="form-outline mb-4">
-                          <label class="form-label" for="form2Example27">
-                            Password
-                          </label>
-                          <input
-                            type="password"
-                            id="form2Example27"
-                            class="form-control form-control-lg"
-                          />
+                        <div className=" align-items-center mb-2">
+                          <div className="input-group"></div>
+                          <div
+                            className="form-floating rounded border border-3 border-warning"
+                            style={{ border: "#f17a12" }}
+                          >
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="floatingInputGroup1"
+                              placeholder="Username"
+                            />
+                            <label htmlFor="floatingInputGroup1">
+                              Password
+                            </label>
+                          </div>
                         </div>
-
-                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4 mt-3">
+                        <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4 mt-3">
                           <button
                             type="button"
-                            class="btn btn-light btn-lg border border-info"
+                            className="rounded border border-3"
+                            style={{ backgroundColor: "#f17a12", width: "30%" }}
                           >
-                            <a className="display-none" href="/">
+                            <a className="text-decoration-none" href="/">
                               Login
                             </a>
                           </button>
                         </div>
 
-                        <p class="mb-5 pb-lg-2">
+                        <p class="d-flex justify-content-center mb-5 pb-lg-2">
                           Don't have an account?
-                          <a href="/signUp" style={{ color: "#393f81" }}>
+                          <a href="/signUp" style={{ color: "#f17a12" }}>
                             Sign Up Here
                           </a>
                         </p>

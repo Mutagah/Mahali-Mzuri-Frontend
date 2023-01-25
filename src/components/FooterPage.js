@@ -3,53 +3,40 @@ import React from "react";
 function FooterPage() {
   return (
     <>
-      <footer
-        className="p-2 text-center text-reset"
-        style={{ backgroundColor: "black" }}
-      >
+      <footer className="p-2 text-center text-reset" style={{ backgroundColor: "black" }}>
         <div class="container text-center ">
           <div class="row mt-4">
             <div class="col text-center">
-              <h3 style={{ color: "white" }}>
-                <u>Quick Links</u>
-              </h3>
-              <div>
+              <h3 style={{ color: "white" }}><u>Quick Links</u></h3>
+              <div >
                 <ul>
-                  <a className="text-decoration-none" href="/">
-                    Home
-                  </a>
+                  <a className="text-decoration-none" href="/">Home</a>
                 </ul>
                 <ul>
-                  <a className="text-decoration-none" href="/services">
-                    Services
-                  </a>
+                  <a className="text-decoration-none" href="/services">Services</a>
                 </ul>
                 <ul>
-                  <a className="text-decoration-none" href="/about">
-                    About Us
-                  </a>
+                  <a className="text-decoration-none" href="/about">About Us</a>
                 </ul>
                 <ul>
-                  <a className="text-decoration-none" href="/contact">
-                    Contact
-                  </a>
+                  <a className="text-decoration-none" href="/contact">Contact</a>
                 </ul>
               </div>
             </div>
             <div class="col-6">
-              <h3 style={{ color: "white" }}>
-                <u>Get In Touch</u>
-              </h3>
+              <h3 style={{ color: "white" }}><u>Get In Touch</u></h3>
               <div>
                 <p style={{ color: "gray" }}>
                   The blissful environment adds to the premium service of our
                   hotel. <br />
-                  #Mahali Mzuri
+                 
+                    #Mahali Mzuri
+                
                 </p>
                 <form class="d-flex">
                   <input
                     type="email"
-                    class="bg-black form-control border-white border-opacity-75 text-color-white"
+                    class="bg-black form-control border-white border-opacity-75"
                     id="exampleFormControlInput1"
                     placeholder="Enter your  Email"
                   />
@@ -60,29 +47,19 @@ function FooterPage() {
               </div>
             </div>
             <div class="col">
-              <h3 style={{ color: "white" }}>
-                <u>Useful</u>
-              </h3>
+              <h3  style={{ color: "white" }}><u>Useful</u></h3>
               <div>
                 <ul>
-                  <a className="text-decoration-none" href="/privacyPolicy">
-                    Privacy Policy
-                  </a>
+                  <a className="text-decoration-none" href="/privacyPolicy">Privacy Policy</a>
                 </ul>
                 <ul>
-                  <a className="text-decoration-none" href="/legal">
-                    Legal
-                  </a>
+                  <a className="text-decoration-none" href="/legal">Legal</a>
                 </ul>
                 <ul>
-                  <a className="text-decoration-none" href="/faq">
-                    FAQ
-                  </a>
+                  <a className="text-decoration-none" href="/faq">FAQ</a>
                 </ul>
                 <ul>
-                  <a className="text-decoration-none" href="/bloga">
-                    Blogs
-                  </a>
+                  <a className="text-decoration-none" href="/bloga">Blogs</a>
                 </ul>
               </div>
             </div>
@@ -102,11 +79,12 @@ function FooterPage() {
             <div class="col pr-2 text-reset">
               <div class="text-end inline-block">
                 <a className="text-decoration-none" href="/twitter">
-                  <svg
+                  <svg 
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
                     height="16"
                     fill="currentColor"
+                    
                     class=" col bi bi-twitter"
                     viewBox="0 0 16 16"
                   >

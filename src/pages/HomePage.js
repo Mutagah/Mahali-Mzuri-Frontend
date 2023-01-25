@@ -106,20 +106,44 @@ export default function HomePage() {
         <div class="p-3 container text-center">
           <div class="row">
             <div class="col">
-            <a href="/drinks" className="p-3"> </a>
-            <a href="/drinks"> Welcome Drinks </a>
+              <a href="/drinks" className="p-3 text-decoration-none">
+                {" "}
+                🥤{" "}
+              </a>
+              <a className="text-decoration-none" href="/drinks">
+                {" "}
+                Welcome Drinks{" "}
+              </a>
             </div>
             <div class="col">
-            <a href="/drinks" className="p-3"> 🚘 </a>
-              <a href="/carRental">  Car Rental </a>
+              <a href="/drinks" className="p-3 text-decoration-none">
+                {" "}
+                🚘{" "}
+              </a>
+              <a className="text-decoration-none" href="/carRental">
+                {" "}
+                Car Rental{" "}
+              </a>
             </div>
             <div class="col">
-            <a href="/drinks" className="p-3"> 🏬 </a>
-              <a href="/drinks">  Resort & Spa </a>
+              <a href="/drinks" className="p-3 text-decoration-none">
+                {" "}
+                🏬{" "}
+              </a>
+              <a className="text-decoration-none" href="/drinks">
+                {" "}
+                Resort & Spa{" "}
+              </a>
             </div>
             <div class="col">
-            <a href="/drinks" className="p-3"> 📶 </a>
-              <a href="/drinks">  Free Wifi </a>
+              <a href="/drinks" className="p-3 text-decoration-none">
+                {" "}
+                📶{" "}
+              </a>
+              <a href="/drinks" className="text-decoration-none">
+                {" "}
+                Free Wifi{" "}
+              </a>
             </div>
           </div>
         </div>

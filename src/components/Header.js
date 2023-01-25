@@ -1,5 +1,5 @@
 import * as React from "react";
-import "../m.jpg"
+
 import {
   AppBar,
   Avatar,
@@ -48,7 +48,7 @@ export default function Header() {
             },
           }}
         >
-          <img src="../m.jpg"alt="logo"/>
+          <img src={window.location.origin + '../../public/m.jpg'} alt="logo"/>
         </IconButton>
         <Typography
           variant="h2"
