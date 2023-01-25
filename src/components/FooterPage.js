@@ -49,7 +49,7 @@ function FooterPage() {
                 <form class="d-flex">
                   <input
                     type="email"
-                    class="bg-black form-control border-white border-opacity-75"
+                    class="bg-black form-control border-white border-opacity-75 text-color-white"
                     id="exampleFormControlInput1"
                     placeholder="Enter your  Email"
                   />
