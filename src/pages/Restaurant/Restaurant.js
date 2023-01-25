@@ -40,6 +40,7 @@ const Restaurant = () => {
         <div class="content">
             <img src="images/s-2.png" alt="" />
             <h3>Continental breakfast</h3>
+            <h3>Ksh.1200</h3>
             <p>The traditional Continental BF consisted simply of hot croissant, brioche or toast, butter and preserves and coffee as the beverage. The current trend in the continental BF menu is towards offering a wider variety of choices.</p>
         </div>
     </div>
@@ -252,56 +253,56 @@ const Restaurant = () => {
         </div>
     </div>
     <div class="box">
-        <img src="images/g-3.jpg" alt="" />
+        <img src="https://images.unsplash.com/photo-1567171466295-4afa63d45416?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="" />
         <div class="content">
-            <h3>tasty food</h3>
+            <h3>Cheese cake</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
         </div>
     </div>
     <div class="box">
-        <img src="images/g-4.jpg" alt="" />
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="" />
         <div class="content">
-            <h3>tasty food</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
-            <a href="#" class="btn">ordern now</a>
-        </div>
-    </div>
-    <div class="box">
-        <img src="images/g-5.jpg" alt="" />
-        <div class="content">
-            <h3>tasty food</h3>
+            <h3>Fresh coffee</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
             <a href="#" class="btn">ordern now</a>
         </div>
     </div>
     <div class="box">
-        <img src="images/g-6.jpg" alt="" />
+        <img src="https://i.pinimg.com/564x/d3/9f/a5/d39fa514428b9703220156a4fca4c795.jpg" alt="" />
         <div class="content">
-            <h3>tasty food</h3>
+            <h3>Freakshake</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
             <a href="#" class="btn">ordern now</a>
         </div>
     </div>
     <div class="box">
-        <img src="images/g-7.jpg" alt="" />
+        <img src="https://images.unsplash.com/photo-1527678357412-ef45dfbd9ecc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="" />
         <div class="content">
-            <h3>tasty food</h3>
+            <h3>Ice coffee</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
             <a href="#" class="btn">ordern now</a>
         </div>
     </div>
     <div class="box">
-        <img src="images/g-8.jpg" alt="" />
+        <img src="https://i.pinimg.com/564x/fb/81/f0/fb81f0faf00359a2f5cc981722f0e1ec.jpg" alt="" />
         <div class="content">
-            <h3>tasty food</h3>
+            <h3>Crispy Roast Potatoes </h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
             <a href="#" class="btn">ordern now</a>
         </div>
     </div>
     <div class="box">
-        <img src="images/g-9.jpg" alt="" />
+        <img src="https://i.pinimg.com/564x/cb/cf/21/cbcf2100371cf15704345d6309b7d92a.jpg" alt="" />
         <div class="content">
-            <h3>tasty food</h3>
+            <h3>Pizza</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+            <a href="#" class="btn">ordern now</a>
+        </div>
+    </div>
+    <div class="box">
+        <img src="https://images.unsplash.com/photo-1515443961218-a51367888e4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" />
+        <div class="content">
+            <h3>Sea food</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
             <a href="#" class="btn">ordern now</a>
         </div>
