@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import ServicePage from "./pages/ServicePage";
+import Restaurant from "./pages/Restaurant/Restaurant";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 function App() {
@@ -38,6 +39,10 @@ function App() {
       path: "/contact",
       element: <ContactPage />,
     },
+    {
+      path: "/restaurant",
+      element: <Restaurant />
+    }
   ]);
   return (
     <>
