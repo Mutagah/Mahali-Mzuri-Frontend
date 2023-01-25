@@ -1,10 +1,11 @@
 import RoomPage from "./pages/RoomPage";
 import HomePage from "./pages/HomePage";
 import Header from "./components/Header";
-import AboutPage from "./pages/AboutPage";
+import AboutPage from "./pages/About/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import ServicePage from "./pages/ServicePage";
 import Restaurant from "./pages/Restaurant/Restaurant";
+import CarRentalPage from "./pages/CarRentalPage";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 function App() {
@@ -41,7 +42,11 @@ function App() {
     },
     {
       path: "/restaurant",
-      element: <Restaurant />
+      element: <Restaurant />,
+    },
+    { 
+      path: "/car-rental",
+      element: <CarRentalPage/>
     }
   ]);
   return (
