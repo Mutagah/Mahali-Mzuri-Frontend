@@ -2,6 +2,7 @@ import React from "react";
 import {
   Box,
   Button,
+  Card,
   FormControl,
   Grid,
   Input,
@@ -14,22 +15,36 @@ import {
 import Image1 from "../Images/25a157f3c7a6480a1342039369c1eb85_5.jpg";
 export default function RentalParkingPage() {
   return (
-    <main>
-      <Grid container xs={12} sx={{ backgroundColor: "#f0f0f0" }}>
-        <Grid
-          item
-          xs={10}
-          sx={{ display: "flex", marginY: "5px", justifyContent: "flex-end" }}
-        >
-          <Button
-            variant="outlined"
-            size="large"
-            href="#outlined-buttons"
-            sx={{ backgroundColor: "#f17a12", margin: "5px" }}
+    <main sx={{ backgroundColor: "#f0f0f0" }}>
+      <Grid container sx={{justifyContent:"center"}}>
+        <Grid item>
+          <Box
+            sx={{
+              marginTop: 2,
+              "&:hover": {
+                opacity: [0.9, 0.8, 0.7],
+              },
+              display: { xs: "none", md: "none", lg: "flex" },
+              justifyContent: "center",
+            }}
           >
-            Parking Services
-          </Button>
+            <Typography variant="h3">Car</Typography>
+            &nbsp; &nbsp; &nbsp;
+            <Typography
+              id="parking"
+              variant="h3"
+              sx={{
+                color: "#f17a12",
+              }}
+            >
+              Rental
+            </Typography>
+            &nbsp; &nbsp; &nbsp;
+            <Typography variant="h3">services</Typography>
+          </Box>
         </Grid>
+      </Grid>
+      <Grid container xs={12}>
         <Grid
           item
           xs={12}
@@ -144,6 +159,7 @@ export default function RentalParkingPage() {
             display: { xs: "none", md: "flex" },
             justifyContent: "center",
             alignItems: "center",
+            paddingRight: "40px",
           }}
         >
           <Box sx={{ padding: "12px" }}>
@@ -156,11 +172,13 @@ export default function RentalParkingPage() {
           sx={{
             display: "flex",
             justifyContent: "center",
+            backgroundColor: "#f0f0f0",
           }}
         >
           <Grid
             item
-            xs={2}
+            md={4}
+            lg={2}
             sx={{
               justifyContent: "center",
               marginY: "15px",
@@ -190,7 +208,8 @@ export default function RentalParkingPage() {
           </Grid>
           <Grid
             item
-            xs={2}
+            md={4}
+            lg={2}
             sx={{
               justifyContent: "center",
               marginY: "15px",
@@ -221,7 +240,8 @@ export default function RentalParkingPage() {
           </Grid>
           <Grid
             item
-            xs={2}
+            md={4}
+            lg={2}
             sx={{
               justifyContent: "center",
               marginY: "15px",
@@ -244,7 +264,8 @@ export default function RentalParkingPage() {
           </Grid>
           <Grid
             item
-            xs={2}
+            md={4}
+            lg={2}
             sx={{
               justifyContent: "center",
               marginY: "15px",
@@ -267,7 +288,8 @@ export default function RentalParkingPage() {
           </Grid>
           <Grid
             item
-            xs={2}
+            md={4}
+            lg={2}
             sx={{
               display: "flex",
               alignItems: "center",
@@ -280,12 +302,46 @@ export default function RentalParkingPage() {
               <Button
                 variant="outlined"
                 size="large"
-                sx={{ backgroundColor: "#f17a12", margin: "5px",borderRadius:"10px" }}
+                sx={{
+                  backgroundColor: "#f17a12",
+                  margin: "5px",
+                  borderRadius: "10px",
+                }}
               >
                 Search Vehicle
               </Button>
             </Box>
           </Grid>
+        </Grid>
+      </Grid>
+      <Grid
+        container
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          marginY: "10px",
+        }}
+      >
+        <Grid item xs={11} sx={{ marginY: "30px" }}>
+          <Card
+            sx={{
+              height: "500px",
+              backgroundColor: "#f0f0f0",
+              border: "5px solid #f17a12",
+              borderRadius: "50px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <Typography
+              variant="h3"
+              color="#000"
+              sx={{ textAlign: "center", justifyContent: "center" }}
+            >
+              Vehicle Cards to be displayed in here for booking purposes.
+            </Typography>
+          </Card>
         </Grid>
       </Grid>
     </main>
