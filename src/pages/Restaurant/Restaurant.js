@@ -139,6 +139,92 @@ const Restaurant = () => {
 </div>
 
 </section>
+
+
+<section class="popular" id="popular">
+
+<h1 class="heading"> most <span>popular</span> drinks </h1>
+
+<div class="box-container">
+
+    <div class="box">
+        <span class="price"> Ksh.200 </span>
+        <img src="https://i.pinimg.com/564x/6b/f4/b8/6bf4b83fcbb176905f99a22ce4b0bd59.jpg" alt="" />
+        <h3>Bourbon Cherry Old Fashioned</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+        </div>
+    </div>
+    <div class="box">
+        <span class="price"> $5 - $20 </span>
+        <img src="images/p-2.jpg" alt="" />
+        <h3>tasty cakes</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+        </div>
+    </div>
+    <div class="box">
+        <span class="price"> $5 - $20 </span>
+        <img src="images/p-3.jpg" alt="" />
+        <h3>tasty sweets</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+        </div>
+    </div>
+    <div class="box">
+        <span class="price"> $5 - $20 </span>
+        <img src="images/p-4.jpg" alt="" />
+        <h3>tasty cupcakes</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+        </div>
+    </div>
+    <div class="box">
+        <span class="price"> $5 - $20 </span>
+        <img src="images/p-5.jpg" alt="" />
+        <h3>cold drinks</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+        </div>
+\    </div>
+    <div class="box">
+        <span class="price"> $5 - $20 </span>
+        <img src="images/p-6.jpg" alt="" />
+        <h3>cold ice-cream</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+
         </div>
     );
 }
