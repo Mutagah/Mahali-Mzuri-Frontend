@@ -5,6 +5,7 @@ import {
   CardContent,
   Grid,
   IconButton,
+  Link,
   Typography,
 } from "@mui/material";
 import Image1 from "../Images/photo-1621293954908-907159247fc8.jpeg";
@@ -60,13 +61,7 @@ export default function ServicePage() {
         </Grid>
       </Grid>
       <Grid container sx={{ px: 5 }}>
-        <Grid
-          item
-          xs={12}
-          md={12}
-          lg={6}
-          sx={{ px: 3}}
-        >
+        <Grid item xs={12} md={12} lg={6} sx={{ px: 3 }}>
           <CssVarsProvider>
             <Box
               sx={{
@@ -204,7 +199,10 @@ export default function ServicePage() {
                   >
                     3
                   </IconButton>
-                  &nbsp; Car rentals & Parking Services
+                  &nbsp;{" "}
+                  <Link href="/car-rental" underline="none" sx={{ color: "#ffffff" }}>
+                    Car rentals & Parking Services
+                  </Link>
                 </Typography>
                 <CardContent
                   sx={{
@@ -233,7 +231,7 @@ export default function ServicePage() {
           sx={{
             px: 3,
             display: "flex",
-            justifyContent: "end"
+            justifyContent: "end",
           }}
         >
           <Box
@@ -251,13 +249,13 @@ export default function ServicePage() {
               alt="Mahali Mzuri"
             />
           </Box>
-            <img
-              src={Image2}
-              style={{
-                maxWidth: "50%",
-              }}
-              alt="Mahali Mzuri"
-            />
+          <img
+            src={Image2}
+            style={{
+              maxWidth: "50%",
+            }}
+            alt="Mahali Mzuri"
+          />
         </Grid>
       </Grid>
     </main>
