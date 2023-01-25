@@ -28,7 +28,7 @@ export default function HomePage() {
             type="button"
           ></button>
         </div>
-        <div className="carousel-inner" style={{ height: "450px" }}>
+        <div className="carousel-inner" style={{ height: "650px" }}>
           <div className="carousel-item active">
             <img
               alt="..."
@@ -73,8 +73,7 @@ export default function HomePage() {
                 Deepen readers understanding of the world and to empower writers
                 to share their best work and biggest ideas.
               </p>
-              {/* <p><a className="btn btn-warning mt-3" href="#">Learn More</a>
-                  </p> */}
+              
             </div>
           </div>
         </div>
