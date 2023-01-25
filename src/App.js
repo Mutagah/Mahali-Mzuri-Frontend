@@ -7,8 +7,8 @@ import ServicePage from "./pages/ServicePage";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import FooterPage from "./components/FooterPage";
-import Login from "./components/Login";
-import SignUp from "./components/SignUp";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
 
 function App() {
   const theme = createTheme({

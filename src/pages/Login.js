@@ -3,7 +3,7 @@ import React from "react";
 function Login() {
   return (
     <>
-      <section class="vh-100" style={{ backgroundColor: "#9A616D" }}>
+      <section class="vh-100" style={{ backgroundColor: "black" }}>
         <div class="container py-5 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col col-xl-10">
@@ -34,7 +34,7 @@ function Login() {
                           class="d-flex justify-content-center w-normal mb-3 pb-3"
                           style={{ letterSpacing: "1px;" }}
                         >
-                          Login To Your Account
+                          Welcome back @ username
                         </h5>
 
                         <div class="form-outline mb-4">

@@ -29,10 +29,9 @@ function FooterPage() {
                 <p>
                   The blissful environment adds to the premium service of our
                   hotel. <br />
-                  <a href="/" className="a{text-decoration: none}">
-                    {" "}
+                 
                     #Mahali Mzuri
-                  </a>
+                
                 </p>
                 <form class="d-flex">
                   <input
