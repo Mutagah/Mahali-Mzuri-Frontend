@@ -47,7 +47,7 @@ export default function Header() {
             },
           }}
         >
-          Logo design
+          <img src="../m.jpg"alt="logo"/>
         </IconButton>
         <Typography
           variant="h2"
