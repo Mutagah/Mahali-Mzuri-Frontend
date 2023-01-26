@@ -42,32 +42,46 @@ function FooterPage() {
                 </ul>
               </div>
             </div>
-            <div class="col-6">
+            <div class=" mt-3 col-6">
               <h3 style={{ color: "white" }}>
                 <u>Get In Touch</u>
               </h3>
               <div>
-                <p style={{ color: "gray" }}>
+                <p className="m-5" style={{ color: "gray-white" }}>
                   The blissful environment adds to the premium service of our
                   hotel. <br />
                   #Mahali Mzuri
                 </p>
-                <form class="d-flex">
+
+                <div class="input-group mb-3">
                   <input
                     type="email"
-                    class="bg-black form-control border-white border-opacity-75"
-                    id="exampleFormControlInput1"
+                    class="bg-black form-control  border-opacity-75 text-white"
                     placeholder="Enter your  Email"
+                    aria-label="Recipient's email"
+                    aria-describedby="basic-addon2"
+                    style={{
+                      borderColor: "#f17a12",
+                      borderWidth: "4px",
+                      borderStyle: "double"
+                    }}
                   />
-
                   <button
+                    class="input-group-text my-2 my-sm-0"
+                    id="basic-addon2"
                     type="button"
-                    className="p-2 my-2 my-sm-0 rounded"
-                    style={{ backgroundColor: "#f17a12", width: "30%" }}
+                    style={{
+                      backgroundColor: "#f17a12",
+                      width: "22%",
+                      borderColor: "#f17a12",
+                      borderWidth: "4px",
+                      fontSize: "17px",
+                      fontWeight: "bold"
+                    }}
                   >
                     Subscribe
                   </button>
-                </form>
+                </div>
               </div>
             </div>
             <div class="col">

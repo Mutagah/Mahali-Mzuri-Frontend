@@ -73,7 +73,6 @@ export default function HomePage() {
                 Deepen readers understanding of the world and to empower writers
                 to share their best work and biggest ideas.
               </p>
-              
             </div>
           </div>
         </div>
@@ -113,7 +112,11 @@ export default function HomePage() {
                   <a href="/drinks" className="p-3 text-decoration-none">
                     🥤
                   </a>
-                  <a className="text-decoration-none text-dark" href="/drinks">
+                  <a
+                    className="text-decoration-none text-dark"
+                    href="/drinks"
+                    style={{ fontSize: "17px", fontWeight: "bold" }}
+                  >
                     Welcome Drinks
                   </a>
                 </div>
@@ -128,7 +131,11 @@ export default function HomePage() {
                   <a href="/drinks" className="p-3 text-decoration-none">
                     🚘
                   </a>
-                  <a className="text-decoration-none text-body" href="/drinks">
+                  <a
+                    className="text-decoration-none text-body"
+                    href="/drinks"
+                    style={{ fontSize: "17px", fontWeight: "bold" }}
+                  >
                     Rental Cars
                   </a>
                 </div>
@@ -140,11 +147,14 @@ export default function HomePage() {
                 style={{ borderColor: "#f17a12", borderWidth: "4px" }}
               >
                 <div class="card-body">
-                  <a href="/drinks" className="p-3 text-decoration-none"
-                  >
+                  <a href="/drinks" className="p-3 text-decoration-none">
                     🏬
                   </a>
-                  <a className="text-decoration-none text-body" href="/drinks" >
+                  <a
+                    className="text-decoration-none text-body"
+                    href="/drinks"
+                    style={{ fontSize: "17px", fontWeight: "bold" }}
+                  >
                     Resort & Spa
                   </a>
                 </div>
@@ -159,7 +169,11 @@ export default function HomePage() {
                   <a href="/drinks" className="p-3 text-decoration-none">
                     📶
                   </a>
-                  <a className="text-decoration-none text-dark" href="/drinks">
+                  <a
+                    className="text-decoration-none text-dark"
+                    href="/drinks"
+                    style={{ fontSize: "17px", fontWeight: "bold" }}
+                  >
                     Free Wifi
                   </a>
                 </div>
