@@ -8,8 +8,8 @@ import {
   Link,
   Typography,
 } from "@mui/material";
-import Image1 from "../Images/photo-1621293954908-907159247fc8.jpeg";
 import Image2 from "../Images/Rectangle 3671.png";
+import Image1 from "../Images/photo-1621293954908-907159247fc8.jpeg";
 import { Experimental_CssVarsProvider as CssVarsProvider } from "@mui/material/styles";
 export default function ServicePage() {
   return (
@@ -63,17 +63,12 @@ export default function ServicePage() {
           </Box>
         </Grid>
       </Grid>
-      <Grid container sx={{ px: 5 }}>
+      <Grid container sx={{ px: 5,marginBottom:5 }}>
         <Grid item xs={12} md={12} lg={6} sx={{ px: 3 }}>
           <CssVarsProvider>
             <Box
               sx={{
                 paddingY: "20px",
-                perspective: "1000px",
-                transition: "transform 0.4s",
-                "& > div, & > div > div": {
-                  transition: "inherit",
-                },
               }}
             >
               <Card
@@ -87,7 +82,11 @@ export default function ServicePage() {
               >
                 <Typography
                   variant="h5"
-                  sx={{ paddingLeft: "10px", color: "#ffffff" }}
+                  sx={{
+                    marginTop: "15px",
+                    paddingLeft: "10px",
+                    color: "#ffffff",
+                  }}
                 >
                   <IconButton
                     sx={{ p: 2, backgroundColor: "#000", color: "#ffffff" }}
@@ -117,11 +116,6 @@ export default function ServicePage() {
             <Box
               sx={{
                 paddingY: "20px",
-                perspective: "1000px",
-                transition: "transform 0.4s",
-                "& > div, & > div > div": {
-                  transition: "inherit",
-                },
               }}
             >
               <Card
@@ -135,7 +129,11 @@ export default function ServicePage() {
               >
                 <Typography
                   variant="h5"
-                  sx={{ paddingLeft: "10px", color: "#ffffff" }}
+                  sx={{
+                    marginTop: "15px",
+                    paddingLeft: "10px",
+                    color: "#ffffff",
+                  }}
                 >
                   <IconButton
                     sx={{ p: 2, backgroundColor: "#f17a12", color: "#ffffff" }}
@@ -164,12 +162,7 @@ export default function ServicePage() {
             </Box>
             <Box
               sx={{
-                paddingY: "20px",
-                perspective: "1000px",
-                transition: "transform 0.4s",
-                "& > div, & > div > div": {
-                  transition: "inherit",
-                },
+                paddingY: "20px"
               }}
             >
               <Card
@@ -183,7 +176,11 @@ export default function ServicePage() {
               >
                 <Typography
                   variant="h5"
-                  sx={{ paddingLeft: "10px", color: "#ffffff" }}
+                  sx={{
+                    marginTop: "15px",
+                    paddingLeft: "10px",
+                    color: "#ffffff",
+                  }}
                 >
                   <IconButton
                     sx={{ p: 2, backgroundColor: "#000", color: "#fff" }}
