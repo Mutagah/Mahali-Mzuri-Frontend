@@ -1,15 +1,15 @@
+import Login from "./pages/LoginPage";
+import SignUp from "./pages/SignUpPage";
 import RoomPage from "./pages/RoomPage";
 import HomePage from "./pages/HomePage";
 import Header from "./components/Header";
-import AboutPage from "./pages/About/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import ServicePage from "./pages/ServicePage";
+import AboutPage from "./pages/About/AboutPage";
 import CarRentalPage from "./pages/CarRentalPage";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Footer from "./components/Footer";
-import Login from "./pages/LoginPage";
-import SignUp from "./pages/SignUpPage";
 
 function App() {
   const theme = createTheme({
