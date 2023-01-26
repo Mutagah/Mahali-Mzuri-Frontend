@@ -7,6 +7,7 @@ import ContactPage from "./pages/ContactPage";
 import ServicePage from "./pages/ServicePage";
 import AboutPage from "./pages/About/AboutPage";
 import CarRentalPage from "./pages/CarRentalPage";
+import RestaurantPage from "./pages/RestaurantPage/Restaurant"
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Footer from "./components/Footer";
@@ -44,8 +45,12 @@ function App() {
       element: <ContactPage />,
     },
     {
+      path: "/restaurant",
+      element: <RestaurantPage />,
+    },
+    {
       path: "/car-rental",
-      element: <CarRentalPage/>
+      element: <CarRentalPage />,
     },
     {
       path: "/login",
@@ -54,7 +59,7 @@ function App() {
     {
       path: "/signup",
       element: <SignUp />,
-    }
+    },
   ]);
   return (
     <>
