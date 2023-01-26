@@ -26,12 +26,15 @@ export default function ServicePage() {
               justifyContent: "center",
             }}
           >
-            <Typography variant="h3">Why you should</Typography>
+            <Typography variant="h3" sx={{ fontWeight: "1000" }}>
+              Why you should
+            </Typography>
             &nbsp; &nbsp; &nbsp;
             <Typography
               variant="h3"
               sx={{
                 color: "#f17a12",
+                fontWeight: "1000",
               }}
             >
               stay here
@@ -167,18 +170,6 @@ export default function ServicePage() {
                 "& > div, & > div > div": {
                   transition: "inherit",
                 },
-                // ,
-                // "&:hover": {
-                //   "& > div": {
-                //     transform: "rotateY(30deg)",
-                //     "& > div:nth-child(2)": {
-                //       transform: "scaleY(0.9) translate3d(20px, 30px, 40px)",
-                //     },
-                //     "& > div:nth-child(3)": {
-                //       transform: "translate3d(45px, 50px, 40px)",
-                //     },
-                //   },
-                // },
               }}
             >
               <Card
@@ -200,7 +191,11 @@ export default function ServicePage() {
                     3
                   </IconButton>
                   &nbsp;{" "}
-                  <Link href="/car-rental" underline="none" sx={{ color: "#ffffff" }}>
+                  <Link
+                    href="/car-rental"
+                    underline="none"
+                    sx={{ color: "#ffffff" }}
+                  >
                     Car rentals & Parking Services
                   </Link>
                 </Typography>

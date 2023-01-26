@@ -7,6 +7,10 @@ import ServicePage from "./pages/ServicePage";
 import CarRentalPage from "./pages/CarRentalPage";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Footer from "./components/Footer";
+import Login from "./pages/LoginPage";
+import SignUp from "./pages/SignUpPage";
+
 function App() {
   const theme = createTheme({
     palette: {
@@ -42,6 +46,14 @@ function App() {
     {
       path: "/car-rental",
       element: <CarRentalPage/>
+    },
+    {
+      path: "/login",
+      element: <Login />,
+    },
+    {
+      path: "/signup",
+      element: <SignUp />,
     }
   ]);
   return (
@@ -49,6 +61,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Header />
         <RouterProvider router={router} />
+        <Footer/>
       </ThemeProvider>
     </>
   );
