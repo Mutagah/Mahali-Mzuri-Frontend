@@ -250,7 +250,7 @@ export default function Header() {
         </Box>
         <IconButton sx={{ p: 0, mr: 5 }}>
           <Avatar
-            sx={{ p: 2 }}
+            sx={{ p: 4 }}
             alt="Remy Sharp"
             src="/static/images/avatar/2.jpg"
           />

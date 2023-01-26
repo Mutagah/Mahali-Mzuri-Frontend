@@ -29,7 +29,7 @@ export default function ServicePage() {
             <Typography variant="h3" sx={{ fontWeight: "1000" }}>
               Why you should
             </Typography>
-            &nbsp; &nbsp; &nbsp;
+            &nbsp;
             <Typography
               variant="h3"
               sx={{
@@ -63,7 +63,7 @@ export default function ServicePage() {
           </Box>
         </Grid>
       </Grid>
-      <Grid container sx={{ px: 5,marginBottom:5 }}>
+      <Grid container sx={{ px: 5, marginBottom: 5 }}>
         <Grid item xs={12} md={12} lg={6} sx={{ px: 3 }}>
           <CssVarsProvider>
             <Box
@@ -139,8 +139,14 @@ export default function ServicePage() {
                     sx={{ p: 2, backgroundColor: "#f17a12", color: "#ffffff" }}
                   >
                     2
-                  </IconButton>
-                  &nbsp; Restaurant Services
+                  </IconButton>{" "}
+                  <Link
+                    href="/restaurant"
+                    underline="none"
+                    sx={{ color: "#ffffff" }}
+                  >
+                    &nbsp; Restaurant Services
+                  </Link>
                 </Typography>
                 <CardContent
                   sx={{
@@ -162,7 +168,7 @@ export default function ServicePage() {
             </Box>
             <Box
               sx={{
-                paddingY: "20px"
+                paddingY: "20px",
               }}
             >
               <Card
