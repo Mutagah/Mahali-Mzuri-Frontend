@@ -27,7 +27,14 @@ export default function HomePage() {
             data-bs-target="#carouselExampleIndicators"
             type="button"
           ></button>
+          <button
+            aria-label="Slide 4"
+            data-bs-slide-to="3"
+            data-bs-target="#carouselExampleIndicators"
+            type="button"
+          ></button>
         </div>
+        
         <div className="carousel-inner" style={{ height: "650px" }}>
           <div className="carousel-item active">
             <img
@@ -50,6 +57,22 @@ export default function HomePage() {
               alt="..."
               className="d-block w-100"
               src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWwlMjByb29tfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            />
+            <div className="carousel-caption">
+              <h5>Authenticity</h5>
+              <p>
+                Deepen readers understanding of the world and to empower writers
+                to share their best work and biggest ideas.
+              </p>
+              {/* <p><a className="btn btn-warning mt-3" href="#">Learn More</a>
+                  </p> */}
+            </div>
+          </div>
+          <div className="carousel-item">
+            <img
+              alt="..."
+              className="d-block w-100"
+              src="https://images.unsplash.com/photo-1531234799389-dcb7651eb0a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE2fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
             />
             <div className="carousel-caption">
               <h5>Authenticity</h5>

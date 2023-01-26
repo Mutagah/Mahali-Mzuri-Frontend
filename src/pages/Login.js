@@ -13,9 +13,10 @@ function Login() {
                     <img
                       src="../m.jpg"
                       alt="logo"
-                      class="m-4 rounded-4"
-                      height="400"
-                      width="400"
+                      class="img-fluid m-4 rounded-4"
+                      // height="400"
+                      // width="400"
+                      style={{ maxWidth: "100%", height: "auto" }}
                     />
                   </div>
                   <div class="col-md-6 col-lg-7 d-flex align-items-center">
@@ -29,37 +30,42 @@ function Login() {
                           <span class="h1 fw-bold mb-0"></span>
                         </div>
 
-                        <h5
+                        <h4
                           class="d-flex justify-content-center w-normal mb-3 pb-3"
-                          style={{ letterSpacing: "1px;" }}
+                          style={{ letterSpacing: "2px;" }}
                         >
-                          Welcome Back @ username
-                        </h5>
+                          Welcome 
+                          <span style={{ color: " #ff6219" }}> Back </span> @
+                          username
+                        </h4>
 
                         <div className="align-items-center mb-2">
-                          <div className="input-group"></div>
-                          <div className="form-floating rounded border border-3 border-warning">
+                          <div className="form-floating rounded border border">
                             <input
                               type="text"
                               className="form-control"
                               id="floatingInputGroup1"
                               placeholder="Username"
+                              style={{
+                                borderColor: "#f17a12",
+                                borderWidth: "4px"
+                              }}
                             />
                             <label htmlFor="floatingInputGroup1">Email</label>
                           </div>
                         </div>
 
                         <div className=" align-items-center mb-2">
-                          <div className="input-group"></div>
-                          <div
-                            className="form-floating rounded border border-3 border-warning"
-                            style={{ border: "#f17a12" }}
-                          >
+                          <div className="form-floating rounded border border">
                             <input
                               type="text"
                               className="form-control"
                               id="floatingInputGroup1"
                               placeholder="Username"
+                              style={{
+                                borderColor: "#f17a12",
+                                borderWidth: "4px"
+                              }}
                             />
                             <label htmlFor="floatingInputGroup1">
                               Password
@@ -72,7 +78,10 @@ function Login() {
                             className="rounded border border-3"
                             style={{ backgroundColor: "#f17a12", width: "30%" }}
                           >
-                            <a className="text-decoration-none" href="/">
+                            <a
+                              className="text-decoration-none text-dark"
+                              href="/"
+                            >
                               Login
                             </a>
                           </button>

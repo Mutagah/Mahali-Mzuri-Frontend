@@ -49,7 +49,7 @@ export default function Header() {
           }}
         >
           <img
-            src="../m.jpg"
+            src="../logo.jpg"
             alt="logo"
             class=" rounded-4"
             height="70"

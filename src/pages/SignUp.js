@@ -11,47 +11,57 @@ function SignUp() {
                 <div className="card-body p-md-5">
                   <div className="row justify-content-center">
                     <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
-                      <p className="text-center h1 fw-bold mb-4 mx-1 mx-md-4">
-                        Create Account
-                      </p>
+                      <h5 className="text-center h1 fw-bold mb-4 mx-1 mx-md-4">
+                        Create<span style={{ color: "#f17a12" }}> Account</span>
+                      </h5>
 
                       <form className="mx-1 mx-md-">
                         <div className="align-items-center mb-2">
-                          <div className="input-group"></div>
-                          <div className="form-floating rounded border border-3 border-warning">
+                          <div className="form-floating rounded border border">
                             <input
                               type="text"
                               className="form-control"
                               id="floatingInputGroup1"
                               placeholder="Username"
+                              style={{
+                                borderColor: "#f17a12",
+                                borderWidth: "4px"
+                              }}
                             />
                             <label htmlFor="floatingInputGroup1">
+                              {" "}
                               Username
                             </label>
                           </div>
                         </div>
 
                         <div className="align-items-center mb-2">
-                          <div className="input-group"></div>
-                          <div className="form-floating rounded border border-3 border-warning">
+                        <div className="form-floating rounded border border">
                             <input
                               type="text"
                               className="form-control"
                               id="floatingInputGroup1"
                               placeholder="Username"
+                              style={{
+                                borderColor: "#f17a12",
+                                borderWidth: "4px"
+                              }}
                             />
                             <label htmlFor="floatingInputGroup1">Email</label>
                           </div>
                         </div>
 
                         <div className="align-items-center mb-2">
-                          <div className="input-group"></div>
-                          <div className="form-floating rounded border border-3 border-warning">
+                        <div className="form-floating rounded border border">
                             <input
                               type="text"
                               className="form-control"
                               id="floatingInputGroup1"
                               placeholder="Username"
+                              style={{
+                                borderColor: "#f17a12",
+                                borderWidth: "4px"
+                              }}
                             />
                             <label htmlFor="floatingInputGroup1">
                               Password
@@ -60,13 +70,16 @@ function SignUp() {
                         </div>
 
                         <div className="align-items-center mb-2">
-                          <div className="input-group"></div>
-                          <div className="form-floating rounded border border-3 border-warning">
+                        <div className="form-floating rounded border border">
                             <input
                               type="text"
                               className="form-control"
                               id="floatingInputGroup1"
                               placeholder="Username"
+                              style={{
+                                borderColor: "#f17a12",
+                                borderWidth: "4px"
+                              }}
                             />
                             <label htmlFor="floatingInputGroup1">
                               Confirm Password
@@ -80,7 +93,7 @@ function SignUp() {
                             className="rounded border border-3"
                             style={{ backgroundColor: "#f17a12", width: "30%" }}
                           >
-                            <a className="text-decoration-none" href="/login">
+                            <a className="text-decoration-none text-dark" href="/login">
                               Sign Up
                             </a>
                           </button>
@@ -88,15 +101,15 @@ function SignUp() {
                         <p class="d-flex justify-content-center  pb-lg-2">
                           Have an account?
                           <a href="/login" style={{ color: "#f17a12" }}>
-                          <button
-                            type="button"
-                            className="rounded border border-3"
-                            style={{ backgroundColor: "#f17a12" }}
-                          >
-                            <a className="text-decoration-none" href="/">
-                              Login
-                            </a>
-                          </button>
+                            <button
+                              type="button"
+                              className="rounded border border-3"
+                              style={{ backgroundColor: "#f17a12" }}
+                            >
+                              <a className="text-decoration-none text-dark" href="/login">
+                                Login
+                              </a>
+                            </button>
                           </a>
                         </p>
                       </form>
