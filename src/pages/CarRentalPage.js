@@ -16,7 +16,7 @@ import Image1 from "../Images/25a157f3c7a6480a1342039369c1eb85_5.jpg";
 export default function RentalParkingPage() {
   return (
     <main sx={{ backgroundColor: "#f0f0f0" }}>
-      <Grid container sx={{justifyContent:"center"}}>
+      <Grid container sx={{ justifyContent: "center" }}>
         <Grid item>
           <Box
             sx={{
@@ -28,19 +28,24 @@ export default function RentalParkingPage() {
               justifyContent: "center",
             }}
           >
-            <Typography variant="h3">Car</Typography>
+            <Typography variant="h3" sx={{ fontWeight: "1000" }}>
+              Car
+            </Typography>
             &nbsp; &nbsp; &nbsp;
             <Typography
               id="parking"
               variant="h3"
               sx={{
                 color: "#f17a12",
+                fontWeight: "1000",
               }}
             >
               Rental
             </Typography>
             &nbsp; &nbsp; &nbsp;
-            <Typography variant="h3">services</Typography>
+            <Typography variant="h3" sx={{ fontWeight: "1000" }}>
+              services
+            </Typography>
           </Box>
         </Grid>
       </Grid>
@@ -71,19 +76,24 @@ export default function RentalParkingPage() {
                 borderRadius: "40px",
               }}
             >
-              <Typography variant="h2">
+              <Typography variant="h2" sx={{ fontWeight: "800" }}>
                 Find, book and rent car in<br></br> easy steps
               </Typography>
               <Typography
                 variant="h5"
-                sx={{ paddingLeft: "10px", color: "#ffffff" }}
+                sx={{ paddingLeft: "10px", color: "#fff", fontWeight: "700" }}
               >
                 <IconButton
-                  sx={{ p: 2, backgroundColor: "#000", color: "#ffffff" }}
+                  sx={{
+                    p: 2,
+                    backgroundColor: "#000",
+                    color: "#ffffff",
+                    fontWeight: "700",
+                  }}
                 >
                   1
                 </IconButton>
-                &nbsp; Select location
+                &nbsp; Choose number of passengers
               </Typography>
               <Box
                 sx={{
@@ -94,10 +104,15 @@ export default function RentalParkingPage() {
               >
                 <Typography
                   variant="h5"
-                  sx={{ paddingLeft: "10px", color: "#ffffff" }}
+                  sx={{ fontWeight: "700", paddingLeft: "10px", color: "#000" }}
                 >
                   <IconButton
-                    sx={{ p: 2, backgroundColor: "#000", color: "#ffffff" }}
+                    sx={{
+                      p: 2,
+                      backgroundColor: "#000",
+                      color: "#ffffff",
+                      fontWeight: "700",
+                    }}
                   >
                     2
                   </IconButton>
@@ -113,32 +128,52 @@ export default function RentalParkingPage() {
               >
                 <Typography
                   variant="h5"
-                  sx={{ paddingLeft: "10px", color: "#ffffff" }}
+                  sx={{
+                    paddingLeft: "10px",
+                    color: "#ffffff",
+                    fontWeight: "700",
+                  }}
                 >
                   <IconButton
-                    sx={{ p: 2, backgroundColor: "#000", color: "#ffffff" }}
+                    sx={{
+                      p: 2,
+                      backgroundColor: "#000",
+                      color: "#ffffff",
+                      fontWeight: "700",
+                    }}
                   >
                     3
                   </IconButton>
                   &nbsp; Select pickup date
                 </Typography>
               </Box>
-              
-                <Typography
-                  variant="h5"
-                  sx={{ paddingLeft: "10px", color: "#ffffff" }}
+
+              <Typography
+                variant="h5"
+                sx={{ paddingLeft: "10px", color: "#000", fontWeight: "700" }}
+              >
+                <IconButton
+                  sx={{
+                    p: 2,
+                    backgroundColor: "#000",
+                    color: "#ffffff",
+                    fontWeight: "700",
+                  }}
                 >
-                  <IconButton
-                    sx={{ p: 2, backgroundColor: "#000", color: "#ffffff" }}
-                  >
-                    4
-                  </IconButton>
-                  &nbsp; Select return date
-                </Typography>
-              
+                  4
+                </IconButton>
+                &nbsp; Select return date
+              </Typography>
+
               <Typography
                 variant="h4"
-                sx={{ paddingLeft: "10px", color: "#ffffff", textAlign:"center" }}
+                sx={{
+                  paddingLeft: "10px",
+                  color: "#ffffff",
+                  textAlign: "center",
+                  fontWeight: "700",
+                  borderBottom: "5px solid black",
+                }}
               >
                 Driver can be hired on request
               </Typography>
@@ -157,7 +192,7 @@ export default function RentalParkingPage() {
           }}
         >
           <Box sx={{ padding: "12px" }}>
-            <img src={Image1} style={{ width: "860px" }} alt="Mahali Mzuri" />
+            <img src={Image1} style={{ width: "680px",height:"530px",borderRadius:"50px" }} alt="Mahali Mzuri" />
           </Box>
         </Grid>
         <Grid
@@ -185,7 +220,7 @@ export default function RentalParkingPage() {
               <Typography
                 color="#f17a12"
                 variant="h6"
-                sx={{ textAlign: "center" }}
+                sx={{ textAlign: "center", fontWeight: "600" }}
               >
                 <span style={{ color: "red" }}>*</span>
                 Number of passengers
@@ -216,7 +251,7 @@ export default function RentalParkingPage() {
               <Typography
                 color="#f17a12"
                 variant="h6"
-                sx={{ textAlign: "center" }}
+                sx={{ textAlign: "center", fontWeight: "600" }}
               >
                 <span style={{ color: "red" }}>*</span>
                 Choose destination
@@ -248,7 +283,7 @@ export default function RentalParkingPage() {
               <Typography
                 color="#f17a12"
                 variant="h6"
-                sx={{ textAlign: "center" }}
+                sx={{ textAlign: "center", fontWeight: "600" }}
               >
                 <span style={{ color: "red" }}>*</span>
                 Car pick up date
@@ -272,7 +307,7 @@ export default function RentalParkingPage() {
               <Typography
                 color="#f17a12"
                 variant="h6"
-                sx={{ textAlign: "center" }}
+                sx={{ textAlign: "center", fontWeight: "600" }}
               >
                 <span style={{ color: "red" }}>*</span>
                 Car return date
@@ -300,6 +335,7 @@ export default function RentalParkingPage() {
                   backgroundColor: "#f17a12",
                   margin: "5px",
                   borderRadius: "10px",
+                  fontWeight: "600",
                 }}
               >
                 Search Vehicle

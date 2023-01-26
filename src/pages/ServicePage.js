@@ -84,7 +84,11 @@ export default function ServicePage() {
               >
                 <Typography
                   variant="h5"
-                  sx={{ paddingLeft: "10px", color: "#ffffff" }}
+                  sx={{
+                    marginTop: "15px",
+                    paddingLeft: "10px",
+                    color: "#ffffff",
+                  }}
                 >
                   <IconButton
                     sx={{ p: 2, backgroundColor: "#000", color: "#ffffff" }}
@@ -132,7 +136,11 @@ export default function ServicePage() {
               >
                 <Typography
                   variant="h5"
-                  sx={{ paddingLeft: "10px", color: "#ffffff" }}
+                  sx={{
+                    marginTop: "15px",
+                    paddingLeft: "10px",
+                    color: "#ffffff",
+                  }}
                 >
                   <IconButton
                     sx={{ p: 2, backgroundColor: "#f17a12", color: "#ffffff" }}
@@ -166,19 +174,7 @@ export default function ServicePage() {
                 transition: "transform 0.4s",
                 "& > div, & > div > div": {
                   transition: "inherit",
-                },
-                // ,
-                // "&:hover": {
-                //   "& > div": {
-                //     transform: "rotateY(30deg)",
-                //     "& > div:nth-child(2)": {
-                //       transform: "scaleY(0.9) translate3d(20px, 30px, 40px)",
-                //     },
-                //     "& > div:nth-child(3)": {
-                //       transform: "translate3d(45px, 50px, 40px)",
-                //     },
-                //   },
-                // },
+                }
               }}
             >
               <Card
@@ -192,7 +188,11 @@ export default function ServicePage() {
               >
                 <Typography
                   variant="h5"
-                  sx={{ paddingLeft: "10px", color: "#ffffff" }}
+                  sx={{
+                    marginTop: "15px",
+                    paddingLeft: "10px",
+                    color: "#ffffff",
+                  }}
                 >
                   <IconButton
                     sx={{ p: 2, backgroundColor: "#000", color: "#fff" }}
@@ -200,7 +200,11 @@ export default function ServicePage() {
                     3
                   </IconButton>
                   &nbsp;{" "}
-                  <Link href="/car-rental" underline="none" sx={{ color: "#ffffff" }}>
+                  <Link
+                    href="/car-rental"
+                    underline="none"
+                    sx={{ color: "#ffffff" }}
+                  >
                     Car rentals & Parking Services
                   </Link>
                 </Typography>
