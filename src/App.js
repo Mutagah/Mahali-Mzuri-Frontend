@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import AboutPage from "./pages/About/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import ServicePage from "./pages/ServicePage";
+import Restaurant from "./pages/Restaurant/Restaurant";
 import CarRentalPage from "./pages/CarRentalPage";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -44,6 +45,10 @@ function App() {
       element: <ContactPage />,
     },
     {
+      path: "/restaurant",
+      element: <Restaurant />,
+    },
+    { 
       path: "/car-rental",
       element: <CarRentalPage/>
     },
