@@ -25,11 +25,86 @@ import Seafood from '/home/zamzam/Desktop/Development/PostSchoolProjects/Mahali-
 import Mango from '/home/zamzam/Desktop/Development/PostSchoolProjects/Mahali-Mzuri-Hotel/Mahali-Mzuri-Frontend/src/pages/Restaurant/images/Mango.jpeg'
 import Spaghetti from '/home/zamzam/Desktop/Development/PostSchoolProjects/Mahali-Mzuri-Hotel/Mahali-Mzuri-Frontend/src/pages/Restaurant/images/Spaghetti.jpg'
 import Fishcurry from '/home/zamzam/Desktop/Development/PostSchoolProjects/Mahali-Mzuri-Hotel/Mahali-Mzuri-Frontend/src/pages/Restaurant/images/Fishcurry.jpg'
+import Freshcoffee from'/home/zamzam/Desktop/Development/PostSchoolProjects/Mahali-Mzuri-Hotel/Mahali-Mzuri-Frontend/src/pages/Restaurant/images/Freshcoffee.jpg'
 
 const Restaurant = () => {
     return (  
         <div className="restautant">
-          <section class="home" id="home">
+
+<section class="gallery" id="gallery">
+<div class="content">
+            <h1 class="heading"> our <span> Restaurant </span> </h1>
+
+            <p>Mahali Mzuri Restaurant is one of Nairobi's most iconic food joints . Our website is a feast for the senses, including bright colors, cheeky line illustrations and mouthwatering food photography. </p>
+        </div>
+
+<h1 class="heading"> our  <span> Breakfast </span> </h1>
+
+<div class="box-container">
+
+    <div class="box">
+    <img class="image" src={English} alt="" />
+        <div class="content">
+            <h3>English Breakfast</h3>
+            <h3>Ksh.1200</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+        </div>
+    </div>
+    <div class="box">
+        <img src={Continental} alt="" />
+        <div class="content">
+            <h3>Continental Breakfast</h3>
+            <h3>Ksh.500</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+        </div>
+    </div>
+    <div class="box">
+        <img src={America} alt="" />
+        <div class="content">
+            <h3>American Breakfast</h3>
+            <h3>Ksh.500</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+        </div>
+    </div>
+    <div class="box">
+        <img src={Buffet} alt="" />
+        <div class="content">
+            <h3>Buffet Breakfast</h3>
+            <h3>Ksh.500</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+        </div>
+    </div>
+    <div class="box">
+        <img src={Regional} alt="" />
+        <div class="content">
+            <h3>Regional Breakfast</h3>
+            <h3>Ksh.500</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+        </div>
+    </div>
+    <div class="box">
+        <img src={Healthy} alt="" />
+        <div class="content">
+            <h3>Healthy Breakfast</h3>
+            <h3>Ksh.500</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+          {/* <section class="home" id="home">
 
         <div class="content">
             <h3>Mahali Mzuri Restaurant</h3>
@@ -40,9 +115,9 @@ const Restaurant = () => {
             <img src="images/home-img.png" alt="" />
         </div>
 
-     </section>
+     </section> */}
 
-
+{/* 
 <section class="speciality" id="speciality">
 
 <h1 class="heading"> our <span>Breakfast</span> </h1>
@@ -106,7 +181,7 @@ const Restaurant = () => {
 
 </div>
 
-</section>
+</section> */}
 
 
 
@@ -287,7 +362,7 @@ const Restaurant = () => {
     <div class="box">
         <img src={Coffee} alt="" />
         <div class="content">
-            <h3>Fresh coffee</h3>
+            <h3>Ice coffee</h3>
             <h3>Ksh.500</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
         </div>
@@ -301,9 +376,9 @@ const Restaurant = () => {
         </div>
     </div>
     <div class="box">
-        <img src="https://images.unsplash.com/photo-1527678357412-ef45dfbd9ecc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="" />
+        <img src={Freshcoffee} alt="" />
         <div class="content">
-            <h3>Ice coffee</h3>
+            <h3>Fresh coffee</h3>
             <h3>Ksh.500</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
         </div>
