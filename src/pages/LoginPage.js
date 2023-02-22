@@ -2,8 +2,7 @@ import React from "react";
 
 function LoginPage() {
   return (
-    <main>
-      <section class="vh-80" style={{ backgroundColor: "white" }}></section>
+    <main class="vh-80">
       <div class="container py-5 h-90">
         <div class="row d-flex justify-content-center align-items-center h-90">
           <div
@@ -16,7 +15,7 @@ function LoginPage() {
           >
             <div class="row g-0">
               <div
-                class="col-md-6 col-lg-6 d-none d-md-flex"
+                class="col-lg-6 d-none d-md-none d-lg-flex"
                 style={{ justifyContent: "center" }}
               >
                 <img
@@ -28,7 +27,7 @@ function LoginPage() {
               </div>
 
               <div
-                class="col-md-6 col-lg-6 d-flex align-items-center"
+                class="col-md-12 col-lg-6 d-flex align-items-center"
                 style={{ justifyContent: "center" }}
               >
                 <div class="card-body p-4 p-lg-5 text-black">
@@ -41,16 +40,13 @@ function LoginPage() {
                       <span class="h1 fw-bold mb-0"></span>
                     </div>
 
-                    <h1
-                      class="d-flex justify-content-center w-normal mb-3 pb-3"
-                      style={{ letterSpacing: "2px;" }}
-                    >
-                      Welcome
+                    <h2 class="d-flex justify-content-center w-normal mb-3 pb-3">
+                      Welcome,
                       <span style={{ color: " #ff6219" }}>
-                        &nbsp; back,&nbsp;
+                        &nbsp; login &nbsp;
                       </span>
-                      login here
-                    </h1>
+                      here
+                    </h2>
 
                     <div className="align-items-center mb-2 py-3">
                       <div className="form-floating rounded border border">
@@ -95,12 +91,15 @@ function LoginPage() {
                       </button>
                     </div>
 
-                    <p class="d-flex justify-content-center mb-5 pb-lg-2">
+                    <h5 class="d-flex justify-content-center mb-5 pb-lg-2">
                       Don't have an account?
-                      <a href="/signUp" style={{ color: "#f17a12" }}>
-                        &nbsp; Sign Up Here
+                      <a
+                        href="/signUp"
+                        style={{ color: "#f17a12", textDecoration: "none" }}
+                      >
+                        &nbsp; <i>Sign Up Here</i>
                       </a>
-                    </p>
+                    </h5>
                   </form>
                 </div>
               </div>
@@ -109,7 +108,7 @@ function LoginPage() {
         </div>
       </div>
 
-      <section class="vh-80" style={{ backgroundColor: "white" }}>
+      {/* <section class="vh-80" style={{ backgroundColor: "white" }}>
         <div class="container py-5 h-90">
           <div class="row d-flex justify-content-center align-items-center h-90">
             <div class="col col-xl-10">
@@ -214,7 +213,7 @@ function LoginPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }
