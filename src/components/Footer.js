@@ -10,7 +10,7 @@ function FooterPage() {
         <div class="container text-center ">
           <div class="row mt-4">
             <div class="col text-center">
-              <h3 style={{ color: "white" }}>
+              <h3 style={{ color: "#f17a12" }}>
                 <u>Quick Links</u>
               </h3>
               <div>
@@ -47,7 +47,10 @@ function FooterPage() {
                 <u>Get In Touch</u>
               </h3>
               <div>
-                <p className="m-5" style={{ color: "gray-white" }}>
+                <p
+                  className="m-5"
+                  style={{ color: "#f17a12", fontSize: "20px" }}
+                >
                   The blissful environment adds to the premium service of our
                   hotel. <br />
                   #Mahali Mzuri
@@ -63,7 +66,7 @@ function FooterPage() {
                     style={{
                       borderColor: "#f17a12",
                       borderWidth: "4px",
-                      borderStyle: "double"
+                      borderStyle: "double",
                     }}
                   />
                   <button
@@ -76,7 +79,7 @@ function FooterPage() {
                       borderColor: "#f17a12",
                       borderWidth: "4px",
                       fontSize: "17px",
-                      fontWeight: "bold"
+                      fontWeight: "bold",
                     }}
                   >
                     Subscribe
@@ -85,7 +88,7 @@ function FooterPage() {
               </div>
             </div>
             <div class="col">
-              <h3 style={{ color: "white" }}>
+              <h3 style={{ color: "#f17a12" }}>
                 <u>Useful</u>
               </h3>
               <div>

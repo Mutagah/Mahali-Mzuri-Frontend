@@ -1,4 +1,4 @@
-import Login from "./pages/LoginPage";
+import LoginPage from "./pages/LoginPage";
 import SignUp from "./pages/SignUpPage";
 import RoomPage from "./pages/RoomPage";
 import HomePage from "./pages/HomePage";
@@ -54,7 +54,7 @@ function App() {
     },
     {
       path: "/login",
-      element: <Login />,
+      element: <LoginPage />,
     },
     {
       path: "/signup",

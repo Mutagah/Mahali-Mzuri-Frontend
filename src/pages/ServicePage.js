@@ -29,7 +29,7 @@ export default function ServicePage() {
             <Typography variant="h3" sx={{ fontWeight: "1000" }}>
               Why you should
             </Typography>
-            &nbsp;
+            &nbsp; &nbsp; &nbsp;
             <Typography
               variant="h3"
               sx={{
