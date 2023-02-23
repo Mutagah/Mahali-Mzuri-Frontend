@@ -29,7 +29,6 @@ function SignUp() {
                               }}
                             />
                             <label htmlFor="floatingInputGroup1">
-                              {" "}
                               Username
                             </label>
                           </div>

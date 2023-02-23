@@ -124,14 +124,14 @@ export default function HomePage() {
           <span className="visually-hidden">Next</span>
         </button>
 
-        <div class="p-4 container text-center">
-          <div class="row">
-            <div class="col">
+        <div className="p-4 container text-center">
+          <div className="row">
+            <div className="col">
               <div
-                class="card m-3"
+                className="card m-3"
                 style={{ borderColor: "#f17a12", borderWidth: "4px" }}
               >
-                <div class="card-body">
+                <div className="card-body">
                   <a href="/drinks" className="p-3 text-decoration-none">
                     🥤
                   </a>
@@ -145,12 +145,12 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div className="col">
               <div
-                class="card m-3"
+                className="card m-3"
                 style={{ borderColor: "#f17a12", borderWidth: "4px" }}
               >
-                <div class="card-body">
+                <div className="card-body">
                   <a href="/drinks" className="p-3 text-decoration-none">
                     🚘
                   </a>
@@ -164,12 +164,12 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div className="col">
               <div
-                class="card m-3"
+                className="card m-3"
                 style={{ borderColor: "#f17a12", borderWidth: "4px" }}
               >
-                <div class="card-body">
+                <div className="card-body">
                   <a href="/drinks" className="p-3 text-decoration-none">
                     🏬
                   </a>
@@ -183,12 +183,12 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div className="col">
               <div
-                class="card m-3"
+                className="card m-3"
                 style={{ borderColor: "#f17a12", borderWidth: "4px" }}
               >
-                <div class="card-body">
+                <div className="card-body">
                   <a href="/drinks" className="p-3 text-decoration-none">
                     📶
                   </a>

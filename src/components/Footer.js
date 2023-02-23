@@ -7,9 +7,9 @@ function FooterPage() {
         className="p-2 text-center text-reset"
         style={{ backgroundColor: "black" }}
       >
-        <div class="container text-center ">
-          <div class="row mt-4">
-            <div class="col text-center">
+        <div className="container text-center ">
+          <div className="row mt-4">
+            <div className="col text-center">
               <h3 style={{ color: "#f17a12" }}>
                 <u>Quick Links</u>
               </h3>
@@ -42,7 +42,7 @@ function FooterPage() {
                 </ul>
               </div>
             </div>
-            <div class=" mt-3 col-6">
+            <div className=" mt-3 col-6">
               <h3 style={{ color: "white" }}>
                 <u>Get In Touch</u>
               </h3>
@@ -56,10 +56,10 @@ function FooterPage() {
                   #Mahali Mzuri
                 </p>
 
-                <div class="input-group mb-3">
+                <div className="input-group mb-3">
                   <input
                     type="email"
-                    class="bg-black form-control  border-opacity-75 text-white"
+                    className="bg-black form-control  border-opacity-75 text-white"
                     placeholder="Enter your  Email"
                     aria-label="Recipient's email"
                     aria-describedby="basic-addon2"
@@ -70,7 +70,7 @@ function FooterPage() {
                     }}
                   />
                   <button
-                    class="input-group-text my-2 my-sm-0"
+                    className="input-group-text my-2 my-sm-0"
                     id="basic-addon2"
                     type="button"
                     style={{
@@ -87,7 +87,7 @@ function FooterPage() {
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div className="col">
               <h3 style={{ color: "#f17a12" }}>
                 <u>Useful</u>
               </h3>
@@ -117,12 +117,12 @@ function FooterPage() {
                 </ul>
               </div>
               <div className="d-flex align-items-center">
-                <div class="text-end inline-block">
+                <div className="text-end inline-block">
                   <a className="text-decoration-none" href="/twitter">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
-                      class=" col bi bi-twitter text-white"
+                      className=" col bi bi-twitter text-white"
                       viewBox="0 0 16 16"
                       style={{ width: "12%", height: "2%" }}
                     >
@@ -130,11 +130,10 @@ function FooterPage() {
                     </svg>
                   </a>
                   <a className="text-decoration-none m-4" href="/youtube">
-                    {" "}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
-                      class=" col bi bi-youtube text-white"
+                      className=" col bi bi-youtube text-white"
                       viewBox="0 0 16 16"
                       style={{ width: "13%", height: "25%" }}
                     >
@@ -147,7 +146,7 @@ function FooterPage() {
                       // width="16"
                       // height="16"
                       fill="currentColor"
-                      class=" col bi bi-facebook text-white"
+                      className=" col bi bi-facebook text-white"
                       viewBox="0 0 16 16"
                       style={{ width: "12%" }}
                     >
@@ -161,9 +160,9 @@ function FooterPage() {
         </div>
         <hr />
 
-        <div class="container px-4 text-center">
-          <div class="row gx-5">
-            <div class="p-2">
+        <div className="container px-4 text-center">
+          <div className="row gx-5">
+            <div className="p-2">
               <p className="text-white">All Right Reserved By @Mahali Mzuri</p>
             </div>
           </div>

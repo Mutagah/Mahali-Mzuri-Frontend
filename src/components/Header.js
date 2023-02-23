@@ -50,7 +50,7 @@ export default function Header() {
           <img
             src="../logo.jpg"
             alt="logo"
-            class=" rounded-4"
+            className=" rounded-4"
             height="70"
             width="100"
           />

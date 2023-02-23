@@ -1,3 +1,16 @@
+import React from "react"
+export default function RestaurantPage(){
+    return 
+    <>
+    hello
+    </>
+}
+
+
+
+
+
+
 // import './Restaurant.css'
 // import English from './Images/English.jpeg'
 // import Continental from './Images/Continental.jpeg'

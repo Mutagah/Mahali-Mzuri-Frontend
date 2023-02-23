@@ -1,46 +1,44 @@
-import React from "react";
+import React,{useState} from "react";
 
 function LoginPage() {
+  const [loginCredential, setLoginCredentials] = useState({})
   return (
-    <main class="vh-80">
-      <div class="container py-5 h-90">
-        <div class="row d-flex justify-content-center align-items-center h-90">
+    <main className="vh-80">
+      <div className="container py-5 h-90">
+        <div className="row d-flex justify-content-center align-items-center h-90">
           <div
-            class="card"
+            className="card"
             style={{
               borderRadius: " 3rem",
               border: "5px solid #f17a12",
               backgroundColor: "#f0f0f0",
             }}
           >
-            <div class="row g-0">
+            <div className="row g-0">
               <div
-                class="col-lg-6 d-none d-md-none d-lg-flex"
+                className="col-lg-6 d-none d-md-none d-lg-flex"
                 style={{ justifyContent: "center" }}
               >
                 <img
                   src="../m.jpg"
                   alt="logo"
-                  class="img-fluid m-4 p-3 rounded-5"
+                  className="img-fluid m-4 p-3 rounded-5"
                   style={{ maxWidth: "100%", height: "auto" }}
                 />
               </div>
 
               <div
-                class="col-md-12 col-lg-6 d-flex align-items-center"
+                className="col-md-12 col-lg-6 d-flex align-items-center"
                 style={{ justifyContent: "center" }}
               >
-                <div class="card-body p-4 p-lg-5 text-black">
+                <div className="card-body p-4 p-lg-5 text-black">
                   <form>
-                    <div class="d-flex align-items-center mb-3 pb-1">
-                      <i
-                        class="fas fa-cubes fa-2x me-3"
-                        style={{ color: " #ff6219" }}
-                      ></i>
-                      <span class="h1 fw-bold mb-0"></span>
+                    <div className="d-flex align-items-center mb-3 pb-1">
+
+                      <span className="h1 fw-bold mb-0"></span>
                     </div>
 
-                    <h2 class="d-flex justify-content-center w-normal mb-3 pb-3">
+                    <h2 className="d-flex justify-content-center w-normal mb-3 pb-3">
                       Welcome,
                       <span style={{ color: " #ff6219" }}>
                         &nbsp; login &nbsp;
@@ -52,6 +50,7 @@ function LoginPage() {
                       <div className="form-floating rounded border border">
                         <input
                           type="text"
+                          onChange={(event) => console.log(event.target.value)}
                           className="form-control"
                           id="floatingInputGroup1"
                           placeholder="Username"
@@ -69,15 +68,15 @@ function LoginPage() {
                     <div className=" align-items-center mb-2 py-3">
                       <div className="form-floating rounded border border">
                         <input
-                          type="text"
+                          type="password"
                           className="form-control"
-                          id="floatingInputGroup1"
-                          placeholder="Username"
+                          data-toggle="password"
+                          placeholder="password"
                           style={{
                             borderColor: "#f17a12",
                             borderWidth: "4px",
                           }}
-                        />
+                         />
                         <label htmlFor="floatingInputGroup1">Password</label>
                       </div>
                     </div>
@@ -91,7 +90,7 @@ function LoginPage() {
                       </button>
                     </div>
 
-                    <h5 class="d-flex justify-content-center mb-5 pb-lg-2">
+                    <h5 className="d-flex justify-content-center mb-5 pb-lg-2">
                       Don't have an account?
                       <a
                         href="/signUp"
