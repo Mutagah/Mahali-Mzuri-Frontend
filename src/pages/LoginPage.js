@@ -1,30 +1,36 @@
 import React, { useState } from "react";
-
-function LoginPage({setCurrentUser}) {
+import { useNavigate } from "react-router-dom";
+function LoginPage({ setCurrentUser }) {
   const [loginId, setLoginId] = useState("");
   const [password, setPassword] = useState("");
-  const handleLoginCredentials = async (event) =>  {
+  const [error, setError] = useState([]);
+  const navigate = useNavigate();
+  const handleLoginCredentials = async (event) => {
     event.preventDefault();
     const settings = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ login_id: loginId, password: password }),
-    }
-
+      body: JSON.stringify({login_id: loginId, password: password}),
+    };
     try {
-      const fetchResponse = await fetch("http://[::1]:3000/api/v1/login",settings)
-      const data =  await fetchResponse.json()
+      const fetchResponse = await fetch(
+        "http://[::1]:3000/api/v1/login",
+        settings
+      );
+      const data = await fetchResponse.json();
+      fetchResponse.status === 401 ? 
+      setError([...error,data.error]) 
+      :
       window.localStorage.setItem("token", JSON.stringify(data.jwt));
-      setCurrentUser(data.user)
-      return data.jwt
+      setCurrentUser(data.user);
+      navigate("/")
+      return data.jwt;
+    } catch (e) {
+      return e;
     }
-      catch (e){
-        return e;
-      }
-      
-    }
+  };
   return (
     <main className="vh-80">
       <div className="container py-5 h-90">
@@ -103,6 +109,13 @@ function LoginPage({setCurrentUser}) {
                         <label htmlFor="floatingInputGroup1">Password</label>
                       </div>
                     </div>
+                    <div>
+                      {error?.length > 0 && (
+                        <ul style={{ color: "red" }}>
+                          <li>{error[0]}</li>
+                        </ul>
+                      )}
+                    </div>
                     <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4 mt-3">
                       <button
                         className="btn btn-lg border-3 my-3"
@@ -114,15 +127,6 @@ function LoginPage({setCurrentUser}) {
                       >
                         Login
                       </button>
-
-                      {/* <button
-                        type="button"
-                        className="btn btn-lg border-3 my-3"
-                        style={{ backgroundColor: "#f17a12" }}
-                        onClick={handleLoginCredentials}
-                      >
-                        Login
-                      </button> */}
                     </div>
                   </form>
                   <h5 className="d-flex justify-content-center mb-5 pb-lg-2">
