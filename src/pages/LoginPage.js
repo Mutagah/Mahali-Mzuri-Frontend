@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function LoginPage() {
+function LoginPage({setCurrentUser}) {
   const [loginId, setLoginId] = useState("");
   const [password, setPassword] = useState("");
   const handleLoginCredentials = async (event) =>  {
@@ -16,13 +16,14 @@ function LoginPage() {
     try {
       const fetchResponse = await fetch("http://[::1]:3000/api/v1/login",settings)
       const data =  await fetchResponse.json()
-      console.log(data)
-      return data
+      window.localStorage.setItem("token", JSON.stringify(data.jwt));
+      setCurrentUser(data.user)
+      return data.jwt
     }
       catch (e){
-        console.log(e)
         return e;
       }
+      
     }
   return (
     <main className="vh-80">

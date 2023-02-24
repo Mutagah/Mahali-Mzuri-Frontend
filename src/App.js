@@ -1,3 +1,4 @@
+import React,{useState} from "react";
 import LoginPage from "./pages/LoginPage";
 import SignUp from "./pages/SignUpPage";
 import RoomPage from "./pages/RoomPage";
@@ -13,6 +14,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Footer from "./components/Footer";
 
 function App() {
+  const [user, setCurrentUser] = useState({})
   const theme = createTheme({
     palette: {
       primary: {
@@ -54,7 +56,7 @@ function App() {
     },
     {
       path: "/login",
-      element: <LoginPage />,
+      element: <LoginPage setCurrentUser={setCurrentUser} />,
     },
     {
       path: "/signup",
