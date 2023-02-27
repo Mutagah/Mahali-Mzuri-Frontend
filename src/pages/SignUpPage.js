@@ -1,15 +1,18 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 function SignUp() {
-  const employees = ["Manager", "Administrator", "Room service", "Cook", "Security"];
+  const employees = ["Manager", "Administrator", "Rooms", "Cook", "Security"];
   const [signUpCredentials, setSignUpCredentials] = useState({})
+  const [errors, setErrors] = useState([])
   const [whichEmployee, setWhichEmployee] = useState("")
+  const navigate = useNavigate();
   const handleChange = (event) => {
     setSignUpCredentials({
       ...signUpCredentials,
       [event.target.name]: event.target.value,
     });
   };
- console.log(signUpCredentials)
+ console.log(errors)
   const handleSignUpCredentials = async (event) => {
     event.preventDefault();
     const settings = {
@@ -25,7 +28,10 @@ function SignUp() {
         settings
       );
       const data = await fetchResponse.json();
-      console.log(data);
+      fetchResponse.status === 422
+        ? setErrors([...data.errors])
+        : navigate("/login")
+    
     } catch (e) {
       return e;
     }
@@ -61,7 +67,7 @@ function SignUp() {
                       here
                     </h2>
 
-                    <div className="align-items-center mb-2 py-3">
+                    <div className="align-items-center mb-2 py-1">
                       <div className="form-floating rounded border border">
                         <input
                           type="text"
@@ -73,13 +79,11 @@ function SignUp() {
                             borderWidth: "4px",
                           }}
                         />
-                        <label>
-                          Email address
-                        </label>
+                        <label>Email address</label>
                       </div>
                     </div>
 
-                    <div className="align-items-center mb-2 py-3">
+                    <div className="align-items-center mb-2 py-1">
                       <div className="form-floating rounded border border">
                         <input
                           type="text"
@@ -96,7 +100,7 @@ function SignUp() {
                       </div>
                     </div>
 
-                    <div className=" align-items-center mb-2 py-3">
+                    <div className=" align-items-center mb-2 py-1">
                       <div className="form-floating rounded border border">
                         <input
                           type="password"
@@ -114,7 +118,7 @@ function SignUp() {
                       </div>
                     </div>
 
-                    <div className=" align-items-center mb-2 py-3">
+                    <div className=" align-items-center mb-2 py-1">
                       <div className="form-floating rounded border border">
                         <input
                           type="password"
@@ -132,17 +136,16 @@ function SignUp() {
                       </div>
                     </div>
                     <fieldset>
-                      <p>Select your role:</p>
+                      <h5 style={{ color: " #ff6219" }}>Select your role:</h5>
                       <div>
                         <input
                           type="radio"
                           name="role"
                           value="client"
                           onInput={(event) => {
-                            handleChange(event)
-                          setWhichEmployee("")
-                          }
-                      }
+                            handleChange(event);
+                            setWhichEmployee("");
+                          }}
                         />
                         &nbsp;
                         <label>Customer</label>
@@ -152,34 +155,47 @@ function SignUp() {
                             type="radio"
                             name="role"
                             value="selectEmployee"
-                            onInput={(event) => setWhichEmployee(event.target.value)}
+                            onInput={(event) =>
+                              setWhichEmployee(event.target.value)
+                            }
                           />
                           &nbsp;
                           <label>Employee</label>
                           <div className="ms-5">
-                            {
-                              whichEmployee === "selectEmployee" ?
-                              employees?.map((emp,index) => {return(
-                                <div class="form-check" key={index}>
-                                  <input
-                                    className="form-check-input"
-                                    type="radio"
-                                    name="role"
-                                    value={emp}
-                                    onInput={(event) => handleChange(event)}
-                                  />
-                                  <label
-                                    className="form-check-label"
-                                  >
-                                    {emp}
-                                  </label>
-                                </div>
-                               )}): " "
-                            }
+                            {whichEmployee === "selectEmployee"
+                              ? employees?.map((emp, index) => {
+                                  return (
+                                    <div className="form-check" key={index}>
+                                      <input
+                                        className="form-check-input"
+                                        type="radio"
+                                        name="role"
+                                        value={
+                                          emp.charAt(0).toLowerCase() +
+                                          emp.slice(1)
+                                        }
+                                        onInput={(event) => handleChange(event)}
+                                      />
+                                      <label className="form-check-label">
+                                        {emp}
+                                      </label>
+                                    </div>
+                                  );
+                                })
+                              : " "}
                           </div>
                         </div>
                       </div>
                     </fieldset>
+                    <div className="ms-5">
+                      {errors?.length > 0 && (
+                        <ul style={{ color: "red" }} className="fs-5">
+                          {errors.map((error) => (
+                            <li key={error}>{error}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
                     <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4 mt-3">
                       <button
                         className="btn btn-lg border-3 my-3"
