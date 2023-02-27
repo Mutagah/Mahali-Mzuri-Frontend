@@ -1,18 +1,30 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function SignUp() {
   const employees = ["Manager", "Administrator", "Rooms", "Cook", "Security"];
-  const [signUpCredentials, setSignUpCredentials] = useState({})
-  const [errors, setErrors] = useState([])
-  const [whichEmployee, setWhichEmployee] = useState("")
+  const [signUpCredentials, setSignUpCredentials] = useState({});
+  const [errors, setErrors] = useState([]);
+  const [whichEmployee, setWhichEmployee] = useState("");
   const navigate = useNavigate();
+  function navigation() {
+    navigate("/login");
+  }
+  async function notify() {
+    toast.success(
+      "You have successfully created your account, please login with details just created",
+      {
+        position: "top-center",
+      }
+    );
+  }
   const handleChange = (event) => {
     setSignUpCredentials({
       ...signUpCredentials,
       [event.target.name]: event.target.value,
     });
   };
- console.log(errors)
   const handleSignUpCredentials = async (event) => {
     event.preventDefault();
     const settings = {
@@ -28,10 +40,13 @@ function SignUp() {
         settings
       );
       const data = await fetchResponse.json();
-      fetchResponse.status === 422
-        ? setErrors([...data.errors])
-        : navigate("/login")
-    
+      if (fetchResponse.status === 422) {
+        setErrors([...data.errors]);
+      } else {
+        setErrors([]);
+         notify();
+         setTimeout(navigation, 7000);
+      }
     } catch (e) {
       return e;
     }
@@ -235,6 +250,7 @@ function SignUp() {
           </div>
         </div>
       </div>
+      <ToastContainer theme="colored" />
     </main>
   );
 }
