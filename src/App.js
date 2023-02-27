@@ -14,7 +14,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Footer from "./components/Footer";
 
 function App() {
-  const [user, setCurrentUser] = useState({})
+  const [user, setUser] = useState({})
+  function setCurrentUser(loggedInUser){
+    setUser(loggedInUser)
+  }
   const theme = createTheme({
     palette: {
       primary: {

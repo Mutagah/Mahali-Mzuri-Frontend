@@ -1,7 +1,35 @@
-import React from "react";
-
+import React, { useState } from "react";
 function SignUp() {
-
+  const employees = ["Manager", "Administrator", "Room service", "Cook", "Security"];
+  const [signUpCredentials, setSignUpCredentials] = useState({})
+  const [whichEmployee, setWhichEmployee] = useState("")
+  const handleChange = (event) => {
+    setSignUpCredentials({
+      ...signUpCredentials,
+      [event.target.name]: event.target.value,
+    });
+  };
+ console.log(signUpCredentials)
+  const handleSignUpCredentials = async (event) => {
+    event.preventDefault();
+    const settings = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(signUpCredentials),
+    };
+    try {
+      const fetchResponse = await fetch(
+        "http://[::1]:3000/api/v1/users",
+        settings
+      );
+      const data = await fetchResponse.json();
+      console.log(data);
+    } catch (e) {
+      return e;
+    }
+  };
   return (
     <main className="vh-80">
       <div className="container py-5 h-90">
@@ -20,7 +48,7 @@ function SignUp() {
                 style={{ justifyContent: "center" }}
               >
                 <div className="card-body p-4 p-lg-5 text-black">
-                  <form>
+                  <form onSubmit={handleSignUpCredentials}>
                     <div className="d-flex align-items-center mb-3 pb-1">
                       <span className="h1 fw-bold mb-0"></span>
                     </div>
@@ -38,14 +66,14 @@ function SignUp() {
                         <input
                           type="text"
                           className="form-control"
-                          name="loginId"
-                          placeholder="Username"
+                          name="email_address"
+                          onInput={(event) => handleChange(event)}
                           style={{
                             borderColor: "#f17a12",
                             borderWidth: "4px",
                           }}
                         />
-                        <label htmlFor="floatingInputGroup1">
+                        <label>
                           Email address
                         </label>
                       </div>
@@ -56,14 +84,15 @@ function SignUp() {
                         <input
                           type="text"
                           className="form-control"
-                          name="loginId"
+                          name="username"
+                          onInput={(event) => handleChange(event)}
                           placeholder="Username"
                           style={{
                             borderColor: "#f17a12",
                             borderWidth: "4px",
                           }}
                         />
-                        <label htmlFor="floatingInputGroup1">Username</label>
+                        <label>Username</label>
                       </div>
                     </div>
 
@@ -73,13 +102,15 @@ function SignUp() {
                           type="password"
                           className="form-control"
                           data-toggle="password"
+                          onInput={(event) => handleChange(event)}
+                          name="password"
                           placeholder="password"
                           style={{
                             borderColor: "#f17a12",
                             borderWidth: "4px",
                           }}
                         />
-                        <label htmlFor="floatingInputGroup1">Password</label>
+                        <label>Password</label>
                       </div>
                     </div>
 
@@ -89,16 +120,66 @@ function SignUp() {
                           type="password"
                           className="form-control"
                           data-toggle="password"
+                          onInput={(event) => handleChange(event)}
+                          name="password_confirmation"
                           placeholder="password"
                           style={{
                             borderColor: "#f17a12",
                             borderWidth: "4px",
                           }}
                         />
-                        <label htmlFor="floatingInputGroup1">Confirm password</label>
+                        <label>Confirm password</label>
                       </div>
                     </div>
-
+                    <fieldset>
+                      <p>Select your role:</p>
+                      <div>
+                        <input
+                          type="radio"
+                          name="role"
+                          value="client"
+                          onInput={(event) => {
+                            handleChange(event)
+                          setWhichEmployee("")
+                          }
+                      }
+                        />
+                        &nbsp;
+                        <label>Customer</label>
+                        &nbsp; &nbsp; &nbsp;
+                        <div>
+                          <input
+                            type="radio"
+                            name="role"
+                            value="selectEmployee"
+                            onInput={(event) => setWhichEmployee(event.target.value)}
+                          />
+                          &nbsp;
+                          <label>Employee</label>
+                          <div className="ms-5">
+                            {
+                              whichEmployee === "selectEmployee" ?
+                              employees?.map((emp,index) => {return(
+                                <div class="form-check" key={index}>
+                                  <input
+                                    className="form-check-input"
+                                    type="radio"
+                                    name="role"
+                                    value={emp}
+                                    onInput={(event) => handleChange(event)}
+                                  />
+                                  <label
+                                    className="form-check-label"
+                                  >
+                                    {emp}
+                                  </label>
+                                </div>
+                               )}): " "
+                            }
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
                     <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4 mt-3">
                       <button
                         className="btn btn-lg border-3 my-3"
