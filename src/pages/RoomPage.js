@@ -1,46 +1,106 @@
-
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 export default function RoomPage() {
-  return(
-    <>
-      <div className="container-fluid">
-        <div className="row text-center">
-          <h6>Our Rooms</h6>
+  // fetching rooms data
+  const baseUrl = "http://[::1]:3000/api/v1/room_types";
+  const [roomTypes, setRoomTypes] = useState([]);
+  useEffect(() => {
+    axios.get(baseUrl).then((response) => {
+      setRoomTypes(response.data);
+    });
+  }, []);
+  return (
+    <main>
+      <div style={{ backgroundColor: "#f0f0f0" }}>
+        <div className="row text-center py-3">
+          <h3>Our Rooms</h3>
         </div>
         <div className="row text-center">
-          <h3>A World Of <span className="text-warning">Choice</span></h3>
+          <h1 style={{ fontWeight: "700", fontSize: "bold" }}>
+            A &nbsp;
+            <span style={{ color: "#f17a12", textDecoration: "none" }}>
+              World
+            </span>
+            &nbsp; Of &nbsp;
+            <span style={{ color: "#f17a12", textDecoration: "none" }}>
+              Choice
+            </span>
+          </h1>
         </div>
         <div className="row text-center">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste esse quibusdam, assumenda, tenetur.</p>
-          <p className="my-n8">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste esse
+            quibusdam, assumenda, tenetur.
+          </p>
+          <p className="my-n8">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
         </div>
-        <div className="row">
+        <div
+          className="row mx-3"
+          style={{
+            disply: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <div className="col-md-4">
-            <div className="img-1">
-              <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlldyUyMGhvdGVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="View Hotel" />
-              <p>3 GUESTS</p>
-            </div>
-            <div className="img-2">
-              <img src="https://images.unsplash.com/photo-1593006526979-5f8814c229f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c21hbGwlMjBob3RlbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Small Room" />
-              <p>1 GUESTS</p>
-            </div>
+            {roomTypes.map((roomType, index) => {
+              if (index === 0 || index === 1) {
+                return (
+                  <div
+                    className="col-md-4 text-center"
+                  >
+                    <img
+                      className="rounded-5"
+                      src={roomType.image1}
+                      alt="View Hotel"
+                      style={{ maxHeight: "600px", maxWidth: "600px" }}
+                    />
+                    <h4>{roomType.room_type}</h4>
+                  </div>
+                );
+              }
+            })}
           </div>
           <div className="col-md-4">
-            <img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8aG90ZWwlMjByb29tfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Luxury Room" />
-            <p>6 GUESTS</p>
+            {roomTypes.map((roomType, index) => {
+              if (index === 2) {
+                return (
+                  <div className="col-md-4" style={{justifyContent:"center",display:"block"}}>
+                    <img
+                      className="rounded-5"
+                      src={roomType.image4}
+                      alt="View Hotel"
+                      style={{ maxWidth: "600px", maxHeight: "500px" }}
+                    />
+                    <p>{roomType.room_type}</p>
+                  </div>
+                );
+              }
+            })}
           </div>
           <div className="col-md-4">
-            <div className="img-4">
-              <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGhvdGVsJTIwcm9vbXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Appartment Room" />
-              <p>5 GUESTS</p>
-            </div>
-            <div className="img-5">
-              <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXBwYXJ0bWVudCUyMHJvb218ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="Medium Room" />
-              <p>4 GUESTS</p>
-            </div>
+            {roomTypes.map((roomType, index) => {
+              if (index === 3 || index === 4) {
+                return (
+                  <div
+                    className="col-md-4"
+                  >
+                    <img
+                      className="rounded-5"
+                      src={roomType.image1}
+                      alt="View Hotel"
+                      style={{ maxHeight: "600px", maxWidth: "600px" }}
+                    />
+                    <p>{roomType.room_type}</p>
+                  </div>
+                );
+              }
+            })}
           </div>
         </div>
       </div>
-    </>
-  )
+    </main>
+  );
 }

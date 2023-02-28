@@ -12,7 +12,7 @@ function LoginPage({ setCurrentUser }) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({login_id: loginId, password: password}),
+      body: JSON.stringify({ login_id: loginId, password: password }),
     };
     try {
       const fetchResponse = await fetch(
@@ -20,13 +20,16 @@ function LoginPage({ setCurrentUser }) {
         settings
       );
       const data = await fetchResponse.json();
-      fetchResponse.status === 401 ? 
-      setError([...error,data.error]) 
-      :
-      window.localStorage.setItem("token", JSON.stringify(data.jwt));
-      setCurrentUser(data.user);
-      navigate("/")
-      return data.jwt;
+      if (fetchResponse.status === 401) {
+        setError([...error, data.error]);
+      }else{
+           window.localStorage.setItem("token", JSON.stringify(data.jwt));
+           setCurrentUser(data.user);
+           navigate("/");
+      }
+
+     
+      // return data.jwt;
     } catch (e) {
       return e;
     }
