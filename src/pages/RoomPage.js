@@ -13,7 +13,7 @@ export default function RoomPage() {
     <main>
       <div style={{ backgroundColor: "#e0e0f0" }}>
         <div className="row text-center py-3">
-          <h1 style={{ fontWeight: "1200",textDecoration:"underline" }}>Our Rooms</h1>
+          <h1 style={{ fontWeight: "1200",textDecoration:"dashed underline" }}>Our Rooms</h1>
         </div>
         <div className="row text-center">
           <h1 style={{ fontWeight: "300", fontSize: "bold" }}>
