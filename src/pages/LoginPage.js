@@ -35,7 +35,7 @@ function LoginPage({ setCurrentUser }) {
     }
   };
   return (
-    <main className="vh-80">
+    <main className="vh-80" style={{backgroundColor:"#e0e0f0" }}>
       <div className="container py-5 h-90">
         <div className="row d-flex justify-content-center align-items-center h-90">
           <div

@@ -1,7 +1,7 @@
 import React from "react";
 export default function HomePage() {
   return (
-    <>
+    <main style={{ backgroundColor: "#e0e0f0" }}>
       <div
         className="carousel slide"
         data-bs-ride="carousel"
@@ -34,7 +34,7 @@ export default function HomePage() {
             type="button"
           ></button>
         </div>
-        
+
         <div className="carousel-inner" style={{ height: "650px" }}>
           <div className="carousel-item active">
             <img
@@ -205,6 +205,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-    </>
+    </main>
   );
 }
