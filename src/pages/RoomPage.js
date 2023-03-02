@@ -13,21 +13,21 @@ export default function RoomPage() {
     <main>
       <div style={{ backgroundColor: "#e0e0f0" }}>
         <div className="row text-center py-3">
-          <h1 style={{ fontWeight: "1200" }}>Our Rooms</h1>
+          <h1 style={{ fontWeight: "1200",textDecoration:"underline" }}>Our Rooms</h1>
         </div>
         <div className="row text-center">
-          <h1 style={{ fontWeight: "700", fontSize: "bold" }}>
+          <h1 style={{ fontWeight: "300", fontSize: "bold" }}>
             A &nbsp;
-            <span style={{ color: "#f17a12", textDecoration: "none" }}>
+            <i style={{ color: "#f17a12", textDecoration: "none" }}>
               World
-            </span>
+            </i>
             &nbsp; Of &nbsp;
-            <span style={{ color: "#f17a12", textDecoration: "none" }}>
+            <i style={{ color: "#f17a12", textDecoration: "none" }}>
               Choice
-            </span>
+            </i>
           </h1>
         </div>
-        <div className="row text-center">
+        {/* <div className="row text-center">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste esse
             quibusdam, assumenda, tenetur.
@@ -35,7 +35,7 @@ export default function RoomPage() {
           <p className="my-n8">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
-        </div>
+        </div> */}
         <div className="row mx-3 py-3">
           <div className="col-md-4 d-block justify-content-center">
             {roomTypes
