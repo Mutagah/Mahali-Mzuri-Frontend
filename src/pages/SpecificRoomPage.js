@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import LocalParkingRoundedIcon from "@mui/icons-material/LocalParkingRounded";
+import BlockRoundedIcon from "@mui/icons-material/BlockRounded";
+import TapasRoundedIcon from "@mui/icons-material/TapasRounded";
+import RestaurantRoundedIcon from "@mui/icons-material/RestaurantRounded";
+import AttachMoneyRoundedIcon from "@mui/icons-material/AttachMoneyRounded";
 export default function SpecificRoomPage() {
   const [roomTypeData, setRoomTypeData] = useState({});
   const params = useParams();
@@ -9,64 +14,71 @@ export default function SpecificRoomPage() {
       .then((data) => {
         setRoomTypeData(data);
       });
+    // fetch("http://[::1]:3000/api/v1/specific_rooms", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({room_type_id: `${params.id}`}),
+    // }).then((response)=> response.json()).then((data)=> console.log(data));
+    //   }
   }, [params]);
-  console.log(roomTypeData);
   return (
-    <main>
-      <div className="container-fluid" style={{ backgroundColor: "#e0e0f0" }}>
+    <main style={{ backgroundColor: "#e0e0f0" }}>
+      <div className="container-fluid py-3">
         <div className="row">
           <div className="col m-3">
-            <h2 style={{ color: "#f17a12", fontWeight: "bolder" }}>
+            <h1 style={{ color: "#f17a12", fontWeight: "bolder" }}>
               &nbsp;{roomTypeData.room_type} rooms
-            </h2>
+            </h1>
             <div className="container">
               <div className="row">
                 <div className="col">
-                  <h5
+                  <h3
                     style={{
                       fontWeight: "bold",
-                      fontSize: "20px",
+                      fontSize: "25px",
                     }}
                   >
                     Room description: &nbsp;
                     <i style={{ fontWeight: "normal" }}>
                       {roomTypeData.description}
                     </i>
-                  </h5>
+                  </h3>
                 </div>
                 <div className="row">
                   <div className="col-md-6">
-                    <h5
+                    <h3
                       style={{
                         fontWeight: "bold",
-                        fontSize: "20px",
+                        fontSize: "25px",
                       }}
                     >
                       Bedroom capacity: &nbsp;
                       <i style={{ fontWeight: "normal" }}>
                         {roomTypeData.bedroom_capacity}
                       </i>
-                    </h5>
+                    </h3>
                   </div>
                   <div className="col">
-                    <h5
+                    <h3
                       style={{
                         fontWeight: "bold",
-                        fontSize: "20px",
+                        fontSize: "25px",
                       }}
                     >
                       Number of {roomTypeData.room_type} rooms: &nbsp;
                       <i style={{ fontWeight: "normal" }}>
                         {roomTypeData.number_of_rooms}
                       </i>
-                    </h5>
+                    </h3>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="card m-5 rounded-5">
+        <div className="card my-3 mx-5 p-2 rounded-5">
           <div className="row mx-3 py-3">
             <div className="col-md-4">
               <div className="row">
@@ -112,6 +124,118 @@ export default function SpecificRoomPage() {
                     src={roomTypeData.image5}
                     alt="View Hotel"
                   />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="container my-4">
+          <div className="row">
+            <div
+              className="d-flex justify-content-around align-items-center py-1 rounded-5"
+              style={{ border: "5px solid #f17a12" }}
+            >
+              <div className="d-block px-4">
+                <div className="d-flex align-items-center justify-content-center mt-4">
+                  {roomTypeData.parking === true ? (
+                    <LocalParkingRoundedIcon style={{ fontSize: "30px" }} />
+                  ) : (
+                    <BlockRoundedIcon style={{ fontSize: "30px" }} />
+                  )}
+                </div>
+                <div className="mt-3">
+                  {roomTypeData.parking === true ? (
+                    <h5
+                      style={{ backgroundColor: "#f17a12", color: "#121212" }}
+                      className="px-3 py-1 rounded-5"
+                    >
+                      Free parking
+                    </h5>
+                  ) : (
+                    <h5
+                      style={{ backgroundColor: "#f17a12", color: "#121212" }}
+                      className="px-2 py-2 rounded-5"
+                    >
+                      No Free Parking
+                    </h5>
+                  )}
+                </div>
+              </div>
+
+              <div className="d-block px-4">
+                <div
+                  className="d-flex justify-content-center align-items-center"
+                  style={{ fontSize: "40px" }}
+                >
+                  📶
+                </div>
+                <div>
+                  <h5
+                    style={{ backgroundColor: "#f17a12", color: "#121212" }}
+                    className="px-2 py-2 rounded-5"
+                  >
+                    Free wifi
+                  </h5>
+                </div>
+              </div>
+
+              <div className="d-block px-4">
+                <div className="d-flex align-items-center justify-content-center mt-4">
+                  <TapasRoundedIcon style={{ fontSize: "30px" }} />
+                </div>
+                <div className="mt-3">
+                  {roomTypeData.parking === true ? (
+                    <h5
+                      style={{ backgroundColor: "#f17a12", color: "#121212" }}
+                      className="px-2 py-2 rounded-5"
+                    >
+                      Free snacks
+                    </h5>
+                  ) : (
+                    <h5
+                      style={{ backgroundColor: "#f17a12", color: "#121212" }}
+                      className="px-2 py-2 rounded-5"
+                    >
+                      No free snacks
+                    </h5>
+                  )}
+                </div>
+              </div>
+
+              <div className="d-block px-4">
+                <div className="d-flex align-items-center justify-content-center mt-4">
+                  <RestaurantRoundedIcon style={{ fontSize: "30px" }} />
+                </div>
+                <div className="mt-3">
+                  {roomTypeData.parking === true ? (
+                    <h5
+                      style={{ backgroundColor: "#f17a12", color: "#121212" }}
+                      className="px-2 py-2 rounded-5"
+                    >
+                      Special meal request
+                    </h5>
+                  ) : (
+                    <h5
+                      style={{ backgroundColor: "#f17a12", color: "#121212" }}
+                      className="px-2 py-2 rounded-5"
+                    >
+                      No Special meal request
+                    </h5>
+                  )}
+                </div>
+              </div>
+
+              <div className="d-block px-4">
+                <div className="d-flex align-items-center justify-content-center mt-4">
+                  <AttachMoneyRoundedIcon style={{ fontSize: "30px" }} />
+                </div>
+                <div className="mt-3">
+                  <h5
+                    style={{ backgroundColor: "#f17a12", color: "#121212" }}
+                    className="px-2 py-2 rounded-5"
+                  >
+                    {roomTypeData.price} USD
+                  </h5>
                 </div>
               </div>
             </div>

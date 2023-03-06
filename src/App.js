@@ -1,13 +1,14 @@
 import React,{useState} from "react";
 import LoginPage from "./pages/LoginPage";
 import SignUp from "./pages/SignUpPage";
-import RoomPage from "./pages/RoomPage";
+import RoomPage from "./pages/RoomPage/RoomPage";
 import HomePage from "./pages/HomePage";
 import Header from "./components/Header";
 import ContactPage from "./pages/ContactPage";
 import ServicePage from "./pages/ServicePage";
 import AboutPage from "./pages/About/AboutPage";
 import CarRentalPage from "./pages/CarRentalPage";
+import SpecificRoomPage from "./pages/SpecificRoomPage";
 import RestaurantPage from "./pages/RestaurantPage/Restaurant"
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -44,6 +45,10 @@ function App() {
     {
       path: "/rooms",
       element: <RoomPage />,
+    },
+    {
+      path: "/specific-room/:id",
+      element: <SpecificRoomPage />,
     },
     {
       path: "/contact",
