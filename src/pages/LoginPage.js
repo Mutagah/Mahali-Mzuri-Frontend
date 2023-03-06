@@ -27,9 +27,6 @@ function LoginPage({ setCurrentUser }) {
            setCurrentUser(data.user);
            navigate("/");
       }
-
-     
-      // return data.jwt;
     } catch (e) {
       return e;
     }

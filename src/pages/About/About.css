@@ -1,8 +1,8 @@
 .about{
-    background: black;
-    color: white;
+    background-color:#e0e0f0 ;
+    color: black;
     display: flex;
-    border: 3px solid orange;
+    /* border: 3px solid #f17a12; */
 }
 .about-details{
     width: 45%;

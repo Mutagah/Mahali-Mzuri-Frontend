@@ -7,6 +7,7 @@ import RestaurantRoundedIcon from "@mui/icons-material/RestaurantRounded";
 import AttachMoneyRoundedIcon from "@mui/icons-material/AttachMoneyRounded";
 export default function SpecificRoomPage() {
   const [roomTypeData, setRoomTypeData] = useState({});
+  const [numberOfRooms,setNumberOfRooms] = useState(0)
   const params = useParams();
   useEffect(() => {
     fetch(`http://localhost:3000/api/v1/room_types/${params.id}`)
@@ -14,66 +15,45 @@ export default function SpecificRoomPage() {
       .then((data) => {
         setRoomTypeData(data);
       });
-    // fetch("http://[::1]:3000/api/v1/specific_rooms", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({room_type_id: `${params.id}`}),
-    // }).then((response)=> response.json()).then((data)=> console.log(data));
-    //   }
+    fetch("http://[::1]:3000/api/v1/specific_rooms", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({room_type_id: `${params.id}`}),
+    }).then((response)=> response.json()).then((data)=> setNumberOfRooms(data.length));
+  
   }, [params]);
   return (
     <main style={{ backgroundColor: "#e0e0f0" }}>
       <div className="container-fluid py-3">
         <div className="row">
-          <div className="col m-3">
+          <div className="col m-3 d-flex justify-content-between">
             <h1 style={{ color: "#f17a12", fontWeight: "bolder" }}>
               &nbsp;{roomTypeData.room_type} rooms
             </h1>
-            <div className="container">
-              <div className="row">
-                <div className="col">
-                  <h3
-                    style={{
-                      fontWeight: "bold",
-                      fontSize: "25px",
-                    }}
-                  >
-                    Room description: &nbsp;
-                    <i style={{ fontWeight: "normal" }}>
-                      {roomTypeData.description}
-                    </i>
-                  </h3>
-                </div>
-                <div className="row">
-                  <div className="col-md-6">
-                    <h3
-                      style={{
-                        fontWeight: "bold",
-                        fontSize: "25px",
-                      }}
-                    >
-                      Bedroom capacity: &nbsp;
-                      <i style={{ fontWeight: "normal" }}>
-                        {roomTypeData.bedroom_capacity}
-                      </i>
-                    </h3>
-                  </div>
-                  <div className="col">
-                    <h3
-                      style={{
-                        fontWeight: "bold",
-                        fontSize: "25px",
-                      }}
-                    >
-                      Number of {roomTypeData.room_type} rooms: &nbsp;
-                      <i style={{ fontWeight: "normal" }}>
-                        {roomTypeData.number_of_rooms}
-                      </i>
-                    </h3>
-                  </div>
-                </div>
+            <button
+              className="btn btn-lg"
+              style={{ backgroundColor: "#f17a12" }}
+            >
+              Book room
+            </button>
+          </div>
+          <div className="container">
+            <div className="row">
+              <div className="col mx-5 ">
+                <h3
+                  className="text-center"
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: "25px",
+                  }}
+                >
+                  Room description: &nbsp;
+                  <i style={{ fontWeight: "normal" }}>
+                    {roomTypeData.description}
+                  </i>
+                </h3>
               </div>
             </div>
           </div>
@@ -126,6 +106,36 @@ export default function SpecificRoomPage() {
                   />
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+        <div className="container my-3 p-3">
+          <div className="row">
+            <div className="col-md-6">
+              <h3
+                style={{
+                  fontWeight: "bold",
+                  fontSize: "25px",
+                }}
+              >
+                Bedroom capacity: &nbsp;
+                <i style={{ fontWeight: "normal" }}>
+                  {roomTypeData.bedroom_capacity}
+                </i>
+              </h3>
+            </div>
+            <div className="col">
+              <h3
+                style={{
+                  fontWeight: "bold",
+                  fontSize: "25px",
+                }}
+              >
+                Number of {roomTypeData.room_type} rooms: &nbsp;
+                <i style={{ fontWeight: "normal" }}>
+                  {numberOfRooms}
+                </i>
+              </h3>
             </div>
           </div>
         </div>
@@ -238,6 +248,22 @@ export default function SpecificRoomPage() {
                   </h5>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="container-fluid my-5">
+          <div className="row">
+            <div className="col d-flex justify-content-center">
+              <button
+                type="button"
+                className="btn btn-lg"
+                style={{ backgroundColor: "#f17a12" }}
+                // data-bs-toggle="modal"
+                // data-bs-target="#exampleModal"
+              >
+                Book Room
+              </button>
             </div>
           </div>
         </div>
