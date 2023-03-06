@@ -18,7 +18,7 @@ export default function AboutPage() {
           escape from the hustle and bustle of everyday life, this is the
           perfect place for you.
         </p>
-        <button onClick={()=> navigate("/z")}>Explore</button>
+        <button onClick={()=> navigate("/")}>Explore</button>
       </div>
       <div className="about-imgs">
         <div
