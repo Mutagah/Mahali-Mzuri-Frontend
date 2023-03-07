@@ -46,7 +46,7 @@
 
 /* media query for mobile phones */
 
-@media (min-width:320px)  { 
+@media (min-width:320px) and (max-width:720px) { 
     .about h1{
         text-align: center;
         margin-left: 15%;
