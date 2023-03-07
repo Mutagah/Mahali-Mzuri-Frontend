@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import LocalParkingRoundedIcon from "@mui/icons-material/LocalParkingRounded";
-import BookRoom from "../components/BookRoom/BookRoom"
+import BookRoom from "../components/BookRoom/BookRoom.js"
 import BlockRoundedIcon from "@mui/icons-material/BlockRounded";
 import TapasRoundedIcon from "@mui/icons-material/TapasRounded";
 import RestaurantRoundedIcon from "@mui/icons-material/RestaurantRounded";
