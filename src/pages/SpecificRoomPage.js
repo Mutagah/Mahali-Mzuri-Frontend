@@ -1,14 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import LocalParkingRoundedIcon from "@mui/icons-material/LocalParkingRounded";
+import BookRoom from "../components/BookRoom/BookRoom"
 import BlockRoundedIcon from "@mui/icons-material/BlockRounded";
 import TapasRoundedIcon from "@mui/icons-material/TapasRounded";
 import RestaurantRoundedIcon from "@mui/icons-material/RestaurantRounded";
 import AttachMoneyRoundedIcon from "@mui/icons-material/AttachMoneyRounded";
 export default function SpecificRoomPage() {
-  const [roomTypeData, setRoomTypeData] = useState({});
-  const [numberOfRooms,setNumberOfRooms] = useState(0)
   const params = useParams();
+  const [show, setShow] = useState(false)
+  const [roomTypeData, setRoomTypeData] = useState({});
+  const [unbookedRooms,setUnbookedRooms] = useState([]);
+  function handleShow(){
+    setShow(true)
+  }
+  function handleClose() {
+    setShow(false);
+  }
   useEffect(() => {
     fetch(`http://localhost:3000/api/v1/room_types/${params.id}`)
       .then((response) => response.json())
@@ -21,9 +29,10 @@ export default function SpecificRoomPage() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({room_type_id: `${params.id}`}),
-    }).then((response)=> response.json()).then((data)=> setNumberOfRooms(data.length));
+    }).then((response)=> response.json()).then((data)=> setUnbookedRooms(data));
   
   }, [params]);
+
   return (
     <main style={{ backgroundColor: "#e0e0f0" }}>
       <div className="container-fluid py-3">
@@ -34,10 +43,12 @@ export default function SpecificRoomPage() {
             </h1>
             <button
               className="btn btn-lg"
+              onClick={handleShow}
               style={{ backgroundColor: "#f17a12" }}
             >
               Book room
             </button>
+            <BookRoom show={show} handleClose={handleClose} roomType={roomTypeData.room_type} unbookedRooms={unbookedRooms}/>
           </div>
           <div className="container">
             <div className="row">
@@ -132,9 +143,7 @@ export default function SpecificRoomPage() {
                 }}
               >
                 Number of {roomTypeData.room_type} rooms: &nbsp;
-                <i style={{ fontWeight: "normal" }}>
-                  {numberOfRooms}
-                </i>
+                <i style={{ fontWeight: "normal" }}>{unbookedRooms.length}</i>
               </h3>
             </div>
           </div>
@@ -259,6 +268,7 @@ export default function SpecificRoomPage() {
                 type="button"
                 className="btn btn-lg"
                 style={{ backgroundColor: "#f17a12" }}
+                onClick={handleShow}
                 // data-bs-toggle="modal"
                 // data-bs-target="#exampleModal"
               >

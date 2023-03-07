@@ -4,8 +4,7 @@ import "./About.css";
 export default function AboutPage() {
   const navigate = useNavigate()
   return (
-    
-    <div className="about ">
+    <div className="about">
       <div className="about-details">
         <h1>ABOUT US</h1>
         <p>

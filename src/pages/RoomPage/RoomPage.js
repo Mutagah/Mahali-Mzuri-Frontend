@@ -15,18 +15,7 @@ export default function RoomPage() {
   return (
     <main>
       <div className="container-fluid" style={{ backgroundColor: "#e0e0f0" }}>
-        <div className="row text-center py-3">
-          <h1
-            style={{
-              fontWeight: "bolder",
-              textDecoration: "dashed underline",
-              textDecorationColor: "#f17a12",
-            }}
-          >
-            Our Rooms
-          </h1>
-        </div>
-        <div className="row text-center">
+        <div className="row text-center py-2">
           <h1 style={{ fontWeight: "bold" }}>
             A &nbsp;
             <i style={{ color: "#f17a12", textDecoration: "none" }}>World</i>
@@ -34,7 +23,7 @@ export default function RoomPage() {
             <i style={{ color: "#f17a12", textDecoration: "none" }}>Choice</i>
           </h1>
         </div>
-        <div className="row  py-3">
+        <div className="row  pb-2">
           {roomTypes.map((roomType, index) => {
             return (
               <div className="col-md-4 col-sm-6" key={index}>
