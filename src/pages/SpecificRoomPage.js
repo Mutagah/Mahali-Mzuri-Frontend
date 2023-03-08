@@ -1,22 +1,32 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import LocalParkingRoundedIcon from "@mui/icons-material/LocalParkingRounded";
-import BookRoom from "../components/BookRoom/BookRoom.js"
-import BlockRoundedIcon from "@mui/icons-material/BlockRounded";
 import TapasRoundedIcon from "@mui/icons-material/TapasRounded";
+import BlockRoundedIcon from "@mui/icons-material/BlockRounded";
+import BookRoom from "../components/BookRoomModal/BookRoomModal.js";
 import RestaurantRoundedIcon from "@mui/icons-material/RestaurantRounded";
 import AttachMoneyRoundedIcon from "@mui/icons-material/AttachMoneyRounded";
+import LocalParkingRoundedIcon from "@mui/icons-material/LocalParkingRounded";
 export default function SpecificRoomPage() {
   const params = useParams();
-  const navigate = useNavigate()
-  const [show, setShowBookModal] = useState(false)
+  const navigate = useNavigate();
+  const [show, setShowBookModal] = useState(false);
+  const [userId, setUserId] = useState(0);
   const [roomTypeData, setRoomTypeData] = useState({});
-  const [unbookedRooms,setUnbookedRooms] = useState([]);
-  function handleShow(){
-     window.localStorage.getItem("token") === null
-       ? setShowBookModal(true)
-       : 
-       navigate("/login")
+  const [unbookedRooms, setUnbookedRooms] = useState([]);
+  const token = JSON.parse(localStorage.getItem("token"));
+  function handleShow() {
+    if (window.localStorage.getItem("token") === null) {
+      navigate("/login");
+    } else {
+      fetch("http://[::1]:3000/api/v1/user_profiles/1", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => setUserId(data.user["id"]));
+      setShowBookModal(true);
+    }
   }
   function handleClose() {
     setShowBookModal(false);
@@ -32,9 +42,10 @@ export default function SpecificRoomPage() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({room_type_id: `${params.id}`}),
-    }).then((response)=> response.json()).then((data)=> setUnbookedRooms(data));
-  
+      body: JSON.stringify({ room_type_id: `${params.id}` }),
+    })
+      .then((response) => response.json())
+      .then((data) => setUnbookedRooms(data));
   }, [params]);
 
   return (
@@ -52,7 +63,6 @@ export default function SpecificRoomPage() {
             >
               Book room
             </button>
-            <BookRoom show={show} handleClose={handleClose} roomType={roomTypeData.room_type} unbookedRooms={unbookedRooms}/>
           </div>
           <div className="container">
             <div className="row">
@@ -282,6 +292,13 @@ export default function SpecificRoomPage() {
           </div>
         </div>
       </div>
+      <BookRoom
+        handleClose={handleClose}
+        roomType={roomTypeData.room_type}
+        show={show}
+        unbookedRooms={unbookedRooms}
+        userId={userId}
+      />
     </main>
   );
 }
