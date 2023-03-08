@@ -1,17 +1,25 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "./RoomPage.css"
+import "./RoomPage.css";
+import LoginorSignupModal from "../../components/LoginorSignupModal";
 import React, { useEffect, useState } from "react";
 export default function RoomPage() {
   // fetching rooms data
   const baseUrl = "http://[::1]:3000/api/v1/room_types";
   const [roomTypes, setRoomTypes] = useState([]);
-  const navigate = useNavigate()
+  const [show, setShowLogInorSignUpModal] = useState(false);
+  const navigate = useNavigate();
   useEffect(() => {
     axios.get(baseUrl).then((response) => {
       setRoomTypes(response.data);
     });
   }, []);
+  // function handleRoomClick(index){
+  //    window.localStorage.getItem("token") === null ? setShowLogInorSignUpModal(true): navigate(`/specific-room/${index + 1}`)
+  // }
+  function handleClose() {
+    setShowLogInorSignUpModal(false);
+  }
   return (
     <main>
       <div className="container-fluid" style={{ backgroundColor: "#e0e0f0" }}>
@@ -34,7 +42,11 @@ export default function RoomPage() {
                     cursor: "pointer",
                     overflowY: "scroll",
                   }}
-                  onClick={() => navigate(`/specific-room/${index + 1}`)}
+                  onClick={() =>
+                    window.localStorage.getItem("token") === null
+                      ? setShowLogInorSignUpModal(true)
+                      : navigate(`/specific-room/${index + 1}`)
+                  }
                 >
                   <img
                     className="card-img-top px-4 pt-4 rounded-5 img-fluid"
@@ -55,7 +67,11 @@ export default function RoomPage() {
                         style={{
                           backgroundColor: "#f17a12",
                         }}
-                        onClick={() => navigate(`/specific-room/${index + 1}`)}
+                        onClick={() =>
+                          window.localStorage.getItem("token") === null
+                            ? setShowLogInorSignUpModal(true)
+                            : navigate(`/specific-room/${index + 1}`)
+                        }
                       >
                         View rooms
                       </button>
@@ -67,6 +83,7 @@ export default function RoomPage() {
           })}
         </div>
       </div>
+      <LoginorSignupModal show={show} handleClose={handleClose} />
     </main>
   );
 }

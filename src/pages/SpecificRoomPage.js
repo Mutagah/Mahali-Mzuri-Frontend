@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import LocalParkingRoundedIcon from "@mui/icons-material/LocalParkingRounded";
 import BookRoom from "../components/BookRoom/BookRoom.js"
 import BlockRoundedIcon from "@mui/icons-material/BlockRounded";
@@ -8,14 +8,18 @@ import RestaurantRoundedIcon from "@mui/icons-material/RestaurantRounded";
 import AttachMoneyRoundedIcon from "@mui/icons-material/AttachMoneyRounded";
 export default function SpecificRoomPage() {
   const params = useParams();
-  const [show, setShow] = useState(false)
+  const navigate = useNavigate()
+  const [show, setShowBookModal] = useState(false)
   const [roomTypeData, setRoomTypeData] = useState({});
   const [unbookedRooms,setUnbookedRooms] = useState([]);
   function handleShow(){
-    setShow(true)
+     window.localStorage.getItem("token") === null
+       ? setShowBookModal(true)
+       : 
+       navigate("/login")
   }
   function handleClose() {
-    setShow(false);
+    setShowBookModal(false);
   }
   useEffect(() => {
     fetch(`http://localhost:3000/api/v1/room_types/${params.id}`)

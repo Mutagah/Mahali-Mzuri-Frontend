@@ -14,7 +14,7 @@ export default function BookRoom({
       <Modal
         show={show}
         onHide={handleClose}
-        style={{ marginTop: "100px"}}
+        style={{ marginTop: "100px" }}
         scrollable={true}
       >
         <Modal.Header style={{ backgroundColor: "#e0e0f0" }} closeButton>
@@ -22,7 +22,10 @@ export default function BookRoom({
             <h4 style={{ color: "#f17a12" }}>{roomType} room booking</h4>
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body className="example" style={{ backgroundColor: "#e0e0f0",maxHeight:"400px" }}>
+        <Modal.Body
+          className="example"
+          style={{ backgroundColor: "#e0e0f0", maxHeight: "400px" }}
+        >
           <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label style={{ fontSize: "18px", fontWeight: 2000 }}>
@@ -37,7 +40,7 @@ export default function BookRoom({
                   maxHeight: "100px",
                 }}
               >
-                {unbookedRooms.map((room, index) => (
+                {unbookedRooms?.map((room, index) => (
                   <option
                     key={index}
                     className="rounded-5 my-2"
