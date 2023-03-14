@@ -10,6 +10,35 @@ export default function BookRoom({
   userId,
 }) {
   const [mobileNumber, setPhoneNumber] = useState("");
+  const [roomId, setRoomId] = useState([]);
+  function handleRoomId(event) {
+    // setRoomId([...roomId, event.target.value]);
+    // roomId.push(event.target.value);
+    console.log(event.target.value);
+  }
+  // console.log(roomId);
+  // const [roomSelectOption, setRoomSelectOption] = useState({});
+  // function handleRoomsSelect(event) {
+  //   // if event.target.name === room_id
+  //   setRoomSelectOption({
+  //     ...roomSelectOption,
+  //     [event.target.name]: event.target.value,
+  //   });
+  // }
+  // console.log(unbookedRooms);
+
+  // Logic for handling rooms
+
+  // 1. Take the room_ids and store them in an array
+  // 2. According to the size of the above created array for each value in the array, create an object that will have all other details created in the roomBooking details together with this unique room_id
+  // 3. Sending the details to the backend >>
+
+  // a. The payment is done first via mpesa then later you create all relevant details in the UserRoomBooking details.
+
+  // b. The logic >> Post the mpesa details and if and only if it is successful then you create the user room booking details. The amount and phone number go first >> The room details follow.
+
+  //  NB: Amount will only total when you have selected all rooms
+
   return (
     <>
       <Modal
@@ -40,6 +69,7 @@ export default function BookRoom({
                   border: "2px solid black",
                   maxHeight: "100px",
                 }}
+                onSelect={(event) => handleRoomId(event)}
               >
                 {unbookedRooms?.map((room, index) => (
                   <option
@@ -51,8 +81,9 @@ export default function BookRoom({
                       fontSize: "18px",
                       fontWeight: 300,
                       border: "1px dotted #f17a12",
+                      backgroundColor: "orange",
                     }}
-                    value={room.room_number}
+                    value={room.id}
                   >
                     {room.room_number}
                   </option>
