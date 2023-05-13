@@ -117,77 +117,61 @@ export default function HomePage() {
         <div className="row">
           <div className="col">
             <div
-              className="card m-3"
+              className="card m-1"
               style={{ borderColor: "#f17a12", borderWidth: "4px" }}
             >
               <div className="card-body">
-                <a href="/drinks" className="p-3 text-decoration-none">
-                  🥤
-                </a>
-                <a
+                <Typography sx={{ fontSize: "20px" }}>🥤</Typography>
+                <Typography
                   className="text-decoration-none text-dark"
-                  href="/drinks"
-                  style={{ fontSize: "17px", fontWeight: "bold" }}
+                  style={{ fontSize: "20px", fontWeight: "bold" }}
                 >
-                  Welcome Drinks
-                </a>
+                  Free Welcome Drinks
+                </Typography>
               </div>
             </div>
           </div>
           <div className="col">
             <div
-              className="card m-3"
+              className="card m-1"
               style={{ borderColor: "#f17a12", borderWidth: "4px" }}
             >
               <div className="card-body">
-                <a href="/drinks" className="p-3 text-decoration-none">
-                  🚘
-                </a>
-                <a
-                  className="text-decoration-none text-body"
-                  href="/drinks"
-                  style={{ fontSize: "17px", fontWeight: "bold" }}
-                >
-                  Rental Cars
-                </a>
+                <Typography sx={{ fontSize: "20px" }}>🚘</Typography>
+                <Typography style={{ fontSize: "20px", fontWeight: "bold" }}>
+                  Rental Car services
+                </Typography>
               </div>
             </div>
           </div>
           <div className="col">
             <div
-              className="card m-3"
+              className="card m-1"
               style={{ borderColor: "#f17a12", borderWidth: "4px" }}
             >
               <div className="card-body">
-                <a href="/drinks" className="p-3 text-decoration-none">
-                  🏬
-                </a>
-                <a
-                  className="text-decoration-none text-body"
-                  href="/drinks"
-                  style={{ fontSize: "17px", fontWeight: "bold" }}
-                >
+                <Typography sx={{ fontSize: "20px" }}>🏬</Typography>
+                <Typography style={{ fontSize: "20px", fontWeight: "bold" }}>
                   Resort & Spa
-                </a>
+                </Typography>
               </div>
             </div>
           </div>
           <div className="col">
             <div
-              className="card m-3"
+              className="card m-1"
               style={{ borderColor: "#f17a12", borderWidth: "4px" }}
             >
               <div className="card-body">
-                <a href="/drinks" className="p-3 text-decoration-none">
+                <Typography sx={{fontSize:"20px"}}>
                   📶
-                </a>
-                <a
+                </Typography>
+                <Typography
                   className="text-decoration-none text-dark"
-                  href="/drinks"
-                  style={{ fontSize: "17px", fontWeight: "bold" }}
+                  style={{ fontSize: "20px", fontWeight: "bold" }}
                 >
                   Free Wifi
-                </a>
+                </Typography>
               </div>
             </div>
           </div>
