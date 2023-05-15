@@ -1,9 +1,6 @@
 import * as React from "react";
 import { useTheme } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import MobileStepper from "@mui/material/MobileStepper";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
+import { Box, Button, MobileStepper, Typography } from "@mui/material";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import SwipeableViews from "react-swipeable-views";
@@ -163,9 +160,7 @@ export default function HomePage() {
               style={{ borderColor: "#f17a12", borderWidth: "4px" }}
             >
               <div className="card-body">
-                <Typography sx={{fontSize:"20px"}}>
-                  📶
-                </Typography>
+                <Typography sx={{ fontSize: "20px" }}>📶</Typography>
                 <Typography
                   className="text-decoration-none text-dark"
                   style={{ fontSize: "20px", fontWeight: "bold" }}

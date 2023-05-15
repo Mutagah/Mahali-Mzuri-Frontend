@@ -8,8 +8,8 @@ import {
   Link,
   Typography,
 } from "@mui/material";
-import Image2 from "../Images/Rectangle 3671.png";
-import Image1 from "../Images/photo-1621293954908-907159247fc8.jpeg";
+import Image2 from "../../Images/Rectangle 3671.png";
+import Image1 from "../../Images/photo-1621293954908-907159247fc8.jpeg";
 import { Experimental_CssVarsProvider as CssVarsProvider } from "@mui/material/styles";
 export default function ServicePage() {
   return (
@@ -72,12 +72,14 @@ export default function ServicePage() {
               }}
             >
               <Card
+                className="example"
                 variant="outlined"
                 sx={{
                   height: "250px",
                   backgroundColor: "#f17a12",
                   border: "2px solid",
                   overflowY: "scroll",
+                  borderRadius: "20px",
                 }}
               >
                 <Typography
@@ -119,12 +121,14 @@ export default function ServicePage() {
               }}
             >
               <Card
+                className="example"
                 variant="outlined"
                 sx={{
                   height: "250px",
                   backgroundColor: "#000",
                   border: "2px solid",
                   overflowY: "scroll",
+                  borderRadius: "20px",
                 }}
               >
                 <Typography
@@ -172,12 +176,14 @@ export default function ServicePage() {
               }}
             >
               <Card
+                className="example"
                 variant="outlined"
                 sx={{
                   height: "250px",
                   backgroundColor: "#f17a12",
                   border: "2px solid",
                   overflowY: "scroll",
+                  borderRadius: "20px",
                 }}
               >
                 <Typography
