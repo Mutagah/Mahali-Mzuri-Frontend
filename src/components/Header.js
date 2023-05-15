@@ -156,9 +156,6 @@ export default function Header() {
               <MenuItem onClick={handleCloseNavMenu}>
                 <Typography textAlign="center">Rooms</Typography>
               </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">Contact</Typography>
-              </MenuItem>
             </Menu>
           </IconButton>
         </Box>
@@ -230,21 +227,6 @@ export default function Header() {
           >
             <Link href="/rooms" underline="none" sx={{ color: "#ffffff" }}>
               Rooms
-            </Link>
-          </Button>
-          <Button
-            onClick={handleCloseNavMenu}
-            sx={{
-              my: 2,
-              px: 2,
-              color: "white",
-              display: "block",
-              fontSize: 17,
-              fontWeight: 600,
-            }}
-          >
-            <Link href="contact" underline="none" sx={{ color: "#ffffff" }}>
-              Contact
             </Link>
           </Button>
           <Button

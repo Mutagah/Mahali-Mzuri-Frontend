@@ -41,6 +41,7 @@ export default function RoomPage() {
                     maxHeight: "350px",
                     cursor: "pointer",
                     overflowY: "scroll",
+                    border: "5px solid #f17a12",
                   }}
                   onClick={() =>
                     window.localStorage.getItem("token") === null

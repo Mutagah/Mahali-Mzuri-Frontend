@@ -11,7 +11,7 @@ function SignUp() {
   function navigation() {
     navigate("/login");
   }
-  async function notify() {
+   function notify() {
     toast.success(
       "You have successfully created your account, please login with details just created",
       {

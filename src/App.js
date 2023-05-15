@@ -4,8 +4,7 @@ import SignUp from "./pages/SignUpPage";
 import RoomPage from "./pages/RoomPage/RoomPage";
 import HomePage from "./pages/HomePage";
 import Header from "./components/Header";
-import ContactPage from "./pages/ContactPage";
-import ServicePage from "./pages/ServicePage";
+import ServicePage from "./pages/ServicePage/ServicePage";
 import AboutPage from "./pages/About/AboutPage";
 import CarRentalPage from "./pages/CarRentalPage";
 import SpecificRoomPage from "./pages/SpecificRoomPage";
@@ -49,10 +48,6 @@ function App() {
     {
       path: "/specific-room/:id",
       element: <SpecificRoomPage />,
-    },
-    {
-      path: "/contact",
-      element: <ContactPage />,
     },
     {
       path: "/restaurant",
