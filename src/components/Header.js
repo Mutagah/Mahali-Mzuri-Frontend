@@ -1,5 +1,4 @@
-import * as React from "react";
-
+import React,{useState} from "react"
 import {
   AppBar,
   Avatar,
@@ -15,7 +14,8 @@ import {
 import { styled } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
 export default function Header() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = useState(null);
+
   const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     alignItems: "flex-start",
     paddingTop: theme.spacing(1),
@@ -109,56 +109,79 @@ export default function Header() {
         >
           Mahali Mzuri
         </Typography>
+
         <Box
           sx={{
-            mt: 3,
-            mr: 12,
             flexGrow: 1,
+            alignItems: "center",
+            marginRight: "10px",
             display: { xs: "flex", md: "flex", lg: "none" },
+            // position: "relative",
           }}
         >
           <IconButton
+            id="demo-positioned-menu"
             size="large"
             aria-label="account of current user"
-            aria-controls="menu-appbar"
+            aria-controls={
+              Boolean(anchorElNav) ? "demo-positioned-menu" : undefined
+            }
             aria-haspopup="true"
+            aria-expanded={Boolean(anchorElNav) ? "true" : undefined}
             onClick={handleOpenNavMenu}
             color="inherit"
           >
             <MenuIcon />
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "none", md: "block" },
-              }}
-            >
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">Home</Typography>
+          </IconButton>
+          <Menu
+            anchorEl={anchorElNav}
+            anchorOrigin={{
+              vertical: "bottom",
+              horizontal: "left",
+            }}
+            keepMounted
+            transformOrigin={{
+              vertical: "top",
+              horizontal: "left",
+            }}
+            open={Boolean(anchorElNav)}
+            onClose={handleCloseNavMenu}
+            sx={{
+              display: { xs: "block", md: "block",lg:"none" },
+              // position: "absolute",
+              // marginLeft:"200px"
+            }}
+          >
+            <MenuItem onClick={handleCloseNavMenu}>
+              <Link href="/" underline="none">
+                Home
+              </Link>
+            </MenuItem>
+            <MenuItem onClick={handleCloseNavMenu}>
+              <Link href="/services" underline="none">
+                Services
+              </Link>
+            </MenuItem>
+            {/* <MenuItem onClick={handleCloseNavMenu}>
+                <Typography textAlign="center">
+                  <Link href="/" underline="none">Home</Link>
+                </Typography>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">Services</Typography>
+                <Typography textAlign="center">
+                  <Link href="/services" underline="none">Services</Link>
+                </Typography>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
                 <Typography textAlign="center">About</Typography>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
                 <Typography textAlign="center">Rooms</Typography>
-              </MenuItem>
-            </Menu>
-          </IconButton>
+              </MenuItem> */}
+          </Menu>
+          {/* </IconButton> */}
         </Box>
+
         <Box
           sx={{
             flexGrow: 1,

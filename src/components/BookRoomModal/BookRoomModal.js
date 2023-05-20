@@ -8,37 +8,43 @@ export default function BookRoom({
   show,
   unbookedRooms,
   userId,
+  roomTypeData,
 }) {
   const [mobileNumber, setPhoneNumber] = useState("");
-  const [roomId, setRoomId] = useState([]);
-  function handleRoomId(event) {
-    // setRoomId([...roomId, event.target.value]);
-    // roomId.push(event.target.value);
-    console.log(event.target.value);
+  const [userRoomBookingDetails, setUserRoomBookingDetails] = useState({});
+  //  Write an async function that will send payment to mpesa and if the payment is successful then the user room booking details should be updated to the backend.
+  function mpesaPayment() {
+    const paymentSettings = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        phoneNumber: mobileNumber.substring(1),
+        amount: `${roomTypeData.price * 150}`}
+      ),
+    };
+   const mpesaResponse = fetch("https://e390-197-232-61-194.ngrok-free.app/stkpush",paymentSettings);
+    console.log(paymentSettings)
   }
-  // console.log(roomId);
-  // const [roomSelectOption, setRoomSelectOption] = useState({});
-  // function handleRoomsSelect(event) {
-  //   // if event.target.name === room_id
-  //   setRoomSelectOption({
-  //     ...roomSelectOption,
-  //     [event.target.name]: event.target.value,
-  //   });
-  // }
-  // console.log(unbookedRooms);
 
-  // Logic for handling rooms
-
-  // 1. Take the room_ids and store them in an array
-  // 2. According to the size of the above created array for each value in the array, create an object that will have all other details created in the roomBooking details together with this unique room_id
-  // 3. Sending the details to the backend >>
-
-  // a. The payment is done first via mpesa then later you create all relevant details in the UserRoomBooking details.
-
-  // b. The logic >> Post the mpesa details and if and only if it is successful then you create the user room booking details. The amount and phone number go first >> The room details follow.
-
-  //  NB: Amount will only total when you have selected all rooms
-
+  function handleUserRoomBookingDetails(event) {
+    if (
+      event.target.name === "room_id" ||
+      event.target.name === "number_of_adults" ||
+      event.target.name === "number_of_kids"
+    ) {
+      setUserRoomBookingDetails({
+        ...userRoomBookingDetails,
+        [event.target.name]: parseInt(event.target.value),
+      });
+    } else {
+      setUserRoomBookingDetails({
+        ...userRoomBookingDetails,
+        [event.target.name]: event.target.value,
+      });
+    }
+  }
   return (
     <>
       <Modal
@@ -62,14 +68,14 @@ export default function BookRoom({
                 Select your room(s)
               </Form.Label>
               <Form.Select
+                name="room_id"
                 className="example"
-                multiple
                 style={{
                   backgroundColor: "#e0e0f0",
                   border: "2px solid black",
                   maxHeight: "100px",
                 }}
-                onSelect={(event) => handleRoomId(event)}
+                onClick={(event) => handleUserRoomBookingDetails(event)}
               >
                 {unbookedRooms?.map((room, index) => (
                   <option
@@ -89,9 +95,6 @@ export default function BookRoom({
                   </option>
                 ))}
               </Form.Select>
-              <Form.Text className="text-muted d-flex justify-content-center">
-                Hold control to select more than one room.
-              </Form.Text>
             </Form.Group>
 
             <div className="container">
@@ -101,7 +104,12 @@ export default function BookRoom({
                     <Form.Label className="d-flex justify-content-center">
                       Number of Adults
                     </Form.Label>
-                    <Form.Control type="number" style={{ maxWidth: "150px" }} />
+                    <Form.Control
+                      type="number"
+                      name="number_of_adults"
+                      style={{ maxWidth: "150px" }}
+                      onChange={(event) => handleUserRoomBookingDetails(event)}
+                    />
                   </Form.Group>
                 </div>
                 <div className="col-6 d-flex justify-content-center align-items-center">
@@ -109,7 +117,12 @@ export default function BookRoom({
                     <Form.Label className="d-flex justify-content-center">
                       Number of Kids
                     </Form.Label>
-                    <Form.Control type="number" style={{ maxWidth: "150px" }} />
+                    <Form.Control
+                      type="number"
+                      name="number_of_kids"
+                      style={{ maxWidth: "150px" }}
+                      onChange={(event) => handleUserRoomBookingDetails(event)}
+                    />
                   </Form.Group>
                 </div>
               </div>
@@ -117,13 +130,21 @@ export default function BookRoom({
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Booking date</Form.Label>
-              <Form.Control type="datetime-local" />
+              <Form.Control
+                type="datetime-local"
+                name="booking_date"
+                onChange={(event) => handleUserRoomBookingDetails(event)}
+              />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label className="d-flex justify-content-end">
                 Checkout date
               </Form.Label>
-              <Form.Control type="datetime-local" />
+              <Form.Control
+                type="datetime-local"
+                name="check_out_date"
+                onChange={(event) => handleUserRoomBookingDetails(event)}
+              />
             </Form.Group>
 
             <div className="d-flex justify-content-center">
@@ -134,7 +155,7 @@ export default function BookRoom({
                 <Form.Control
                   placeholder="Disabled input"
                   className="d-flex justify-content-center"
-                  value={10}
+                  value={roomTypeData.price * 150}
                   style={{ maxWidth: "250px" }}
                   disabled
                 />
@@ -148,6 +169,7 @@ export default function BookRoom({
             <div className="mb-5 d-flex justify-content-center">
               <PhoneInput
                 international
+                name="phoneNumber"
                 defaultCountry="KE"
                 style={{ marginY: "20px", height: 20 }}
                 value={mobileNumber}
@@ -160,7 +182,7 @@ export default function BookRoom({
           className="d-flex justify-content-between"
           style={{ backgroundColor: "#e0e0f0" }}
         >
-          <Button type="submit" style={{ backgroundColor: "#f17a12" }}>
+          <Button onClick={() => mpesaPayment()} style={{ backgroundColor: "#f17a12" }}>
             Pay with Mpesa
           </Button>
           <Button variant="secondary" onClick={handleClose}>

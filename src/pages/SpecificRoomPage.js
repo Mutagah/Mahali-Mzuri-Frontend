@@ -283,8 +283,6 @@ export default function SpecificRoomPage() {
                 className="btn btn-lg"
                 style={{ backgroundColor: "#f17a12" }}
                 onClick={handleShow}
-                // data-bs-toggle="modal"
-                // data-bs-target="#exampleModal"
               >
                 Book Room
               </button>
@@ -298,6 +296,7 @@ export default function SpecificRoomPage() {
         show={show}
         unbookedRooms={unbookedRooms}
         userId={userId}
+        roomTypeData = {roomTypeData}
       />
     </main>
   );

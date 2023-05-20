@@ -11,7 +11,7 @@ function SignUp() {
   function navigation() {
     navigate("/login");
   }
-   function notify() {
+  function notify() {
     toast.success(
       "You have successfully created your account, please login with details just created",
       {
@@ -44,15 +44,15 @@ function SignUp() {
         setErrors([...data.errors]);
       } else {
         setErrors([]);
-         notify();
-         setTimeout(navigation, 7000);
+        notify();
+        setTimeout(navigation, 7000);
       }
     } catch (e) {
       return e;
     }
   };
   return (
-    <main className="vh-80" style={{backgroundColor:"#e0e0f0"}}>
+    <main className="vh-80" style={{ backgroundColor: "#e0e0f0" }}>
       <div className="container py-5 h-90">
         <div className="row d-flex justify-content-center align-items-center h-90">
           <div
