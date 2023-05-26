@@ -256,6 +256,7 @@
 //     </AppBar>
 //   );
 // }
+
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -297,24 +298,27 @@ function Header() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography>
+          <IconButton
+          size="large"
+          edge="start"
+          color="inherit"
+          aria-label="open drawer"
+          sx={{
+            mr: 2,
+            display: {
+              xs: "none",
+              md: "flex",
+            },
+          }}
+        >
+          <img
+            src="../logo.jpg"
+            alt="logo"
+            className=" rounded-4"
+            height="70"
+            width="100"
+          />
+        </IconButton>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -352,7 +356,6 @@ function Header() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -369,7 +372,13 @@ function Header() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+          <img
+            src="../logo.jpg"
+            alt="logo"
+            className=" rounded-4"
+            height="70"
+            width="100"
+          />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
