@@ -51,7 +51,7 @@ export default function RoomPage() {
                 >
                   <img
                     className="card-img-top px-4 pt-4 rounded-5 img-fluid"
-                    src={roomType.image1}
+                    src={roomType.image2}
                     alt="View Hotel"
                     style={{ maxHeight: "300px" }}
                   />
