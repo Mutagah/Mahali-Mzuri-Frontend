@@ -13,7 +13,7 @@ export default function BookRoom({
   const [mobileNumber, setPhoneNumber] = useState("");
   const [userRoomBookingDetails, setUserRoomBookingDetails] = useState({});
   //  Write an async function that will send payment to mpesa and if the payment is successful then the user room booking details should be updated to the backend.
-  function mpesaPayment() {
+  async function mpesaPayment() {
     const paymentSettings = {
       method: "POST",
       headers: {
@@ -21,11 +21,16 @@ export default function BookRoom({
       },
       body: JSON.stringify({
         phoneNumber: mobileNumber.substring(1),
-        amount: `${roomTypeData.price * 150}`}
+        amount: `1`}
       ),
     };
-   const mpesaResponse = fetch("https://e390-197-232-61-194.ngrok-free.app/stkpush",paymentSettings);
-    console.log(paymentSettings)
+   const mpesaResponse = await fetch(
+     "https://c895-197-232-61-242.ngrok-free.app/stkpush",
+     paymentSettings
+   );
+   const data = await mpesaResponse.json();
+   console.log(data.CustomerMessage)
+   
   }
 
   function handleUserRoomBookingDetails(event) {
