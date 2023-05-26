@@ -1,4 +1,4 @@
-import React,{useState} from "react"
+import React, { useState } from "react";
 import {
   AppBar,
   Avatar,
@@ -9,7 +9,7 @@ import {
   MenuItem,
   Toolbar,
   IconButton,
-  Typography
+  Typography,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -22,8 +22,8 @@ export default function Header() {
     paddingBottom: theme.spacing(2),
     // Override media queries injected by theme.mixins.toolbar
     "@media all": {
-      minHeight: 128
-    }
+      minHeight: 128,
+    },
   }));
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -147,7 +147,7 @@ export default function Header() {
             open={Boolean(anchorElNav)}
             onClose={handleCloseNavMenu}
             sx={{
-              display: { xs: "block", md: "block",lg:"none" },
+              display: { xs: "block", md: "block", lg: "none" },
               // position: "absolute",
               // marginLeft:"200px"
             }}
