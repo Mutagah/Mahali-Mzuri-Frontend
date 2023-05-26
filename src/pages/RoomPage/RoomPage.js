@@ -5,7 +5,7 @@ import LoginorSignupModal from "../../components/LoginorSignupModal";
 import React, { useEffect, useState } from "react";
 export default function RoomPage() {
   // fetching rooms data
-  const baseUrl = "http://[::1]:3000/api/v1/room_types";
+  const baseUrl = "https://mahali-mzuri-api.onrender.com/api/v1/room_types";
   const [roomTypes, setRoomTypes] = useState([]);
   const [show, setShowLogInorSignUpModal] = useState(false);
   const navigate = useNavigate();
