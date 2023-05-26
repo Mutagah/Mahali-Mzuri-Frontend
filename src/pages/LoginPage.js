@@ -16,7 +16,7 @@ function LoginPage({ setCurrentUser }) {
     };
     try {
       const fetchResponse = await fetch(
-        "http://[::1]:3000/api/v1/login",
+        "https://mahali-mzuri-api.onrender.com/api/v1/login",
         settings
       );
       const data = await fetchResponse.json();

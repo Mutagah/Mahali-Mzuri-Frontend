@@ -18,7 +18,7 @@ export default function SpecificRoomPage() {
     if (window.localStorage.getItem("token") === null) {
       navigate("/login");
     } else {
-      fetch("http://[::1]:3000/api/v1/user_profiles/1", {
+      fetch("https://mahali-mzuri-api.onrender.com/api/v1/user_profiles/1", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -32,12 +32,14 @@ export default function SpecificRoomPage() {
     setShowBookModal(false);
   }
   useEffect(() => {
-    fetch(`http://localhost:3000/api/v1/room_types/${params.id}`)
+    fetch(
+      `https://mahali-mzuri-api.onrender.com/api/v1/room_types/${params.id}`
+    )
       .then((response) => response.json())
       .then((data) => {
         setRoomTypeData(data);
       });
-    fetch("http://[::1]:3000/api/v1/specific_rooms", {
+    fetch("https://mahali-mzuri-api.onrender.com/api/v1/specific_rooms", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

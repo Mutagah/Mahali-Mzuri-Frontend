@@ -36,7 +36,7 @@ function SignUp() {
     };
     try {
       const fetchResponse = await fetch(
-        "http://[::1]:3000/api/v1/users",
+        "https://mahali-mzuri-api.onrender.com/api/v1/users",
         settings
       );
       const data = await fetchResponse.json();
