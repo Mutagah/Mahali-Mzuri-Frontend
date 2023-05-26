@@ -173,9 +173,10 @@ function SignUp() {
                             onInput={(event) =>
                               setWhichEmployee(event.target.value)
                             }
+                            disabled
                           />
                           &nbsp;
-                          <label>Employee</label>
+                          <label style={{textDecoration:"line-through"}}>Employee</label>
                           <div className="ms-5">
                             {whichEmployee === "selectEmployee"
                               ? employees?.map((emp, index) => {
