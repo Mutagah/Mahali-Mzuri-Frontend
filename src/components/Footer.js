@@ -12,7 +12,7 @@ function FooterPage() {
               <h3 style={{ color: "#f17a12" }}>
                 <u>Quick Links</u>
               </h3>
-              <div>
+              <div className="">
                 <ul>
                   <a className="text-decoration-none text-white" href="/">
                     Home
@@ -42,7 +42,7 @@ function FooterPage() {
               </div>
             </div>
             <div className=" mt-3 col-6">
-              <h3 style={{ color: "white" }}>
+              <h3 style={{ color: "white" }} >
                 <u>Get In Touch</u>
               </h3>
               <div>
@@ -55,7 +55,7 @@ function FooterPage() {
                   #Mahali Mzuri
                 </p>
 
-                <div className="input-group mb-3">
+                <div className="input-group mb-3 d-sm-flex-column">
                   <input
                     type="email"
                     className="bg-black form-control  border-opacity-75 text-white"
@@ -74,7 +74,7 @@ function FooterPage() {
                     type="button"
                     style={{
                       backgroundColor: "#f17a12",
-                      width: "22%",
+                      width: "auto",
                       borderColor: "#f17a12",
                       borderWidth: "4px",
                       fontSize: "17px",
