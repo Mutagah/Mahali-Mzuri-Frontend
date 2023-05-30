@@ -1,4 +1,5 @@
 import * as React from "react";
+import {Container} from "react-bootstrap";
 import { useTheme } from "@mui/material/styles";
 import { Box, Button, MobileStepper, Typography } from "@mui/material";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
@@ -49,7 +50,7 @@ export default function HomePage() {
   };
 
   return (
-    <>
+    <Container fluid>
       <Box sx={{ flexGrow: 1 }}>
         <AutoPlaySwipeableViews
           axis={theme.direction === "rtl" ? "x-reverse" : "x"}
@@ -172,6 +173,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-    </>
+    </Container>
   );
 }

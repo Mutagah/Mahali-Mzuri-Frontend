@@ -1,7 +1,8 @@
 import React from "react";
+import { Container} from 'react-bootstrap';
 function FooterPage() {
   return (
-    <>
+    <Container fluid>
       <footer
         className="p-2 text-center text-reset"
         style={{ backgroundColor: "black" }}
@@ -167,7 +168,7 @@ function FooterPage() {
           </div>
         </div>
       </footer>
-    </>
+    </Container>
   );
 }
 
