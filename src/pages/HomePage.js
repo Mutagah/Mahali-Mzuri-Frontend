@@ -1,17 +1,15 @@
 import * as React from "react";
-import {Container} from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { useTheme } from "@mui/material/styles";
+import SwipeableViews from "react-swipeable-views";
+import { autoPlay } from "react-swipeable-views-utils";
 import { Box, Button, MobileStepper, Typography } from "@mui/material";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
-import SwipeableViews from "react-swipeable-views";
-import { autoPlay } from "react-swipeable-views-utils";
-
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
-
 const images = [
   {
-    label: "San Francisco – Oakland Bay Bridge, United States",
+    label: "San Francisco",
     imgPath:
       "https://images.unsplash.com/photo-1621293954908-907159247fc8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
   },
@@ -31,12 +29,10 @@ const images = [
       "https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=857&q=80",
   },
 ];
-
 export default function HomePage() {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = images.length;
-
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
