@@ -7,18 +7,21 @@ export default function ProfilePage() {
   const [userBookedRooms, seetUserBookedRooms] = useState([]);
   const token = JSON.parse(localStorage.getItem("token"));
   useEffect(() => {
-    fetch("http://[::1]:3000/api/v1/user_profiles/1", {
+    fetch("https://mahali-mzuri-api.onrender.com/api/v1/user_profiles/1", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     })
       .then((response) => response.json())
       .then((data) => setUserData(data));
-    fetch("http://[::1]:3000/api/v1/user_room_bookings/1", {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    })
+    fetch(
+      "https://mahali-mzuri-api.onrender.com/api/v1/user_room_bookings/1",
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    )
       .then((response) => response.json())
       .then((data) => seetUserBookedRooms(data));
   }, [token]);
