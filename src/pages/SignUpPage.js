@@ -36,7 +36,7 @@ function SignUp() {
     };
     try {
       const fetchResponse = await fetch(
-        "http://[::1]:3000/api/v1/users",
+        "https://mahali-mzuri-api.onrender.com/api/v1/users",
         settings
       );
       const data = await fetchResponse.json();
@@ -173,9 +173,10 @@ function SignUp() {
                             onInput={(event) =>
                               setWhichEmployee(event.target.value)
                             }
+                            disabled
                           />
                           &nbsp;
-                          <label>Employee</label>
+                          <label style={{textDecoration:"line-through"}}>Employee</label>
                           <div className="ms-5">
                             {whichEmployee === "selectEmployee"
                               ? employees?.map((emp, index) => {
