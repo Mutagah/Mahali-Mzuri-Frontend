@@ -2,7 +2,7 @@ import "./App.css"
 import React,{useState} from "react";
 import LoginPage from "./pages/LoginPage";
 import SignUp from "./pages/SignUpPage";
-import ProfilePage from "./pages/ProfilePage"
+import ProfilePage from "./pages/ProfilePage/ProfilePage"
 import RoomPage from "./pages/RoomPage/RoomPage";
 import HomePage from "./pages/HomePage";
 import Header from "./components/Header";
