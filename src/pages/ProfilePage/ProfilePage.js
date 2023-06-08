@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
 import "./ProfilePage.css";
-import { Button, Card, Col, Container, Row, Table } from "react-bootstrap";
 import { BsPersonFill } from "react-icons/bs";
-
+import React, { useEffect, useState } from "react";
+import { Button, Card, Col, Container, Row, Table } from "react-bootstrap";
 export default function ProfilePage() {
   const [userData, setUserData] = useState({});
   const [userBookedRooms, seetUserBookedRooms] = useState([]);

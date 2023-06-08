@@ -1,8 +1,9 @@
-import React from 'react';
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
-import { BsPersonFill } from 'react-icons/bs';
-
+import React from "react";
+import { BsPersonFill } from "react-icons/bs";
+import LoginIcon from "@mui/icons-material/Login";
+import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 function Header() {
+  const token = JSON.parse(localStorage.getItem("token"));
   return (
     <Container fluid>
       <Navbar sticky="top" style={{ backgroundColor: "#000000" }} expand="lg">
@@ -51,13 +52,19 @@ function Header() {
             </Nav>
 
             <Nav>
-              <Nav.Link href="/profile">
-                <BsPersonFill size={30} style={{ color: "white" }} />
-              </Nav.Link>
+              {window.localStorage.getItem("token") === null ? (
+                <Nav.Link href="/login">
+                  <LoginIcon style={{ color: "white" }} />
+                </Nav.Link>
+              ) : (
+                <Nav.Link href="/profile">
+                  <BsPersonFill size={30} style={{ color: "white" }} />
+                </Nav.Link>
+              )}
             </Nav>
             <Nav>
               <NavDropdown
-                title="Profile"
+                title="Account"
                 id="collasible-nav-dropdown"
                 style={{
                   color: "white",
@@ -65,9 +72,15 @@ function Header() {
                   borderRadius: "5px",
                 }}
               >
-                <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#logout">Logout</NavDropdown.Item>
+                {window.localStorage.getItem("token") === null ? (
+                  <NavDropdown.Item href="/login">Login</NavDropdown.Item>
+                ) : (
+                  <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
+                  // <NavDropdown.Item href="#logout">Logout</NavDropdown.Item>
+                )}
+                {/* <NavDropdown.Item href="/profile">Profile</NavDropdown.Item> */}
+                {/* <NavDropdown.Divider />
+                <NavDropdown.Item href="#logout">Logout</NavDropdown.Item> */}
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
@@ -78,4 +91,3 @@ function Header() {
 }
 
 export default Header;
-

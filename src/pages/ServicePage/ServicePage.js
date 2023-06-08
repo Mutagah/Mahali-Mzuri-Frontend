@@ -5,7 +5,6 @@ import {
   CardContent,
   Grid,
   IconButton,
-  Link,
   Typography,
 } from "@mui/material";
 import Image2 from "../../Images/Rectangle 3671.png";
