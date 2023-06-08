@@ -25,11 +25,12 @@ export default function BookRoom({
       ),
     };
    const mpesaResponse = await fetch(
-     "https://c895-197-232-61-242.ngrok-free.app/stkpush",
+     "https://mahali-mzuri-api.onrender.com/stkpush",
      paymentSettings
    );
-   const data = await mpesaResponse.json();
-   console.log(data.CustomerMessage)
+  //  const data = await mpesaResponse.json();
+  //  console.log(data.CustomerMessage)
+   console.log(mpesaResponse)
    
   }
 

@@ -1,281 +1,93 @@
-import React,{useState} from "react"
-import {
-  AppBar,
-  Avatar,
-  Box,
-  Button,
-  Link,
-  Menu,
-  MenuItem,
-  Toolbar,
-  IconButton,
-  Typography
-} from "@mui/material";
-import { styled } from "@mui/material/styles";
-import MenuIcon from "@mui/icons-material/Menu";
-export default function Header() {
-  const [anchorElNav, setAnchorElNav] = useState(null);
-
-  const StyledToolbar = styled(Toolbar)(({ theme }) => ({
-    alignItems: "flex-start",
-    paddingTop: theme.spacing(1),
-    paddingBottom: theme.spacing(2),
-    // Override media queries injected by theme.mixins.toolbar
-    "@media all": {
-      minHeight: 128
-    }
-  }));
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+import React from "react";
+import { BsPersonFill } from "react-icons/bs";
+import LoginIcon from "@mui/icons-material/Login";
+import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+function Header() {
+  const token = JSON.parse(localStorage.getItem("token"));
   return (
-    <AppBar position="sticky" color="primary">
-      <StyledToolbar>
-        <IconButton
-          size="large"
-          edge="start"
-          color="inherit"
-          aria-label="open drawer"
-          sx={{
-            mr: 2,
-            display: {
-              xs: "none",
-              md: "flex",
-            },
-          }}
-        >
-          <img
-            src="../logo.jpg"
-            alt="logo"
-            className=" rounded-4"
-            height="70"
-            width="100"
-          />
-        </IconButton>
-        <Typography
-          variant="h2"
-          noWrap
-          component="div"
-          sx={{
-            fontFamily: "Comfortaa",
-            flexGrow: 1,
-            alignSelf: "flex-end",
-            justifyContent: "center",
-            display: {
-              xs: "none",
-              md: "none",
-              lg: "flex",
-            },
-          }}
-        >
-          Mahali Mzuri
-        </Typography>
-        <Typography
-          variant="h3"
-          noWrap
-          component="div"
-          sx={{
-            fontFamily: "Comfortaa",
-            flexGrow: 1,
-            alignSelf: "flex-end",
-            justifyContent: "center",
-            display: {
-              xs: "none",
-              md: "flex",
-              lg: "none",
-              xl: "none",
-            },
-          }}
-        >
-          Mahali Mzuri
-        </Typography>
-        <Typography
-          variant="h4"
-          noWrap
-          component="div"
-          sx={{
-            fontFamily: "Comfortaa",
-            flexGrow: 1,
-            alignSelf: "flex-start",
-            display: {
-              xs: "flex",
-              md: "none",
-              lg: "none",
-            },
-          }}
-        >
-          Mahali Mzuri
-        </Typography>
+    <Container fluid>
+      <Navbar sticky="top" style={{ backgroundColor: "#000000" }} expand="lg">
+        <Container fluid className="mx-5 px-5">
+          <Navbar.Brand href="home">
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <img
+                src="../logo.jpg"
+                alt="logo"
+                className=" rounded-4"
+                height="70"
+                width="100"
+              />
+            </div>
+            <div>
+              <h1 style={{ color: "#f17a12" }}>Mahali Mzuri</h1>
+            </div>
+          </Navbar.Brand>
 
-        <Box
-          sx={{
-            flexGrow: 1,
-            alignItems: "center",
-            marginRight: "10px",
-            display: { xs: "flex", md: "flex", lg: "none" },
-            // position: "relative",
-          }}
-        >
-          <IconButton
-            id="demo-positioned-menu"
-            size="large"
-            aria-label="account of current user"
-            aria-controls={
-              Boolean(anchorElNav) ? "demo-positioned-menu" : undefined
-            }
-            aria-haspopup="true"
-            aria-expanded={Boolean(anchorElNav) ? "true" : undefined}
-            onClick={handleOpenNavMenu}
-            color="inherit"
-          >
-            <MenuIcon />
-          </IconButton>
-          <Menu
-            anchorEl={anchorElNav}
-            anchorOrigin={{
-              vertical: "bottom",
-              horizontal: "left",
-            }}
-            keepMounted
-            transformOrigin={{
-              vertical: "top",
-              horizontal: "left",
-            }}
-            open={Boolean(anchorElNav)}
-            onClose={handleCloseNavMenu}
-            sx={{
-              display: { xs: "block", md: "block",lg:"none" },
-              // position: "absolute",
-              // marginLeft:"200px"
-            }}
-          >
-            <MenuItem onClick={handleCloseNavMenu}>
-              <Link href="/" underline="none">
-                Home
-              </Link>
-            </MenuItem>
-            <MenuItem onClick={handleCloseNavMenu}>
-              <Link href="/services" underline="none">
-                Services
-              </Link>
-            </MenuItem>
-            {/* <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">
-                  <Link href="/" underline="none">Home</Link>
-                </Typography>
-              </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">
-                  <Link href="/services" underline="none">Services</Link>
-                </Typography>
-              </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">About</Typography>
-              </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">Rooms</Typography>
-              </MenuItem> */}
-          </Menu>
-          {/* </IconButton> */}
-        </Box>
-
-        <Box
-          sx={{
-            flexGrow: 1,
-            display: { xs: "none", md: "none", lg: "flex" },
-          }}
-        >
-          <Button
-            onClick={() => {
-              handleCloseNavMenu();
-            }}
-            sx={{
-              my: 2,
-              px: 2,
-              color: "white",
-              display: "block",
-              fontSize: 17,
-              fontWeight: 600,
-            }}
-          >
-            <Link href="/" underline="none" sx={{ color: "#ffffff" }}>
-              Home
-            </Link>
-          </Button>
-          <Button
-            onClick={() => {
-              handleCloseNavMenu();
-            }}
-            sx={{
-              my: 2,
-              px: 2,
-              color: "white",
-              display: "block",
-              fontSize: 17,
-              fontWeight: 600,
-            }}
-          >
-            <Link href="/services" underline="none" sx={{ color: "#ffffff" }}>
-              Services
-            </Link>
-          </Button>
-          <Button
-            onClick={handleCloseNavMenu}
-            sx={{
-              my: 2,
-              px: 2,
-              color: "white",
-              display: "block",
-              fontSize: 17,
-              fontWeight: 600,
-            }}
-          >
-            <Link href="/about" underline="none" sx={{ color: "#ffffff" }}>
-              About
-            </Link>
-          </Button>
-          <Button
-            onClick={handleCloseNavMenu}
-            sx={{
-              my: 2,
-              px: 2,
-              color: "white",
-              display: "block",
-              fontSize: 17,
-              fontWeight: 600,
-            }}
-          >
-            <Link href="/rooms" underline="none" sx={{ color: "#ffffff" }}>
-              Rooms
-            </Link>
-          </Button>
-          <Button
-            onClick={handleCloseNavMenu}
-            sx={{
-              my: 2,
-              px: 2,
-              color: "white",
-              display: "block",
-              fontSize: 17,
-              fontWeight: 600,
-            }}
-          >
-            <Link href="/login" underline="none" sx={{ color: "#ffffff" }}>
-              Login
-            </Link>
-          </Button>
-        </Box>
-        <IconButton sx={{ p: 0, mr: 5 }}>
-          <Avatar
-            sx={{ p: 4 }}
-            alt="Remy Sharp"
-            src="/static/images/avatar/2.jpg"
+          <Navbar.Toggle
+            aria-controls="responsive-navbar-nav"
+            style={{ backgroundColor: "White" }}
           />
-        </IconButton>
-      </StyledToolbar>
-    </AppBar>
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav
+              fill
+              variant="tabs"
+              className="me-auto"
+              style={{ marginLeft: "10px" }}
+            >
+              <Nav.Link href="/" className="text-white mx-3">
+                HOME
+              </Nav.Link>
+              <Nav.Link href="/services" className="text-white mx-3">
+                SERVICES
+              </Nav.Link>
+              <Nav.Link href="/about" className="text-white mx-3">
+                ABOUT
+              </Nav.Link>
+              <Nav.Link href="/rooms" className="text-white mx-3">
+                ROOMS
+              </Nav.Link>
+              <Nav.Link href="/login" className="text-white mx-3">
+                LOGIN
+              </Nav.Link>
+            </Nav>
+
+            <Nav>
+              {window.localStorage.getItem("token") === null ? (
+                <Nav.Link href="/login">
+                  <LoginIcon style={{ color: "white" }} />
+                </Nav.Link>
+              ) : (
+                <Nav.Link href="/profile">
+                  <BsPersonFill size={30} style={{ color: "white" }} />
+                </Nav.Link>
+              )}
+            </Nav>
+            <Nav>
+              <NavDropdown
+                title="Account"
+                id="collasible-nav-dropdown"
+                style={{
+                  color: "white",
+                  backgroundColor: "white",
+                  borderRadius: "5px",
+                }}
+              >
+                {window.localStorage.getItem("token") === null ? (
+                  <NavDropdown.Item href="/login">Login</NavDropdown.Item>
+                ) : (
+                  <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
+                  // <NavDropdown.Item href="#logout">Logout</NavDropdown.Item>
+                )}
+                {/* <NavDropdown.Item href="/profile">Profile</NavDropdown.Item> */}
+                {/* <NavDropdown.Divider />
+                <NavDropdown.Item href="#logout">Logout</NavDropdown.Item> */}
+              </NavDropdown>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </Container>
   );
 }
+
+export default Header;

@@ -1,9 +1,93 @@
 import React from "react";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faTwitter } from "@fortawesome/free-solid-svg-icons";
+import { Col, Container, Row } from "react-bootstrap";
 function FooterPage() {
   return (
-    <>
-      <footer
-        className="p-2 text-center text-reset"
+    <Container fluid className="p-3" style={{ backgroundColor: "#000000" }}>
+      <Row className="m-3 p-3">
+        <Col xs={8}>
+          <h5 className="text-white">Get in touch&nbsp;:&nbsp; </h5>
+
+          <h5 className="mx-4" style={{ color: "#f17713" }}>
+            The blissful environment adds to the premium service of our hotel.
+          </h5>
+        </Col>
+        <Col style={{ display: "flex", alignItems: "center" }}>
+          <div className="input-group mb-3 d-sm-flex-column">
+            <input
+              type="email"
+              className="bg-black form-control  border-opacity-75 text-white"
+              placeholder="Enter your  Email"
+              aria-label="Recipient's email"
+              aria-describedby="basic-addon2"
+              style={{
+                borderColor: "#f17a12",
+                borderWidth: "4px",
+                borderStyle: "double",
+              }}
+            />
+            <button
+              className="input-group-text my-2 my-sm-0"
+              id="basic-addon2"
+              type="button"
+              style={{
+                backgroundColor: "#f17a12",
+                width: "auto",
+                borderColor: "#f17a12",
+                borderWidth: "4px",
+                fontSize: "17px",
+                fontWeight: "bold",
+              }}
+            >
+              Subscribe
+            </button>
+          </div>
+        </Col>
+      </Row>
+
+      <Row className="my-3">
+        <Col
+          xs={6}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <div>
+            <h5 className="text-white">
+              <u>Quick Links</u>
+            </h5>
+            &nbsp;
+            <ul>
+              <a className="text-decoration-none text-white" href="/">
+                Home
+              </a>
+            </ul>
+            <ul>
+              <a className="text-decoration-none text-white" href="/rooms">
+                Rooms
+              </a>
+            </ul>
+          </div>
+        </Col>
+        <Col xs={6} style={{ border: "2px solid red" }}>
+          <h4 style={{ color: "#f17a12" }}>
+            <u>Engage with me:</u>
+            {/* <FontAwesomeIcon icon={faTwitter} /> */}
+          </h4>
+        </Col>
+      </Row>
+      <div className="container px-4 text-center">
+        <div className="row gx-5">
+          <div className="p-2">
+            <h4 className="text-white">All Right Reserved By @Mahali Mzuri</h4>
+          </div>
+        </div>
+      </div>
+      <Row></Row>
+      {/* <footer
+        className="p-2  text-center text-reset"
         style={{ backgroundColor: "black" }}
       >
         <div className="container text-center ">
@@ -12,7 +96,7 @@ function FooterPage() {
               <h3 style={{ color: "#f17a12" }}>
                 <u>Quick Links</u>
               </h3>
-              <div>
+              <div className="">
                 <ul>
                   <a className="text-decoration-none text-white" href="/">
                     Home
@@ -55,7 +139,7 @@ function FooterPage() {
                   #Mahali Mzuri
                 </p>
 
-                <div className="input-group mb-3">
+                <div className="input-group mb-3 d-sm-flex-column">
                   <input
                     type="email"
                     className="bg-black form-control  border-opacity-75 text-white"
@@ -74,7 +158,7 @@ function FooterPage() {
                     type="button"
                     style={{
                       backgroundColor: "#f17a12",
-                      width: "22%",
+                      width: "auto",
                       borderColor: "#f17a12",
                       borderWidth: "4px",
                       fontSize: "17px",
@@ -166,8 +250,8 @@ function FooterPage() {
             </div>
           </div>
         </div>
-      </footer>
-    </>
+      </footer> */}
+    </Container>
   );
 }
 

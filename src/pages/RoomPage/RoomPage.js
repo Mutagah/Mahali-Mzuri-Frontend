@@ -5,7 +5,7 @@ import LoginorSignupModal from "../../components/LoginorSignupModal";
 import React, { useEffect, useState } from "react";
 export default function RoomPage() {
   // fetching rooms data
-  const baseUrl = "http://[::1]:3000/api/v1/room_types";
+  const baseUrl = "https://mahali-mzuri-api.onrender.com/api/v1/room_types";
   const [roomTypes, setRoomTypes] = useState([]);
   const [show, setShowLogInorSignUpModal] = useState(false);
   const navigate = useNavigate();
@@ -51,7 +51,7 @@ export default function RoomPage() {
                 >
                   <img
                     className="card-img-top px-4 pt-4 rounded-5 img-fluid"
-                    src={roomType.image1}
+                    src={roomType.image2}
                     alt="View Hotel"
                     style={{ maxHeight: "300px" }}
                   />

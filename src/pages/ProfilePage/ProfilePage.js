@@ -1,21 +1,20 @@
-import React, { useEffect, useState } from "react";
 import "./ProfilePage.css";
-import { Button, Card, Col, Container, Row, Table } from "react-bootstrap";
 import { BsPersonFill } from "react-icons/bs";
-
+import React, { useEffect, useState } from "react";
+import { Button, Card, Col, Container, Row, Table } from "react-bootstrap";
 export default function ProfilePage() {
   const [userData, setUserData] = useState({});
   const [userBookedRooms, seetUserBookedRooms] = useState([]);
   const token = JSON.parse(localStorage.getItem("token"));
   useEffect(() => {
-    fetch("http://[::1]:3000/api/v1/user_profiles/1", {
+    fetch("https://mahali-mzuri-api.onrender.com/api/v1/user_profiles/1", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     })
       .then((response) => response.json())
       .then((data) => setUserData(data));
-    fetch("http://[::1]:3000/api/v1/user_room_bookings/1", {
+    fetch("https://mahali-mzuri-api.onrender.com/api/v1/user_room_bookings/1", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -23,36 +22,51 @@ export default function ProfilePage() {
       .then((response) => response.json())
       .then((data) => seetUserBookedRooms(data));
   }, [token]);
-  const previouslyBookedRooms = userBookedRooms.filter((roomBooking) =>
-    parseInt(
-        (new Date(roomBooking.check_out_date).getTime()- new Date().getTime()) /
-        (1000 * 60 * 60 * 24)
-        ) < 0)
-    const recentlyBookedRooms = userBookedRooms.filter(
-           (roomBooking) =>
-             parseInt(
-               (new Date(roomBooking.booking_date).getTime() -
-                 new Date().getTime()) /
-                 (1000 * 60 * 60 * 24)
-             ) > 0
-         );
-  const displayPreviouslyBookedRooms = previouslyBookedRooms.map((room) => (
-    <Card className="m-2" style={{ border: "2px solid grey" }}>
-      <Card.Title className="m-1" style={{ color: "red" }}>
-        {room.room.room_number}
-      </Card.Title>
-      <Card.Body>
-        <h4>
-          Number of kids: {room.number_of_kids} &nbsp; &nbsp; &nbsp; Number of
-          Adults: {room.number_of_adults}
-        </h4>
-      </Card.Body>
-      <Card.Title className="d-flex justify-content-end m-1">
-        <h5 style={{ color: "#f17a12" }}>Checked out Date</h5> &nbsp;: &nbsp;
-        {room.check_out_date.slice(0, 10)}
-      </Card.Title>
-    </Card>
-  ));
+  const previouslyBookedRooms = userBookedRooms?.filter(
+    (roomBooking) =>
+      parseInt(
+        (new Date(roomBooking.check_out_date).getTime() -
+          new Date().getTime()) /
+          (1000 * 60 * 60 * 24)
+      ) < 0
+  );
+  const recentlyBookedRooms = userBookedRooms?.filter(
+    (roomBooking) =>
+      parseInt(
+        (new Date(roomBooking.booking_date).getTime() - new Date().getTime()) /
+          (1000 * 60 * 60 * 24)
+      ) > 0
+  );
+  const displayPreviouslyBookedRooms =
+    previouslyBookedRooms.length === 0 ? (
+      <Card className="m-2" style={{ border: "2px dotted red" }}>
+        <h1
+          className="d-flex justify-content-center p-2 m-5"
+          style={{ color: "#f17a12" }}
+        >
+          Previously,no rooms have been booked
+        </h1>
+      </Card>
+    ) : (
+      previouslyBookedRooms.map((room) => (
+        <Card className="m-2" style={{ border: "2px solid grey" }}>
+          <Card.Title className="m-1" style={{ color: "red" }}>
+            {room.room.room_number}
+          </Card.Title>
+          <Card.Body>
+            <h4>
+              Number of kids: {room.number_of_kids} &nbsp; &nbsp; &nbsp; Number
+              of Adults: {room.number_of_adults}
+            </h4>
+          </Card.Body>
+          <Card.Title className="d-flex justify-content-end m-1">
+            <h5 style={{ color: "#f17a12" }}>Checked out Date</h5> &nbsp;:
+            &nbsp;
+            {room.check_out_date.slice(0, 10)}
+          </Card.Title>
+        </Card>
+      ))
+    );
   const displayRecentlyBookedRooms =
     recentlyBookedRooms.length === 0 ? (
       <Card className="m-2" style={{ border: "2px dotted red" }}>
@@ -76,8 +90,7 @@ export default function ProfilePage() {
             </h4>
           </Card.Body>
           <Card.Title className="d-flex justify-content-end m-1">
-            <h5 style={{ color: "#f17a12" }}>Booked Date</h5> &nbsp;:
-            &nbsp;
+            <h5 style={{ color: "#f17a12" }}>Booked Date</h5> &nbsp;: &nbsp;
             {room.check_out_date.slice(0, 10)}
           </Card.Title>
         </Card>
