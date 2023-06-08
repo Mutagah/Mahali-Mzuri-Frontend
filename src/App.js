@@ -52,6 +52,10 @@ function App() {
       element: <SpecificRoomPage />,
     },
     {
+      path: "/profile",
+      element: <ProfilePage />,
+    },
+    {
       path: "/login",
       element: <LoginPage setCurrentUser={setCurrentUser} />,
     },
