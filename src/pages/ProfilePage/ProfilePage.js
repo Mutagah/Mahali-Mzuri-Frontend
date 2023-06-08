@@ -22,12 +22,12 @@ export default function ProfilePage() {
       .then((response) => response.json())
       .then((data) => seetUserBookedRooms(data));
   }, [token]);
-  const previouslyBookedRooms = userBookedRooms.filter((roomBooking) =>
+  const previouslyBookedRooms = userBookedRooms?.filter((roomBooking) =>
     parseInt(
         (new Date(roomBooking.check_out_date).getTime()- new Date().getTime()) /
         (1000 * 60 * 60 * 24)
         ) < 0)
-    const recentlyBookedRooms = userBookedRooms.filter(
+    const recentlyBookedRooms = userBookedRooms?.filter(
            (roomBooking) =>
              parseInt(
                (new Date(roomBooking.booking_date).getTime() -
