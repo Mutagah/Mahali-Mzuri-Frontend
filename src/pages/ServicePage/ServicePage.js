@@ -143,14 +143,8 @@ export default function ServicePage() {
                     sx={{ p: 2, backgroundColor: "#f17a12", color: "#ffffff" }}
                   >
                     2
-                  </IconButton>{" "}
-                  <Link
-                    href="/restaurant"
-                    underline="none"
-                    sx={{ color: "#ffffff" }}
-                  >
+                  </IconButton>
                     &nbsp; Restaurant Services
-                  </Link>
                 </Typography>
                 <CardContent
                   sx={{
@@ -199,14 +193,8 @@ export default function ServicePage() {
                   >
                     3
                   </IconButton>
-                  &nbsp;{" "}
-                  <Link
-                    href="/car-rental"
-                    underline="none"
-                    sx={{ color: "#ffffff" }}
-                  >
+                  &nbsp;
                     Car rentals & Parking Services
-                  </Link>
                 </Typography>
                 <CardContent
                   sx={{

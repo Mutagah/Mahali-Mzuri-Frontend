@@ -52,18 +52,6 @@ function App() {
       element: <SpecificRoomPage />,
     },
     {
-      path: "/restaurant",
-      element: <RestaurantPage />,
-    },
-    {
-      path: "/car-rental",
-      element: <CarRentalPage />,
-    },
-    {
-      path: "/profile",
-      element: <ProfilePage />,
-    },
-    {
       path: "/login",
       element: <LoginPage setCurrentUser={setCurrentUser} />,
     },
