@@ -28,21 +28,63 @@ export default function ProfilePage() {
         (new Date(roomBooking.check_out_date).getTime()- new Date().getTime()) /
         (1000 * 60 * 60 * 24)
         ) < 0)
-  console.log(previouslyBookedRooms)
+    const recentlyBookedRooms = userBookedRooms.filter(
+           (roomBooking) =>
+             parseInt(
+               (new Date(roomBooking.booking_date).getTime() -
+                 new Date().getTime()) /
+                 (1000 * 60 * 60 * 24)
+             ) > 0
+         );
   const displayPreviouslyBookedRooms = previouslyBookedRooms.map((room) => (
-    <Card className="m-2" style={{border:"2px solid red"}}>
-      <Card.Title className="m-1" style={{color:"red"}}>{room.room.room_number}</Card.Title>
+    <Card className="m-2" style={{ border: "2px solid grey" }}>
+      <Card.Title className="m-1" style={{ color: "red" }}>
+        {room.room.room_number}
+      </Card.Title>
       <Card.Body>
         <h4>
           Number of kids: {room.number_of_kids} &nbsp; &nbsp; &nbsp; Number of
           Adults: {room.number_of_adults}
         </h4>
       </Card.Body>
-      <Card.Title className="d-flex justify-content-end m-1">{room.check_out_date.slice(0,10)}</Card.Title>
+      <Card.Title className="d-flex justify-content-end m-1">
+        <h5 style={{ color: "#f17a12" }}>Checked out Date</h5> &nbsp;: &nbsp;
+        {room.check_out_date.slice(0, 10)}
+      </Card.Title>
     </Card>
   ));
+  const displayRecentlyBookedRooms =
+    recentlyBookedRooms.length === 0 ? (
+      <Card className="m-2" style={{ border: "2px dotted red" }}>
+        <h1
+          className="d-flex justify-content-center p-2 m-5"
+          style={{ color: "#f17a12" }}
+        >
+          No rooms booked recently
+        </h1>
+      </Card>
+    ) : (
+      recentlyBookedRooms.map((room) => (
+        <Card className="m-2" style={{ border: "2px solid grey" }}>
+          <Card.Title className="m-1" style={{ color: "red" }}>
+            {room.room.room_number}
+          </Card.Title>
+          <Card.Body>
+            <h4>
+              Number of kids: {room.number_of_kids} &nbsp; &nbsp; &nbsp; Number
+              of Adults: {room.number_of_adults}
+            </h4>
+          </Card.Body>
+          <Card.Title className="d-flex justify-content-end m-1">
+            <h5 style={{ color: "#f17a12" }}>Booked Date</h5> &nbsp;:
+            &nbsp;
+            {room.check_out_date.slice(0, 10)}
+          </Card.Title>
+        </Card>
+      ))
+    );
   return (
-    <Container fluid>
+    <Container fluid className="m-2">
       <Container fluid className="m-2 px-5">
         <Row>
           <Col className="d-flex justify-content-end">
@@ -116,21 +158,16 @@ export default function ProfilePage() {
               Recently booked Rooms
             </h3>
             <Card
-              className="p-3 m-3"
-              style={{ border: "3px solid black", borderRadius: "10px" }}
+              className="example d-flex p-2 m-2"
+              style={{
+                border: "3px solid black",
+                maxHeight: "350px",
+                cursor: "pointer",
+                overflowY: "scroll",
+                borderRadius: "10px",
+              }}
             >
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">
-                  Card Subtitle
-                </Card.Subtitle>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-                <Card.Link href="#">Card Link</Card.Link>
-                <Card.Link href="#">Another Link</Card.Link>
-              </Card.Body>
+              {displayRecentlyBookedRooms}
             </Card>
           </Col>
           <Col xs={12} md={6}>
@@ -141,12 +178,13 @@ export default function ProfilePage() {
               Previously Booked Rooms
             </h3>
             <Card
-              className="example p-2 m-2"
+              className="example p-2 m-2 d-flex"
               style={{
                 border: "3px solid black",
                 maxHeight: "350px",
                 cursor: "pointer",
                 overflowY: "scroll",
+                borderRadius: "10px",
               }}
             >
               {displayPreviouslyBookedRooms}
